@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+
+2017 ryan reede
+template: pixelarity.com
+
+sitemap:
+|base| 
+	-index.html
+	-about.html
+	-|assets|
+	-|images|
+	-|projects|
+		-data.html		**YOU ARE HERE**
+		-vr.html 		
+		-video.html
+		-|data|		
+			-images.html
+			-simpsons.html
+			-streaming.html
+			-yelp.html
+		-|video|
+			-modofcards.html
+			-misc.html
+		-|vr|
+			-bcinvr.html
+			-joycestick.html
+			-irishvr.html
+		
+-->
+<html>
+	<head>
+		<title>Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul>
+							<li><a href="../index.html"><h2>Home</h2></a></li>
+							
+							<li><a href="../about.html"><h3>About Me</h3></a></li>
+
+							
+							<li><a href="vr.html"><h3>Virtual Reality</h3></a>
+								<ul>
+									<li>
+									<a href="/vr/joycestick.html">Joycestick</a>
+									</li>
+									
+									<li>
+									<a href="/vr/bcinvr.html">Boston College in VR</a></li>
+	
+									<li>
+									<a href="/vr/irishvr.html">Making it Irish</a>
+									</li>
+	
+								</ul>
+							</li>
+							
+							<li><a href="data.html"><h3><strong>Data Analysis</strong></h3></a>
+							
+								<ul>
+									<li>
+									<a href="/data/images.html">K-Nearest Images</a>
+									</li>
+									
+									<li>
+									<a href="/data/simpsons.html">Simpsons Text Generation</a></li>
+	
+									<li>
+									<a href="/data/streaming.html">Streaming Data Analysis</a>
+									</li>
+																		
+									<li>
+									<a href="/data/yelp.html">Yelp Academic Dataset</a>
+									</li>
+								</ul>	
+
+							</li>
+							<li><a href="video.html"><h3>Video</h3></a>
+							
+							
+								<ul>
+									<li>
+									<a href="/video/modofcards.html">Mod of Cards</a>
+									</li>
+									
+									<li>
+									<a href="/video/misc.html">Miscellaneous</a></li>
+	
+								</ul>						
+							
+							
+							</li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Data Analysis and Machine Learning</h1>
+							<span class="image main"></span>
+							<blockquote>"Listening to the data is important… but so is experience and intuition. After all, what is intuition at its best but large amounts of data of all kinds filtered through a human brain rather than a math model?” – Steve Lohr, New York Times </blockquote>
+							<p>In the Spring semester of my sophomore year at Boston College (before I began studying Computer Science) I took an Information Systems course with <a href="http://www.samransbotham.com/cv">Prof. Ransbotham</a> called Analytics and Business Intelligence. Slightly panicked as I still didnt know what I wanted to study, I found myself the odd one out among a number of business and MBA students. As I began to find my niche within the class as the <em>this is going to change everything</em> apocalyptist, it became increasingly clear to me that taking this course would wind up defining the rest of my studies.</p>
+						  <p>Although in this course we focused on the managerial implications of data mining and business-realted outcomes of &nbsp;data-driven decision making, I was intrigued by the possibilities. We ended up doing some hands-on coursework such as <a href="data/yelp.html">this project </a>in which we anayzed a subset of the Yelp Academic dataset using R and Tableau, but I craved more technical work in this field. I latched onto Prof. Ransbotham and stayed close with him as I began down the Computer Science path, disregarding the future demise of my GPA.</p>
+						  <p>The rest is history. And although I'd always had an affinity for understanding machinines, ripping electronics apart and even jailbreaking others' iPhones in high school for extra cash, studying CS gave me a new appreciation for the impressiveness of the devices and applications we use each day, how incredible the technical infastructure our society is already built upon is, and what the future has in store given how much data everyone/thing produces each day. </p>
+						  <p>Piggy-backing off my similar interests in the realm of <a href="vr.html">Virtual Reality</a> (VR), I decided to build a project for <a href="https://www.bc.edu/bc-web/bcnews/campus-community/students/posterseason.html">Big Data Research Day at Boston College</a> that would help explain how sensors in smartphones and VR headsets make this technology possible. While most projects at BIg Data research day focused on big data as a reference to the volume of data being analyzed, <a href="data/streaming.html">this project took a look at the speed at which data needs to be processed</a> to maintain a suitable framerate and not induce motion sickness. </p>
+						  <p>More recently, I had the opportunity to take Machine Learning (CSCI 3345 Fall '16) with <a href="http://cs.bc.edu/~alvarez/">Prof. Alvarez </a>where I was able to take my understanding of the theory, methods and applications of data science to the next level. We covered topics ranging from generalization bounds and error measures to gradient decsent, radial basis functions and deep learning. The commulation of my coursework in ML resulted in a projected that studied the <a href="data/simpsons.html">effectivness of Recurrent Neural Networks for text generation compared to a more simple Markov Model</a> using 600 episodes of <em>The Simpsons</em> as training data. </p>
+						  <p>While studying the intracacies of different types of learning models and the trade-offs between them, I was working on a semester-long project for Algorithms (CSCI 3383). The project was simple: given an image, a dataset of images and an integer <em>k</em>, find the <em>k </em>most similar images in the dataset to the given images. We were allowed to assume that all of the images were binary matrices ( just 1s and 0s) and that were to be graded on a tradeoff between speed and accuracy with speed being most important. Given the fact that my mind was in ML mode, our group ended up taking an approach <a href="data/images.html">synthesizing techniques from Computer Vision, Machine Learning and Algorithmic Analysis and can be found here.</a></p>
+						  <p> My realtionship with data science and anlytics predated and even pushed me towards taking the step towards studying Computer Science. But even with years of academic and practical knowledge using and implementing different machine learning models, the gap between what I know and what I seek to understand in this field continues to grow. </p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+
+<section>
+	<h2>Connect</h2>
+
+	<ul class="icons">
+		<li>
+		<a href="https://twitter.com/ryreede" class="icon style2 fa-twitter">
+		<span class="label">Twitter</span>
+		</a>
+		</li>
+		
+		<li>
+		<a href="https://github.com/reedery" class="icon style2 fa-github"><span class="label">GitHub</span>
+		</a>
+		</li>
+									
+		<li>
+		<a href="https://www.linkedin.com/in/ryreede" class="icon style2 fa-linkedin">
+		<span class="label">LinkedIn</span>
+		</a>
+		</li>
+		 
+		<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
+		</a>
+		</li>
+
+		<li>
+		<a href="mailto:reede.ryan@gmail.com" class="icon style2 fa-envelope-o"><span class="label">Email</span>
+		</a>
+		</li>
+	</ul>
+</section>
+							<ul class="copyright">
+							  <li>&copy; 2017 Ryan Reede</li>
+						  </ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
