@@ -1,9 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-
 2017 ryan reede
 template: pixelarity.com
-
 sitemap:
 |base| 
 	-index.html
@@ -119,60 +117,98 @@ sitemap:
 						</ul>
 					</nav>
 
+
+
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-						  <h1>Finding Similar Images with LSH</h1>
+						  <h1>Finding Similar Images with LS-Hash</h1>
 						  <span class="image main"></span>
-						  <p><span style="font-weight: 400;">Danielle Nash, Ryan Reede, Drew Hoo</span></p>
-						  <p>On github <a href="https://github.com/hoodr/Algorithms_final_project">here</a>&nbsp;</p>
-						  <ol>
-  <li><strong> &nbsp;The Problem</strong></li>
-</ol>
-<p><span style="font-weight: 400;">While getting more familiar with different aspects of this project, we debated many different solutions, before landing on our final implementation. The first of which included comparing every query image to every database image, and maintaining a list of each comparison along with the score associated with that comparison. We planned to do a number of operations to the database image, such as rotations and horizontal and vertical flips, in each comparison to account for potential changes to the image data. </span></p>
-<p><span style="font-weight: 400;">After abandoning this idea because it would require a lot of passes on the data and would not scale well for multiple query images, we moved more towards a computer vision approach, which relied on extracting important features from the image. &nbsp;After deciding on feature extraction, we debated how to plot each image in the feature space and look for nearby neighbors. &nbsp;We looked at methods from Machine Learning to best understand how to do this, and a naive implementation of the k-Nearest Neighbors algorithm immediately come to mind. </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">-NN works very well in lower dimensional spaces and when time and scare are not the most immediate concern. Unfortunately for us, time was of the essence and we needed to find an algorithm that could scale and perform quicker than </span><em><span style="font-weight: 400;">O(n*d)</span></em><span style="font-weight: 400;">. &nbsp;Even though we were getting good results from just the first few simple features we implemented with </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">-NN, we decided to search for a faster alternative that would scale efficiently.</span></p>
-<p><span style="font-weight: 400;">Through research, we found two solutions to our problems, a </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">-d tree and a locality-sensitive hash (LSH). We began to work with both and found that although neither would be retrieving results as accurately as the naive </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">-NN, we could still perform quite well and much quicker. The ultimate decision then came down to a matter of speed, and since the performance of the </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">-d tree and LSH seemed about the same (empirically) on as few as three features, but we went with the LSH method &ndash; capable of indexing and querying in higher dimensions- because we were not sure how large our feature vector would become. </span></p>
-<ol>
-  <li><strong> Preprocessing:</strong></li>
-</ol>
-<p><span style="font-weight: 400;">We took a number steps to preprocess the images before generating a feature vector, so that the features extracted would be more relevant and normalized. First, we de-noised the image to remove small groups of pixels that were surrounded by the opposite value: For each pixel </span><em><span style="font-weight: 400;">p</span></em> <span style="font-weight: 400;">in the image, we find a 4x4 matrix of pixels from the original image data such that this 4x4&rsquo;s upper left-hand pixel is </span><em><span style="font-weight: 400;">p. </span></em><span style="font-weight: 400;">When near an edge or corner, the data used to generate this mini-matrix would wrap around the edges of the original image. Once each 4x4 was extracted, we would check the outside 12 pixels, verify that they were all the same color, and if so, force that the inner four pixels too became this color. Our algorithm also counted the number of instances where the outside 12 pixels were either all 0, or all 1 &ndash; and after going through the entire image, the most prominent of the two counts would tell us with high likelihood what the background color of the image was. </span></p>
-<p><span style="font-weight: 400;">Following the denoise function we rotated the image around a major axis. &nbsp;The major axis was found using random lines through the image, and seeing which line hit the most points in the shape. &nbsp;After finding this line, we calculated the angle between this line and the X axis, using the inverse tangent. &nbsp;As long as there was a significant rotation that needed to be made (more than 5 degrees and less and 85 degrees) then the array was rotated using scipy.ndimage.interpolation. &nbsp;We had implemented a deskew function, but since this is only really important in MNIST images, we decided to just use the rotation function because it would work on all different types of shapes, and not just numbers or letters. </span></p>
-<p><span style="font-weight: 400;">The final preprocessing step we took was the creation of the bounding box, which would start from the top-left and bottom-right corners of the image and work its way diagonally checking each column and row of image for anything other than the background color. If it finds this, then it stops searching in that direction and return the appropriate dimension from that side. Once the searchers return, the image is then resized to the new dimensions plus padding to make sure we have a little room to work with. &nbsp;The bounding box helped give a better idea of the dimensions of the shape, which was used later. &nbsp;This meant that the dimensions of a longer skinnier shape, like a &lsquo;1&rsquo; would be very different from a wider more square shape, like the image of a &lsquo;5.&rsquo; </span></p>
-<ol>
-  <li><strong> Feature Extraction:</strong></li>
-</ol>
-<p><span style="font-weight: 400;">Now that we were working with clean and normalized images, we moved to feature extraction to generate the feature vector for each image. &nbsp;The first features to extract all dealt with pixel counts: foreground pixels, horizontal symmetry, vertical symmetry, number of shape pixels in the right half, and number of shape pixels in the left half of the image. &nbsp;All of these features were extracted on two sweeps which went through half of the pixels in the image, which equates to one sweep through the entire image. &nbsp;Each of these feature values were saved as percentages, in order to normalize the entire feature vector, but also to normalize the values across images that might be different sizes after the bounding box function. &nbsp;We decided on these features because they can tell a lot about the area that a shape encompasses. </span></p>
-<p><span style="font-weight: 400;">Next we also used the FAST corner detection to find the number of corners and the position of the corners in the shape. &nbsp;We then used the position of the corners to find the centroid - since we could not approximate the number of corners each image had, we needed a generalized way to utilize corners and make sure our feature vector was the same standard length. &nbsp;We had implemented a Harris Corner Detection algorithm to find the number of corners, but decided to actually use the FAST implementation because it was much faster and more accurate than our own implementation.</span></p>
-<ol>
-  <li><strong> Locality-Sensitive Hashing (LSH)</strong></li>
-</ol>
-<p><span style="font-weight: 400;">After feature extraction, we then used a pure python implementation of &nbsp;LSH to hash on the feature vector for each image. We tried many different combination of features, as well as different scoring techniques, but decided that normalizing the features to all be a percentage (less than 1) gave us the most accurate results. &nbsp;After hashing all of the database images, and getting the feature vector for the query image, we used &nbsp;LSH &nbsp;query([query image feature vector], </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;">) method which returns an array of feature vectors the size </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;"> (if there are at least </span><em><span style="font-weight: 400;">k</span></em><span style="font-weight: 400;"> neighbors). </span></p>
-<p><span style="font-weight: 400;">While parsing the database images, we had saved both the images file name, and the images feature vector into two separate lists. &nbsp;After getting all of the feature vectors for the k nearest neighbors, we used this map to find the index of this feature vector, and therefore used this index to find the actual image file name. &nbsp;</span></p>
-<p><span style="font-weight: 400;">In some extreme cases, the LSH query function returned less than k neighbors. In order to get around this and find exactly k neighbors, we then used whatever neighbors it did find, and found their closest neighbors. &nbsp;In the extremely rare case that a query image returned no neighbors, we decided to just print this query image k times. &nbsp;We decided this was the best course of action because there were no other neighbors to look at, and we really did not want to implement a slower algorithm which could give us the correct number of neighbors. </span></p>
-<ol>
-  <li><strong> Generalization</strong></li>
-</ol>
-<p><span style="font-weight: 400;">While we were working with the MNIST data set for some time, we really tried to focus our approach on a scalable implementation, that could work for other data sets as well. That is why we took so much time to rotate the image, and find the bounding box, and use percentages throughout the entire feature vector. &nbsp;It means that our data was much more normalized and could find similar images that were simple scalers of one another, or that were rotations of one another. &nbsp;That is also why we decided to use the LSH function, because we decided that it was more important to scale timewise, than it was to get the exact nearest neighbors. </span></p>
-<ol>
-  <li><strong> Empirical Runtime:</strong></li>
-</ol>
-<p><span style="font-weight: 400;">14.46s - Average Preprocessing time for 1000 db images</span></p>
-<p><span style="font-weight: 400;">16.5676s - Average NN search time for 1000 db images and 1000 query images</span></p>
-<p><span style="font-weight: 400;">Before finding the NN for each query image, we preprocesses the image then run neighbors. This means that, in effect, the NN search time also includes the time it takes to preprocess each of the query images. Going by the average preprocessing time, this means that query time only took approximately &nbsp;2.1076s for each of the query images. This means that our LSH will efficiently scale for even larger data sets.</span></p>
-<p><strong>VII. Team Contributions:</strong></p>
-<p><span style="font-weight: 400;">Danielle: Implemented Horizontal and Vertical Symmetry. &nbsp;Implemented the rotation function, as well as Implemented a Harris Corner Detection, which was then scrapped for the FAST corners. &nbsp;Worked on the main file to parse each query and database image, and use the LSHash. </span></p>
-<p><span style="font-weight: 400;">Ryan: Initial development on our python object class </span><em><span style="font-weight: 400;">Image</span></em><span style="font-weight: 400;">. Built out the functions for denoising and determining the background color, principal components analysis, finding surrounded pixels and brought code developed for deskew into our codebase. </span></p>
-<p><span style="font-weight: 400;">Drew: Implemented bounding box and centroid algorithms. Wrote the performance evaluator executable, and empirical runtime research. Responsible for the Linux terminal, like compiling our executables, and overall navigating the server. </span></p>
-<p><span style="font-weight: 400;">Work was divided evenly among the group in terms of time spent on the project. </span></p>
-<p><strong>VIII. Code Contributions</strong></p>
-<p><strong> Citations:</strong></p>
+						  
+						  
+						  <h2>Overview</h2>
+						  <p>For our semester-long project in Algorithms (CSCI 3383)  with <a href="http://www.jbento.net/">Prof. Bento Ayres Periera</a>, we were given the following description: </p>
+						  <ul>
+						  <li>You have to develop an algorithm that given a query image finds the “closest” entries to it on a dataset of images</li>
+						  <li>
+						  	Your solution will be evaluated based on how its run-time scales with the size of the input dataset, the number of input queries and the value of K.
+						  </li>	
+						  <li>
+						  	It will also be evaluated on how its memory usage scale with the input.
+						  </li>
+
+						<li>
+							Finally, your solution will also be evaluated based on its accuracy to solve a classification. Your solution will also be evaluated based on its accuracy to solve a classification task. More specifically, we will run your final code on a folder with a dataset of images and another folder with a several query images. The images will be 2D arrays of 1s and 0s. We will run your code on these input folders for a value of K = 9. These images fall into several category. We know the categories in which each image falls but you do not. We will read the output file produced by your program where you stored the K files closest to each query. We will read it line by line. If the category that most frequently appears on these K files is the same category as the input file, then you get one point. Otherwise you get zero points. This will produce a total score. We will then run your code, just like described above, also for K = 1, 3, 5, 7. Your final accuracy score will the highest score you get among the values of K tested.
+						    </li>
+						  </ul>
+						<p>To solve this, we took a hybrid approach incorporating elements of Machine Learning and Computer Vision in which we extracted features from the images, and 'clustered' them using <a href="https://en.wikipedia.org/wiki/Locality-sensitive_hashing">Locality-Sensitive Hashing</a>. By Danielle Nash, Ryan Reede and Drew Hoo 
+						<a href="https://github.com/reedery/Algorithms_final_project">on GitHub here</a>.</p>
+									<hr />
+  <h2>Deciding on an Approach</h2>
+							
+
+							<p>While getting more familiar with different aspects of this project, we debated many different solutions, before landing on our final implementation. The first of which included comparing every query image to every database image, and maintaining a list of each comparison along with the score associated with that comparison. We planned to do a number of operations to the database image, such as rotations and horizontal and vertical flips, in each comparison to account for potential changes to the image data. </p>
+							
+<p>After abandoning this idea because it would require a lot of passes on the data and would not scale well for multiple query images, we moved more towards a computer vision approach, which relied on extracting important features from the image. After deciding on feature extraction, we debated how to plot each image in the feature space and look for nearby neighbors. We looked at methods from Machine Learning to best understand how to do this, and a naive implementation of the k-Nearest Neighbors algorithm immediately come to mind. <em>k</em>-NN works very well in lower dimensional spaces and when time and scare are not the most immediate concern. Unfortunately for us, time was of the essence and we needed to find an algorithm that could scale and perform quicker than <em>O(n*d)</em>. Even though we were getting good results from just the first few simple features we implemented with<em>k</em>-NN, we decided to search for a faster alternative that would scale efficiently.</p>
+						
+						
+<p>Through more research, we found two new potential solutions to our problem: a <em>k</em>-d tree and a locality-sensitive hash (LSH). We began to work with both and found that although neither would be retrieving results as accurately as the naive <em>k</em>-NN, we could still perform quite well and much quicker. The ultimate decision then came down to a matter of speed, and since the performance of the <em>k</em>-d tree and LSH seemed about the same (empirically) on as few as three features, but we went with the LSH method– capable of indexing and querying in higher dimensions– because we were not sure how large our feature vector would become. </p>
+																<hr />
+
+
+							<h2>Preprocessing the Images</h2>
+<p>We took a number steps to preprocess the images before generating a feature vector so that the features extracted would be relevant and normalized. First, we de-noised the image to remove small groups of pixels that were surrounded by the opposite value: For each pixel <em>p</em> in the image, we find a 4x4 matrix of pixels from the original image data such that this 4x4's upper left-hand pixel is <em>p</em>. When near an edge or corner, the data used to generate this mini-matrix would wrap around the edges of the original image. Once each 4x4 was extracted, we would check the outside 12 pixels, verify that they were all the same color, and if so, force that the inner four pixels too became this color. Our algorithm also counted the number of instances where the outside 12 pixels were either all 0, or all 1 and after going through the entire image, the most prominent of the two counts would tell us with high likelihood what the background color of the image was. Below is the code for the denoise operation. </p>
+<p>
+<script src="https://gist.github.com/reedery/5a50ffc33d5297a00c9ef9a653df000c.js"></script></p>
+
+<p>Following the denoise function we rotated the image around a major axis. &nbsp;The major axis was found using random lines through the image, and seeing which line hit the most points in the shape. After finding this line, we calculated the angle between this line and the X axis, using the inverse tangent. As long as there was a significant rotation that needed to be made (more than 5 degrees and less and 85 degrees) then the array was rotated using <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/ndimage.html">scipy.ndimage.interpolation</a>. We had implemented a deskew function, but since this is only really important in MNIST images, we decided to just use the rotation function because it would work on all different types of shapes, and not just hand-drawn digits. </p>
+
+<p>The final preprocessing step we took was the creation of the bounding box, which would start from the top-left and bottom-right corners of the image and work its way diagonally checking each column and row of image for anything other than the background color. If it finds this, then it stops searching in that direction and return the appropriate dimension from that side. Once the searchers return, the image is then resized to the new dimensions plus padding to make sure we have a little room to work with. The bounding box helped give a better idea of the dimensions of the shape, which was used later. This meant that the dimensions of a longer skinnier shape, like a 1 would be very different from a wider more square shape, like the image of a 5. </p>
+
+<hr />
+							<h2>Feature Extraction</h2>
+<p>Now that we were working with clean and normalized images, we moved to feature extraction to generate the feature vector for each image. The first features to extract all dealt with pixel counts: foreground pixels, horizontal symmetry, vertical symmetry, number of shape pixels in the right half, and number of shape pixels in the left half of the image. All of these features were extracted on two sweeps which went through half of the pixels in the image, which equates to one sweep through the entire image. Each of these feature values were saved as percentages, in order to normalize the entire feature vector, but also to normalize the values across images that might be different sizes after the bounding box function. We decided on these features because they can tell a lot about the area that a shape encompasses. </p>
+
+<p>Next we also used the FAST corner detection to find the number of corners and the position of the corners in the shape. We then used the position of the corners to find the centroid - since we could not approximate the number of corners each image had, we needed a generalized way to utilize corners and make sure our feature vector was the same standard length. We had implemented a Harris Corner Detection algorithm to find the number of corners, but decided to actually use the FAST implementation because it was much faster and more accurate than our own implementation. Below are a number of methods we used to generate a feature vector for each image.</p>
+
+<script src="https://gist.github.com/reedery/ae4f781b6a6386397e7a5bd936379293.js"></script>
+
+<hr />
+							
+							<h2>Locality-Sensitive Hashing (LSH)</h2>
+<p>After feature extraction, we then used a <a href="https://readthedocs.org/projects/lshash/">pure python implementation of LSH</a> to hash on the feature vector for each image. We tried many different combination of features, as well as different scoring techniques, but decided that normalizing the features to all be a percentage (less than 1) gave us the most accurate results. After hashing all of the database images, and getting the feature vector for the query image, we used LSH.query([query image feature vector], <em>k</em>) method which returns an array of feature vectors the size <em>k</em> (if there are at least <em>k</em> neighbors).</p>
+
+<p>While parsing the database images, we had saved both the images file name, and the images feature vector into two separate lists. After getting all of the feature vectors for the k nearest neighbors, we used this map to find the index of this feature vector, and therefore used this index to find the actual image file name. </p>
+
+<p>In some extreme cases, the LSH query function returned less than k neighbors. In order to get around this and find exactly k neighbors, we then used whatever neighbors it did find, and found their closest neighbors. In the extremely rare case that a query image returned no neighbors, we decided to just print this query image k times. We decided this was the best course of action because there were no other neighbors to look at, and we really did not want to implement a slower algorithm which could give us the correct number of neighbors.</p>
+<hr />
+							<h2>Generalization & Runtimes</h2>
+<p>While we were working with the MNIST data set for some time, we really tried to focus our approach on a scalable implementation, that could work for other data sets as well. That is why we took so much time to rotate the image, and find the bounding box, and use percentages throughout the entire feature vector. It means that our data was much more normalized and could find similar images that were simple scalers of one another, or that were rotations of one another. That is also why we decided to use the LSH function, because we decided that it was more important to scale time-wise, than it was to get the exact nearest neighbors.</p>
+
+<p>Empirical Runtime:
+
+<ul>
+<li>
+	14.46s - Average Preprocessing time for 1000 db images
+</li>
+<li>
+	16.5676s - Average NN search time for 1000 db images and 1000 query images
+</li>
+						  </ul></p>
+<p>Before finding the NN for each query image, we preprocesses the image then run neighbors. This means that, in effect, the NN search time also includes the time it takes to preprocess each of the query images. Going by the average preprocessing time, this means that query time only took approximately 2.1076s for each of the query images. This means that our LSH will efficiently scale for even larger data sets.</p>
+
+<hr />
+							
+<h2>Code Contributions</h2>
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;">FAST Edge Detection: </span><a href="https://www.edwardrosten.com/work/fast.html"><span style="font-weight: 400;">https://www.edwardrosten.com/work/fast.html</span></a></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">LSH: </span><a href="https://github.com/kayzhu/LSHash"><span style="font-weight: 400;">https://github.com/kayzhu/LSHash</span></a></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Scipy Rotation: </span><a href="https://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.ndimage.interpolation.rotate.html"><span style="font-weight: 400;">https://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.ndimage.interpolation.rotate.html</span></a> </li>
-						  </ul>
-						</div>
-					</div>
+</ul>
+</div>
+</div>
+
+
 
 				<!-- Footer -->
 					<footer id="footer">
