@@ -126,13 +126,16 @@ sitemap:
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+
 						  <h1>Joycestick</h1>
+						  <img src="../../images/joycestick/joycestick_class.jpg" alt="classimage" width="100%">
+						  
 						  <span class="image main"></span>
-						  
+						  						
+							<p>_</p><p></p><p></p>
+
 						  <h2>Overview</h2>
-						  
-	
-						  <p>Joycestick is reimagining James Joyce's <em>Ulysses </em>in Virtual Reality. The project is under active development by a class of of 30 students from Boston College, MIT, Northeastern and Berklee School of Music. As the teaching assistant of the course developing Joycestick, I had the plan and vision for this project over a year prior to the first time the class met. Once development began, I served as the Engineering Lead and shipped both the MVP and second version of Joycestick. Since I graduated (in Dec. 2016), I passed on my role [to <a href="http://evanotero.com/">someone smarter than me</a>] to see the vision I have for this project through.</p>
+						  <p>Joycestick is reimagining James Joyce's <em>Ulysses </em>in Virtual Reality. The project is under active development by a class of nearly 30 students from Boston College, MIT, Northeastern and Berklee School of Music. As the teaching assistant of the course developing Joycestick, I had the plan and vision for this project over a year prior to the first time the class met. Once development began, I served as the Engineering Lead and shipped both the MVP and second version of Joycestick. Since I graduated (in Dec. 2016), I passed on my role to <a href="http://evanotero.com/">someone smarter than me </a>who I trust will see the vision I have for this project through.</p>
 						  <iframe align="center" width="100%" height="500" src="https://www.youtube.com/embed/oOQ-NyNIj_E" frameborder="10" allowfullscreen></iframe>
 							<p> </p><p>_</p><p></p><p></p>
 						  <h2>Why <em>Ulysses</em>?</h2>
@@ -147,36 +150,49 @@ sitemap:
 							<p></p>
 						  
 						  <p>The team of software developers for Joycestick comes from a diverse background. We have experience building applications for mobile, web, analytics and even embeded systems. But naturally, no one (with the exception of myself) had ever used Unity or built a video game. It was clear we had our work cut out for us and building the early versions of the game relied on our flexibiity as team, and being unafraid to scrap our progress at any time in favor of a more scalable and extensible approach. </p>
-						  <p>Early on, this happened a number of times. As we began to explore a more well-organized code structure and object-oriented game architechture through better design patterns, branching off in a new direction became essential. &nbsp;Some early Joycestick C# scripts include the one below defining the Class <em>JoyceObject</em>. </p>
- <div style="width: 100%; margin: 0 auto; padding: 20px 0 20px;">
+						  <p>Early on, this happened a number of times. As we began to explore a more well-organized code structure and object-oriented game architechture through better design patterns, branching off in a new direction became essential. &nbsp;Some early Joycestick C# scripts include the following:</p>
+						  <div style="width: 100%; margin: 0 auto; padding: 20px 0 20px;">
         <ul class="tabs" data-persist="true">
             <li><a href="#view1">JoyceObject.cs</a></li>
             <li><a href="#view2">Coin.cs</a></li>
             <li><a href="#view3">GameMgr.cs</a></li>
+            <li><a href="#view4">SoftFlicker.cs</a></li>
         </ul>
         <div class="tabcontents">
             <div id="view1">
-            <p>JoyceObject Script</p>
-<script src="http://gist-it.appspot.com/https://github.com/reedery/joycestick-scripts/blob/master/JoyceObject.cs"></script>
+				<p>Interacting with JoyceObjects is the key to progressing in Joycestick.</p>
+<script src="https://gist.github.com/reedery/b5347ddb47922635fff8dc9689c84668.js"></script>
                 
             </div>
             <div id="view2">
             
-            <p>Coin (JoyceObject) Script</p>
-<script src="http://gist-it.appspot.com/https://github.com/reedery/joycestick-scripts/blob/master/Coin.cs"></script>               
-            </div>
+            <p>The Coin is an example of one JoyceObject</p>
+<script src="https://gist.github.com/reedery/1d907e0fb7910ab43260eda01ed969be.js"></script>           
+          </div>
             <div id="view3">
              
-            <p>GameMgr Script</p>
-<script src="http://gist-it.appspot.com/https://github.com/reedery/joycestick-scripts/blob/master/GameMgr.cs"></script> 
+            <p>Manages object completion and changes as tasks associated with each object are completed.</p>
+            
+<script src="https://gist.github.com/reedery/dd9f1a13752b45b31be19297d395e744.js"></script>
            
-            </div>
+          </div>
+            
+            
+            
+        <div id="view4">
+             
+            <p>SoftFlicker gives the gas lamps in the scene a realistic flicker.</p>
+           <script src="https://gist.github.com/reedery/9244d82c6d9ab8da822f2eeec1a3d241.js"></script>
+           
+          </div>
+                       
+ 
+            
+            
+            
         </div>
     </div>						  
-						  
-
-						  
-						  
+							  
 						 						  
 						  
 						  
