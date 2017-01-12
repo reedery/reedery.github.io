@@ -123,11 +123,22 @@ sitemap:
 					<div id="main">
 						<div class="inner">
 						  <h1>Boston College in Virtual Reality</h1>
-						  <span class="image main"></span>
-						  <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
+					
+						  <p>After the success of the <a href="irishvr.html">McMullen Museum of Art Virtual Reality experience,</a> Boston College Ireland commissioned me to build a similar experience for visitors to Dublin for the 2016 ACC kickoff football game between Georgia Tech and Boston College. To push myself to make the experience more impressive than the McMullen's, I decided to shoot and stitch 3D, 360 degree panoramas instead of opting for the same monoscopic flat panorama I had done previously. </p>
+						  <p>From the start, I knew that working in 3D would be pose quite a challenge. Due to parallax points associated with stitching spheres, the geometry of rotating stereo viewpoints and numerous other issues, getting this entire project in working order would be no small task. Meanwhile (even as recently as 2015), 360 stereo for live video/photo capture was a widely unsolved problem. And those who did have it solved such as Facebook weren't about to release their IP. Aside from capture, stitching and bringing the two channels of images into the graphics engine would cause additional concerns. I found some solid <a href="http://elevr.com/elevrant-360-stereo-consumer-cameras/">research</a> on the web and began to prioritize. As each piece began to come together, the project as a whole seemed more feasible.<br>
+					      </p>
+						  <hr />
+						  <h2>The camera Rig</h2>
+					  	  <img src="../../images/bcinvr/cams.jpg" width="30%" style="margin: 10px 10px" align="right" caption="test">
+						  <p>I started with the camera rig. Without the assets for the content, this project was obviously headed nowhere fast. As mentioned, 3D/360 camera rigs such as <a href="http://vuze.camera/">Vuze</a> didn't exist when was building this project so I had to create my own solution. I picked up a pair of Sony a6000 mirorrless camers with matching fisheye lenses as these would be the two stero viewpoints. </p>	
+						    <img src="../../images/bcinvr/parts.jpg" width="50%" style="margin: 10px 10px" align="left">
+					      <p> Once I had the two cameras, I needed a way to connect them together by the hot shoe mount to stay together so that their lenses would be together. No consumer products for this sort of thing existed so I decided to 3D-print a part to match the specifications I needs. I measured the cameras down to the millimeter and learned how to build models in Autodesk 123D Design. Iterations of the plastic mount had to accompany for structural integrity of the part (the camera/lens combo is heavy) as well as <a href="https://en.wikipedia.org/wiki/Interpupillary_distance">IPD</a> angles and distances. Below are different iterations of the part (I used the serrating on the part's edges to get accurate measurements between tests).&nbsp;After countless broken parts and images that wouldn't stitch even remotely correctly, I finally found a solid working model to use as I shot the entirety of the panoramas.</p>
+<img src="../../images/bcinvr/rig.jpg" width="100%" style="margin: 10px 10px">
+				  <hr />
+				  
+				  <h2>Shooting and Stitching</h2>
+				  <p> Shooting with the cameras was a relatively painless part of the process. Given that the cameras are positioned upright during shooting, </p>
+					  </div>
 					</div>
 
 				<!-- Footer -->
