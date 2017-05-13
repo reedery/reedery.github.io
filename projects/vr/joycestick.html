@@ -24,8 +24,8 @@ sitemap:
 			-misc.html
 		-|vr|
 			-bcinvr.html		
-			-joycestick.html
-			-irishvr.html		**YOU ARE HERE**
+			-joycestick.html     **YOU ARE HERE**
+			-irishvr.html
 		
 -->
 
@@ -131,6 +131,13 @@ sitemap:
 						  <img src="../../images/joycestick/joycestick_class.jpg" alt="classimage" width="100%">
 						  
 						  <span class="image main"></span>
+
+							<p>
+								<a href="joycestick.com">Joycestick Official Website</a>
+							</p>
+							<p>
+								<a href="https://apnews.com/8ca6137f8393406c9d27d60bd93e4b72/turning-james-joyces-ulysses-virtual-reality-game">In the Associated Press  </a>
+							</p>
 						  						
 									<hr />
 
@@ -140,7 +147,9 @@ sitemap:
 									<hr />
 						  <h2>Why <em>Ulysses</em>?</h2>
 						  <p>My research advisor at Boston College in Digital Humanities, Prof. Joe Nugent is a Joyce scholar, so we've always had an interest in bringing the intricate world of <em>Ulysses</em> to a medium that holds so much promise for telling complex stories. Furthermore, <em>Ulysses </em>is very much so about a story about experience and imagery– all aspects that make the story an excellent candidate to try in VR. The current direction that Joycestick is heading breaks the story up logically by chapter and represents each through objects and images. These are translated into scenes that vary in degree of interactivity, and as the player moves through the scenes, an aspect of the story is uncovered and they feel rewarded.</p>
-						  <hr />
+
+
+						    <hr />
 						  <h2>Developing Joycestick</h2>
 						  <img src="../../images/joycestick/mit_medialab_joycestick.jpg" alt="mlab" width="100%">
 						  <blockquote>Working on Joycestick at "Reality, Virtually" Hackathon at the Media Lab at MIT.</blockquote>
@@ -150,25 +159,35 @@ sitemap:
 							<p>Early on, this happened a number of times. As we began to explore a more &nbsp;object-oriented game architectures through design patterns, branching off in a new direction became essential. &nbsp;Some early Joycestick C# scripts include the following:</p>
 							<div style="width: 100%; margin: 0 auto; padding: 20px 0 20px;">
         <ul class="tabs" data-persist="true">
-            <li><a href="#view1">JoyceObject</a></li>
-            <li><a href="#view2">Coin</a></li>
-            <li><a href="#view3">GameMgr</a></li>
+            <li><a href="#view1">CalypsoMgr</a></li>
+            <li><a href="#view2">JoyceObject</a></li>
+            <li><a href="#view3">Coin</a></li>
             <li><a href="#view4">SoftFlicker</a></li>
         </ul>
         <div class="tabcontents">
             <div id="view1">
-				<p>Interacting with JoyceObjects is the key to progressing in Joycestick.</p>
-<script src="https://gist.github.com/reedery/b5347ddb47922635fff8dc9689c84668.js"></script>
-                
+
+				<p>CalypsoMgr.cs manages the scenes in Joycestick modeled after the Calypso chapter.</p>
+				<script src="https://gist.github.com/reedery/e9e64136eaf046d322e0a43f83c59bb0.js"></script>
+
             </div>
             <div id="view2">
-              <p>Coin.cs is an example of one JoyceObject</p>
-              <script src="https://gist.github.com/reedery/1d907e0fb7910ab43260eda01ed969be.js"></script>           
+
+
+				<p>Interacting with JoyceObjects is the key to progressing in Joycestick.</p>
+				<script src="https://gist.github.com/reedery/b5347ddb47922635fff8dc9689c84668.js"></script>
+
+
+
+
+
           </div>
             <div id="view3">
-              <p>GameMgr.cs manages object completion and changes as tasks associated with each object are completed.</p>
-              <script src="https://gist.github.com/reedery/dd9f1a13752b45b31be19297d395e744.js"></script>
-           
+
+				<p>Coin.cs is an example of one JoyceObject</p>
+				<script src="https://gist.github.com/reedery/1d907e0fb7910ab43260eda01ed969be.js"></script>
+
+
           </div>
             
             
@@ -223,9 +242,9 @@ sitemap:
 		</li>
 		 
 		 
-		<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
-		</a>
-		</li>
+		<!--<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>-->
+		<!--</a>-->
+		<!--</li>-->
 		
 		<li><a href="https://vimeo.com/user715423" class="icon style2 fa-vimeo"><span class="label">Vimeo</span>
 		</a>
