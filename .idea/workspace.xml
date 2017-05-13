@@ -2,311 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd710614-ddd9-4aee-9ca7-5679576ddd18" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/build/three.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/files.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/files/inconsolata.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/NOTICE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/droid_sans_bold.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/droid_sans_mono_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/droid_sans_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/droid_serif_bold.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/droid/droid_serif_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/gentilis_bold.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/gentilis_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/helvetiker_bold.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/helvetiker_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/optimer_bold.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/optimer_regular.typeface.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/fonts/ttf/kenpixel.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/hbd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/AnimationClipCreator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/BlendCharacter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/BlendCharacterGui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/BufferGeometryUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Car.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Cloth.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ConvexObjectBreaker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/CurveExtras.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Detector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/GPUComputationRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/GPUParticleSystem.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Gyroscope.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ImprovedNoise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/MD2Character.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/MD2CharacterComplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/MarchingCubes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Mirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/MorphAnimMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/MorphAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Ocean.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Octree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/PRNG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ParametricGeometries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/RollerCoaster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ShaderGodRays.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ShaderSkin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ShaderTerrain.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/ShaderToon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/SimplexNoise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/SkyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/TimelinerController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/TypedArrayUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/UCSCharacter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/Volume.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/VolumeSlice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/WaterShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/animation/CCDIKSolver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/animation/MMDPhysics.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/cameras/CinematicCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/cameras/CombinedCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/DeviceOrientationControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/DragControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/EditorControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/FirstPersonControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/FlyControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/OrthographicTrackballControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/PointerLockControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/TrackballControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/TransformControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/controls/VRControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/crossfade/gui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/crossfade/scenes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/crossfade/transition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/curves/NURBSCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/curves/NURBSSurface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/curves/NURBSUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/AnaglyphEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/AsciiEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/OutlineEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/ParallaxBarrierEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/PeppersGhostEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/StereoEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/effects/VREffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/exporters/MMDExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/exporters/OBJExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/exporters/STLBinaryExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/exporters/STLExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/exporters/TypedGeometryExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/geometries/ConvexGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/geometries/DecalGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/geometries/TeapotBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/geometries/hilbert2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/geometries/hilbert3D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/ammo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/dat.gui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/earcut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/inflate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/jszip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/mmdparser.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/msgpack-js.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/o3dgc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/opentype.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/pnltri.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/stats.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/system.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/timeliner_gui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/tween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/libs/zlib_and_gzip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/lights/RectAreaLightUniformsLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/3MFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/AMFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/AWDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/AssimpJSONLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/AssimpLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/BVHLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/BabylonLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/BinaryLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ColladaLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ColladaLoader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/DDSLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/FBXLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/FBXLoader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/GLTFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/HDRCubeTextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/KMZLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/MD2Loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/MMDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/MTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/NRRDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/PCDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/PDBLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/PLYLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/PVRLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/PlayCanvasLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/RGBELoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/STLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/SVGLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/TGALoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/TTFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/UTF8Loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/VRMLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/VTKLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/collada/Animation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/collada/AnimationHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/collada/KeyFrameAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/CTMLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/CTMWorker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/ctm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/license/OpenCTM.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/license/js-lzma.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/license/js-openctm.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/ctm/lzma.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/deprecated/SceneLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/SEA3D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/SEA3DDeflate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/SEA3DLZMA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/SEA3DLegacy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/SEA3DLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/o3dgc/SEA3DGC.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/physics/SEA3DAmmo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/physics/SEA3DAmmoLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/loaders/sea3d/physics/SEA3DRigidBody.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/math/ColorConverter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/math/Lut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/modifiers/BufferSubdivisionModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/modifiers/ExplodeModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/modifiers/SimplifyModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/modifiers/SubdivisionModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/modifiers/TessellateModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/AttributeNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/ConstNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/FunctionCallNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/FunctionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/GLNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/InputNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/NodeBuilder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/NodeLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/NodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/RawNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/TempNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/VarNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/CameraNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/ColorsNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/LightNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/NormalNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/PositionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/ReflectNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/ScreenUVNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/accessors/UVNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/ColorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/CubeTextureNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/FloatNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/IntNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/Matrix4Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/MirrorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/ScreenNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/TextureNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/Vector2Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/Vector3Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/inputs/Vector4Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/materials/PhongNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/materials/PhongNodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/materials/StandardNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/materials/StandardNodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/math/Math1Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/math/Math2Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/math/Math3Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/math/OperatorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/postprocessing/NodePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/BlurNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/BumpNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/ColorAdjustmentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/JoinNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/LuminanceNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/NoiseNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/NormalMapNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/ResolutionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/RoughnessToBlinnExponentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/SwitchNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/TimerNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/nodes/utils/VelocityNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/objects/ShadowMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/pmrem/PMREMCubeUVPacker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/pmrem/PMREMGenerator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/AdaptiveToneMappingPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/BloomPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/BokehPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/ClearPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/CubeTexturePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/DotScreenPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/EffectComposer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/FilmPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/GlitchPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/MaskPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/OutlinePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/RenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/SMAAPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/SSAARenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/SavePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/ShaderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/TAARenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/TexturePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/postprocessing/UnrealBloomPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/CSS2DRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/CSS3DRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/CanvasRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/Projector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/RaytracingRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/RaytracingWorker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/SVGRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/SoftwareRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/renderers/WebGLDeferredRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BasicShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BleachBypassShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BlendShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BokehShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BokehShader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/BrightnessContrastShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/ColorCorrectionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/ColorifyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/ConvolutionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/CopyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/DOFMipMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/DigitalGlitch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/DotScreenShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/EdgeShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/EdgeShader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/FXAAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/FilmShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/FocusShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/FresnelShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/GammaCorrectionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/HorizontalBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/HorizontalTiltShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/HueSaturationShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/KaleidoShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/LuminosityHighPassShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/LuminosityShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/MirrorShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/NormalMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/OceanShaders.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/ParallaxShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/RGBShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/SMAAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/SSAOShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/SepiaShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/TechnicolorShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/ToneMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/TriangleBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/UnpackDepthRGBAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/VerticalBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/VerticalTiltShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/shaders/VignetteShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/utils/GeometryUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/utils/ImageUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/utils/ShadowMapViewer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/utils/UVsDebug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/vr/PaintViveController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/vr/ViveController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/r/e2/js/vr/WebVR.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.html" afterPath="$PROJECT_DIR$/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/data/images.html" afterPath="$PROJECT_DIR$/projects/data/images.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/vr/joycestick.html" afterPath="$PROJECT_DIR$/projects/vr/joycestick.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -321,12 +17,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="365" column="12" lean-forward="true" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
+            <state relative-caret-position="5475">
+              <caret line="365" column="12" lean-forward="false" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -335,7 +31,7 @@
       <file leaf-file-name="images.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/data/images.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
+            <state relative-caret-position="1935">
               <caret line="129" column="83" lean-forward="false" selection-start-line="129" selection-start-column="83" selection-end-line="129" selection-end-column="83" />
               <folding />
             </state>
@@ -355,8 +51,8 @@
       <file leaf-file-name="joycestick.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects/vr/joycestick.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="245" column="19" lean-forward="true" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
+            <state relative-caret-position="546">
+              <caret line="144" column="715" lean-forward="false" selection-start-line="144" selection-start-column="715" selection-end-line="144" selection-end-column="715" />
               <folding />
             </state>
           </provider>
@@ -365,7 +61,7 @@
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="2490">
               <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="168" selection-end-column="17" />
               <folding />
             </state>
@@ -414,6 +110,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -478,8 +176,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,12 +205,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494657429688</updated>
-      <workItem from="1494657431507" duration="816000" />
+      <workItem from="1494657431507" duration="850000" />
+      <workItem from="1494658581139" duration="344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="816000" />
+    <option name="totallyTimeSpent" value="1194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -522,19 +219,19 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -549,6 +246,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5475">
+          <caret line="365" column="12" lean-forward="false" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/data/images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="83" lean-forward="false" selection-start-line="129" selection-start-column="83" selection-end-line="129" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/vr/irishvr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2490">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="168" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/vr/joycestick.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3975">
+          <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projects/vr/irishvr.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -559,7 +296,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/data/images.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
+        <state relative-caret-position="1935">
           <caret line="129" column="83" lean-forward="false" selection-start-line="129" selection-start-column="83" selection-end-line="129" selection-end-column="83" />
           <folding />
         </state>
@@ -567,7 +304,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="2490">
           <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="168" selection-end-column="17" />
           <folding />
         </state>
@@ -575,16 +312,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="365" column="12" lean-forward="true" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
+        <state relative-caret-position="5475">
+          <caret line="365" column="12" lean-forward="false" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/vr/joycestick.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="245" column="19" lean-forward="true" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
+        <state relative-caret-position="546">
+          <caret line="144" column="715" lean-forward="false" selection-start-line="144" selection-start-column="715" selection-end-line="144" selection-end-column="715" />
           <folding />
         </state>
       </provider>
