@@ -1,32 +1,34 @@
 <!DOCTYPE HTML>
 <!--
 
-2017 ryan reede
+2018 ryan reede
 template: pixelarity.com
 
 sitemap:
-|base| 
+|base|
 	-index.html
 	-about.html
 	-|assets|
 	-|images|
 	-|projects|
 		-data.html
-		-vr.html 		
+		-arvr.html
 		-video.html
 		-|data|
 			-images.html
-			-simpsons.html		**YOU ARE HERE**
+			-simpsons.html **YOU ARE HERE**
 			-streaming.html
 			-yelp.html
 		-|video|
 			-modofcards.html
 			-misc.html
-		-|vr|
-			-bcinvr.html		
+		-|arvr|
+			-armature.html
+			-fmd.html
+			-bcinvr.html
 			-joycestick.html
-			-irishvr.html		
-		
+			-irishvr.html
+
 -->
 
 <html>
@@ -57,78 +59,91 @@ sitemap:
 						</div>
 					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul>
-							<li><a href="../../index.html"><h2>Home</h2></a></li>
-							
-							<li><a href="../../about.html"><h3>About Me</h3></a></li>
+					<!-- Menu -->
+						<nav id="menu">
+							<ul>
+								<li><a href="../../index.html"><h2>Home</h2></a></li>
 
-							
-							<li><a href="../vr.html"><h3>Virtual Reality</h3></a>
-								<ul>
-									<li>
-									<a href="../vr/joycestick.html">Joycestick</a>
-									</li>
-									
-									<li>
-									<a href="../vr/bcinvr.html">Boston College in VR</a></li>
-	
-									<li>
-									<a href="../vr/irishvr.html">Making it Irish</a>
-									</li>
-	
-								</ul>
-							</li>
-							
-							<li><a href="../data.html"><h3>Data Analysis</h3></a>
-							
-								<ul>
-									<li>
-									<a href="images.html">K-Nearest Images</a>
-									</li>
-									
-									<li>
-									<a href="simpsons.html"><strong>Simpsons Text Generation</strong></a></li>
-	
-									<li>
-									<a href="streaming.html">Streaming Data Analysis</a>
-									</li>
-																		
-									<li>
-									<a href="yelp.html">Yelp Academic Dataset</a>
-									</li>
-								</ul>	
+								<li><a href="../../about.html"><h3>About Me</h3></a></li>
 
-							</li>
-							<li><a href="../video.html"><h3>Video</h3></a>
-							
-							
-								<ul>
-									<li>
-									<a href="../video/modofcards.html">Mod of Cards</a>
-									</li>
-									
-									<li>
-									<a href="../video/misc.html">Miscellaneous</a></li>
-	
-								</ul>						
-							
-							
-							</li>
-						</ul>
-					</nav>
 
-				<!-- Main -->
+								<li><a href="../arvr.html"><h3>AR/VR</h3></a>
+									<ul>
+
+										<li>
+										<a href="../arvr/armature.html">Armature</a>
+										</li>
+
+										<li>
+										<a href="../arvr/fmd.html">Follow me Dragon</a>
+										</li>
+
+
+										<li>
+										<a href="../arvr/joycestick.html">Joycestick</a>
+										</li>
+
+										<li>
+										<a href="../arvr/bcinvr.html">Boston College in VR</a></li>
+
+										<li>
+										<a href="../arvr/irishvr.html">Making it Irish</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li><a href="../data.html"><h3>Data Analysis</h3></a>
+
+									<ul>
+										<li>
+										<a href="images.html">K-Nearest Images</a>
+										</li>
+
+										<li>
+										<a href="simpsons.html"><strong>Simpsons Text Generation</strong></a></li>
+
+										<li>
+										<a href="streaming.html">Streaming Data Analysis</a>
+										</li>
+
+										<li>
+										<a href="yelp.html">Yelp Academic Dataset</a>
+										</li>
+									</ul>
+
+								</li>
+								<li><a href="../video.html"><h3>Video</h3></a>
+
+
+									<ul>
+										<li>
+										<a href="../video/modofcards.html">Mod of Cards</a>
+										</li>
+
+										<li>
+										<a href="../video/misc.html">Miscellaneous</a></li>
+
+									</ul>
+
+
+								</li>
+							</ul>
+						</nav>
+
+
+
+
+		<!-- Main -->
 					<div id="main">
 						<div class="inner">
 						  <h1>Simpsons Text Generation</h1>
-						  
-						  
-						  
-						  
-						  
-						  						  
+
+
+
+
+
+
 						  <h2>Overview</h2>
 						  <img src="../../images/simpsons/homer.png" width="20%" style="margin: 3px 3px" align="right">
 						  <p>For our Machine Learning (CSCI 3345, Fall 2016) final project with <a href="http://cs.bc.edu/~alvarez/">Prof. Alvarez</a>, we were given the opportunity to work with one of the various ML approaches we studied over the course of the semester in a practical manner. The problem we decided to tackle was text generation. In particular, we wanted to see how well a machine could write more Simpsons scripts based on 600 episodes of text as training data. &nbsp;We decided to use a Long Short-term Memory Recurrent Neural Network for the procedural text generation, and due to the convincing argument put fourth by <a href="https://www.r-bloggers.com/is-deep-learning-a-markov-chain-in-disguise/">this article</a>, we also compared our results with text generated using a simpler method: A Markov Chain. </p>
@@ -142,7 +157,7 @@ sitemap:
 <p>Procedural natural language generation is an interesting and novel application of modern machine learning techniques. The ability to generate natural human language has a wide range of applications including software user interfaces that offer dynamic text, natural language summaries of live data, and even the creation of entertainment and comedy media. However, creating text that feels and sounds like natural spoken language is a challenging task. Identifying and understanding the characteristics of existing natural language samples can allow us to leverage these rules in the creation of new language samples.</p>
 <p>The aim of this project was to explore some of the available procedural techniques for generating natural language. These modern procedure based approaches extract features from text samples in order to create a To accomplish this, we wanted to acquire a large data set of language that has many strong identifiers and a specific style so that we could reliably extract and apply characteristics of the text.</p>
 <p>With this is mind we acquired a data set of all dialogue from the long running television show, <em>the Simpsons</em>. <em>the Simpsons</em> has been running new 30-minute episodes since 1989 and has aired of 605 episodes. <em>the Simpsons</em> data set was large, uniquely-styled, and varied enough in topic to serve as a viable and novel learning target. Using this data we were able to experiment with and analyze two different language generation approaches, implementing Markov chain and recurrent neural network models to create new text samples in the style of <em>the Simpsons</em>.</p>
-	
+
 <hr />
 
 <h2>Technical Introduction</h2>
@@ -152,8 +167,8 @@ sitemap:
 
 <p>In this project our goal was to apply and compare two methods of Procedural Content Generation to the task of generating new and unique natural language samples. Markov Chains are considered one of the simpler approaches to procedural content generation and can be used as a benchmark for other methods, as they construct a large probability function which characterizes sequences in media in order to recreate samples (Rowe). The concept of modeling language as a Markov Chain traces its roots to a 1948 paper written by Claude Shannon which proposed a probabilistic model for describing language (Shannon 1948). Modernly, approaches inspired by this original model have gained increasing popularity in the creation of entertainment-oriented procedural text generators, including many that have built Markov Models from the works of Shakespeare to generate Shakespeare-esque language samples (Smith).</p>
 
-	
-<p>A second method, Recurrent Neural Networks, has gained recent attention for procedurally generating natural language and other styled media. RNN based character level approach was shown to produce realistic results when trained on sets of similar text samples from Wikipedia, and the New York Times (Sutskever et al 2011). Similar to the work of Markov Models, RNNs have also been applied to the novel task of producing Additional refinements to the model have also been explored, including an approach we used here, the use of Long Short-term Memory RNN for sequence generation. LSTM RNNs have been effective in Procedural Content Generation, as shown by one paper which demonstrated their ability to generate new samples of handwriting when trained on a set of human written samples (Graves 2014). 
+
+<p>A second method, Recurrent Neural Networks, has gained recent attention for procedurally generating natural language and other styled media. RNN based character level approach was shown to produce realistic results when trained on sets of similar text samples from Wikipedia, and the New York Times (Sutskever et al 2011). Similar to the work of Markov Models, RNNs have also been applied to the novel task of producing Additional refinements to the model have also been explored, including an approach we used here, the use of Long Short-term Memory RNN for sequence generation. LSTM RNNs have been effective in Procedural Content Generation, as shown by one paper which demonstrated their ability to generate new samples of handwriting when trained on a set of human written samples (Graves 2014).
 						  </p>
 						  <hr />
 						  <h2>Challenges</h2>
@@ -166,10 +181,10 @@ sitemap:
 <h2>Methods</h2>
 <p>As evidenced by our preliminary research into various text generation models, the Recurrent Neural Network (RNN) and Markov Chain (MC) arose as two models suitable for comparison in this project. And while we will go into the specifics of each, we will first talk about the Dataset that remained constant throughout the project. Using Todd Schneider&rsquo;s Rails app, from his github repo <a href="https://github.com/toddwschneider/flim-springfield">film-springfield</a>, we were able to successfully crawl <a href="http://www.simpsonsworld.com/">simpsonsworld.com</a> which hosts every Simpsons episode ever aired, along with the script for that episode. The reason for the rails app is access to the Nokogiri Library. Nokogiri is an HTML, XML, SAX, and Reader parser. I has features like the ability to search documents via XPath or CSS3 selectors, which are well suited for this specific task of parsing through the complicated formatting of <em>the Simpsons</em>world.com website. The rails app performed all of the heavy lifting by grabbing the relevant script data (i.e.: scene location, time of day, speaker) from simpsons world, wikipedia, and imdb and utilizing a PostgreSQL database to store the information in a well organized and labeled relational database. What we were left with in our CSV file we exported from postgres were rows that corresponded to individual lines from the script. The columns of the data we utilized varies slightly between methods (MC vs RNN) but the major ones were unsurprisingly character (who's speaking the line if it is a spoken line) and text (what was spoken and any sentiment directions for the voice actors in parenthesis). We also had access to the scene ID within each episode so that we can determine when a conversation exchange ended. From here we were able to script some text parsing in Python to generate plain text files of various lengths for training that we could feed into the RNN and MC, since all the RNN needed was raw script data.
 	</p>
-	
-	
-	
-<p>Conceptually, the Markov Chain is fairly simple. It builds a matrix of probabilities between states in a state machine. Building this matrix based on the training data requires iteration through the entire text, and for each n-character long sequence, we add to a hashmap this sequence and the single character that follows it in the text. Once all sequences have been fed into this map, we can calculate probabilities of what character should come next given a sequence already seen as input. In essence, the hashmap contains a probability distribution function (PDF) for each sequence it has been fed. Once these probabilities have been calculated from the training data, we can use the Markov Chain in a generative sense. We feed it a key from the hashmap and using random values, the next character in the string we are building will be selected from the PDF. 
+
+
+
+<p>Conceptually, the Markov Chain is fairly simple. It builds a matrix of probabilities between states in a state machine. Building this matrix based on the training data requires iteration through the entire text, and for each n-character long sequence, we add to a hashmap this sequence and the single character that follows it in the text. Once all sequences have been fed into this map, we can calculate probabilities of what character should come next given a sequence already seen as input. In essence, the hashmap contains a probability distribution function (PDF) for each sequence it has been fed. Once these probabilities have been calculated from the training data, we can use the Markov Chain in a generative sense. We feed it a key from the hashmap and using random values, the next character in the string we are building will be selected from the PDF.
 </p>
 	<p>Ultimately, we implemented two versions of the Markov Chain. The first implementation was a character-based model that created chains of a given 'order.' An order three model of this design, for example, would create a PDF as described above for every sequence of three characters and the likelihood that a given single character would follow that sequence. During generation, the model would be given a seed of at least the order length and generate a character based on the stored probabilities. The generator cursor would then shift one character to the next group of characters of the order length (including the character just generated) and make another probabilistic choice, terminating after generating a predetermined length of text.</p>
 	<script src="https://gist.github.com/reedery/cfd1c5bbe8dc9a914a47e2df803da041.js"></script>
@@ -201,7 +216,7 @@ sitemap:
 <p>While we conducted our comparisons and contrasts between the Markov Chain and the Recurrent Neural Network, what we found was that both had their triumphs and shortcomings. To solve the problem of naive text generation to mimic style and structure, the straightforward Markov Chain yielded viable results. Given enough training data and space complexity to store in memory all the combinations it may run into in a large training text, the Markov Chain was able to reliably produce results that avoided copying dialogue verbatim, but also produced coherent phrases.</p>
 
 									<img src="../../images/simpsons/markov_out.png" width="60%" style="margin: 8px 8px" align="left" >
-									
+
 <p>That being said, the Recurrent Neural Network holds significantly more promise for generating more original, authentic text based on training data. Along with the increased learning curve associated with understanding the way in which RNNs operate, our output was typically more robust when training went well. For instance, the ability for the RNN to pick up the minute details in context is something a Markov Chain would never be able to figure out.</p>
 
 <p>Using our rewritten Character LSTM, we were able to train on the most data of all of our models. The results picked up the most context, and by varying the &ldquo;diversity&rdquo; a term that was used by Keras creator Francois Chollet, we managed to get a range of very different results per the weight results of each epoch. The effect of this &ldquo;diversity&rdquo; is that it, in a sense, &nbsp;pre-normalizes the log of the probabilities generated by the lstm, before being re-exponentiated and normalized as usual. &nbsp;In the end, though spelling errors were about, it picked up the most on the injection of stage direction and character emotions that most scripts use affect an actor&rsquo;s tone. The result below was generated on an 800kb excerpt of the full scripts with a length of 818245 characters which 69 are unique. This was trained on the same model we have been using for our word model. The difference is how the texts were preprocessed and the max length of the sliding window used to read sequences into the input matrix. As you can see, the net completes the missing characters at the end of the seed string, and then immediately tries to establish a scene and then dialog, something any normal script will do. The results here are promising but after 47 epochs and loss: 0.6263 - val_loss: 1.8713, it still indicates more data will result in better context and text generation.</p>
@@ -210,7 +225,7 @@ sitemap:
 				<p>While the RNN models did not perform as well as we had initially expected, they did show clear promise in understanding temporal structures in sequential data, understanding contextual elements in text sequences in a way that only neural models can. Given more time, we would attempt to train similar models with larger amounts of data, distribute them across multiple GPUs for faster training, trained multiple models concurrently for more efficient parameter tuning, and tested deeper networks for larger amounts of epochs. While deep neural networks have had recent breakthroughs in the domains of image classification, machine translation, and many other areas, sequence generation is still a relatively new application of these models. While this project shows that there is some promise in this area, there is clearly room to grow in the field of neural natural language generation. </p>
 				<p>This project was done by Drew Hoo, Ryan Reede, Charles Fox, Emily Lu, James LeDoux and Cameron Lunt.</p>
 				<hr />
-				
+
 				<h2>Sources</h2>
 <ol>
 <li style="font-weight: 400;">Karpathy, Andrej:<em>The Unreasonable Effectiveness of Recurrent Neural Networks </em>2015 <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">http://karpathy.github.io/2015/05/21/rnn-effectiveness/</a></li>
@@ -244,23 +259,24 @@ sitemap:
 		<span class="label">Twitter</span>
 		</a>
 		</li>
-		
+
 		<li>
 		<a href="https://github.com/reedery" class="icon style2 fa-github"><span class="label">GitHub</span>
 		</a>
 		</li>
-									
+
 		<li>
 		<a href="https://www.linkedin.com/in/ryreede" class="icon style2 fa-linkedin">
 		<span class="label">LinkedIn</span>
 		</a>
 		</li>
-		 
-		 
-		<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
-		</a>
-		</li>
-		
+
+
+		<!--
+				<li><a href="https://www.instagram.com/--/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
+				</a>
+				</li> -->
+
 		<li><a href="https://vimeo.com/user715423" class="icon style2 fa-vimeo"><span class="label">Vimeo</span>
 		</a>
 		</li>
@@ -272,7 +288,7 @@ sitemap:
 	</ul>
 </section>
 							<ul class="copyright">
-							  <li>&copy; 2017 Ryan Reede</li>
+							  <li>&copy; 2018 Ryan Reede</li>
 						  </ul>
 						</div>
 					</footer>

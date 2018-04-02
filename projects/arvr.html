@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <!--
 
-2017 ryan reede
+2018 ryan reede
 template: pixelarity.com
 sitemap:
-|base| 
+|base|
 	-index.html
 	-about.html
 	-|assets|
 	-|images|
 	-|projects|
 		-data.html
-		-vr.html 		**YOU ARE HERE**
+		-arvr.html 		**YOU ARE HERE**
 		-video.html
 		-|data|
 			-images.html
@@ -21,16 +21,18 @@ sitemap:
 		-|video|
 			-modofcards.html
 			-misc.html
-		-|vr|
+		-|arvr|
+			-armature.html
+			-fmd.html
 			-bcinvr.html
 			-joycestick.html
 			-irishvr.html
-		
+
 -->
 
 <html>
 	<head>
-		<title>Virtual Reality</title>
+		<title>Augmented and Virtual Reality</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -57,63 +59,74 @@ sitemap:
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<ul>
-							<li><a href="../index.html"><h2>Home</h2></a></li>
-							
-							<li><a href="../about.html"><h3>About Me</h3></a></li>
+				<nav id="menu">
+					<ul>
+						<li><a href="index.html"><h2>Home</h2></a></li>
 
-							
-							<li><a href="vr.html"><h3>Virtual Reality</h3></a>
-								<ul>
-									<li>
-									<a href="/vr/joycestick.html">Joycestick</a>
-									</li>
-									
-									<li>
-									<a href="/vr/bcinvr.html">Boston College in VR</a></li>
-	
-									<li>
-									<a href="/vr/irishvr.html">Making it Irish</a>
-									</li>
-	
-								</ul>
-							</li>
-							
-							<li><a href="data.html"><h3>Data Analysis</h3></a>
-							
+						<li><a href="about.html"><h3>About Me</h3></a></li>
+
+
+						<li><a href="/projects/arvr.html"><h3>AR/VR</h3></a>
+							<ul>
+
+								<li>
+								<a href="/projects/arvr/armature.html">Armature</a>
+								</li>
+
+								<li>
+								<a href="/projects/arvr/fmd.html">Follow Me Dragon</a>
+								</li>
+
+								<li>
+								<a href="/projects/arvr/joycestick.html">Joycestick</a>
+								</li>
+
+								<li>
+								<a href="/projects/arvr/bcinvr.html">Boston College in VR</a></li>
+
+								<li>
+								<a href="/projects/arvr/irishvr.html">Making it Irish</a>
+								</li>
+
+							</ul>
+						</li>
+
+
+						  <li><a href="/projects/data.html"><h3>AI/Machine Learning</h3></a>
+
+
 								<ul>
 									<li>
 									<a href="/data/images.html">K-Nearest Images</a>
 									</li>
-									
+
 									<li>
 									<a href="/data/simpsons.html">Simpsons Text Generation</a></li>
-	
+
 									<li>
 									<a href="/data/streaming.html">Streaming Data Analysis</a>
 									</li>
-																		
+
 									<li>
 									<a href="/data/yelp.html">Yelp Academic Dataset</a>
 									</li>
-								</ul>	
+								</ul>
 
 							</li>
 							<li><a href="video.html"><h3>Video</h3></a>
-							
-							
+
+
 								<ul>
 									<li>
 									<a href="/video/modofcards.html">Mod of Cards</a>
 									</li>
-									
+
 									<li>
 									<a href="/video/misc.html">Miscellaneous</a></li>
-	
-								</ul>						
-							
-							
+
+								</ul>
+
+
 							</li>
 						</ul>
 					</nav>
@@ -121,12 +134,37 @@ sitemap:
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-						  <h1>Virtual Reality</h1>
+						  <h1>Augmented and Virtual Reality</h1>
 						  <span class="image main"></span>
-						  <p>A perfect synthesis of art, tech and filmmaking, Virtual Reality has long piqued my interest. Although I didn't have a capable machine that would justify my backing Oculus' inital Kickstarter campaign, I followed the developments closely, and after trying the DK1 at CES 2013, it was clear to me that VR would open a tremendous number of creative opportunities. In fact, <a href="https://ryreede.wordpress.com/category/hardware/">Here are few blog posts</a> I wrote about VR, Google's Project Tango SLAM tablet and 3D Printing back in 2014. </p>
+						  <p>Humans are social beings– we form communities and share stories.
+								And as we have gone from cuneiform script to oil painting to IMAX cinema, our species has always
+								employed the latest in technology to push the limits of what kinds of stories we can share.</p>
+								<p>
+								Whether realistic, or artistically abstracted in any way, most modern forms of media consist of
+								a blend of various, often older, artforms (engineering among them). Brad Bird, director of The Incredibles and Iron Giant (my favorite film of all-time),
+								says he loves all of the arts, but "movies most because they combine so many of them." I wholeheartedly agree with
+								this, and it is by extension of his logic that makes me extremely excited about a future with stories being told in augmented and virtual reality.
+							</p>
+
+
+
+
+
+
+
+
+					<!--			The perfect synthesis of art, tech and filmmaking, Virtual Reality
+								has long piqued my interest. Although I didn't have a capable machine
+								that would justify my backing Oculus' inital Kickstarter campaign,
+								I followed the developments closely, and after trying the DK1 at
+								CES 2013, it was clear to me that VR would open a tremendous number
+								of creative opportunities.
+								<a href="https://ryreede.wordpress.com/category/hardware/">Here is some old writing</a> of mine about VR, Google's Project Tango SLAM-enabled device and 3D Printing from 2014. </p>
 						  <p>Alongside my Digital Humanities professor Joe Nugent, and thanks to a number of generous research grant from Boston College I would go on to build a number VR experiences while in school. The first of which we conceived of in 2014 as part of a plan to bring some flair to the McMullen Museum of Art at Boston College. <em>Making it Irish </em>was an exhibition at the Museum back in 2015 that showed off a number of objects from Irish History that exemplify the Irish Arts &amp; Crafts movement. To bring context to those pieces, <a>I built a simple VR panorama experience</a>. </p>
 						  <p>Following this, I was asked by the EVP of Boston College to produce a similar experience for BC Ireland– our satellite campus in Dublin. This experience would be shown off during the Aer Lingus Classic Football match between BC and Georgia Tech in Dublin in September 2016 and showcase Boston College's newer buildings for alumni and fans who haven't been on-campus for years. Instead of entirely mimicing the proccess of shooting, stitching and implementing the VR environment as I did for the Irish project, I wanted to produce this in 3D. Following months of research and testing, I wound up with a 3D-printed mount to connect to mirrorless cameras together for shooting stereo panoramas. I wound up compiling these assets in Unreal Engine. More information about <a href="vr/bcinvr.html">BC in VR can be found here. </a></p>
 						  <p>At this point, Prof. Nugent and I had already planned and assembled a class of some of brightest and most creative students and faculty at Boston College to be a part of Joycestick. Given how intricate the novel is, giving it a go in Virtual Reality seemed like an undertaking worth pursuing. We wound up pulling together one of the largest interdisclinary project Boston College has seen. Ever since, <a href="vr/joycestick.html">Joycestick has been in active development</a> for which I sereved as a Teaching Assitant and Lead Developer through shipping the MVP and V2. </p>
+-->
+
 						</div>
 					</div>
 
@@ -143,23 +181,23 @@ sitemap:
 		<span class="label">Twitter</span>
 		</a>
 		</li>
-		
+
 		<li>
 		<a href="https://github.com/reedery" class="icon style2 fa-github"><span class="label">GitHub</span>
 		</a>
 		</li>
-									
+
 		<li>
 		<a href="https://www.linkedin.com/in/ryreede" class="icon style2 fa-linkedin">
 		<span class="label">LinkedIn</span>
 		</a>
 		</li>
-		 
-		 
-		<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
-		</a>
-		</li>
-		
+
+		<!--
+				<li><a href="https://www.instagram.com/--/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
+				</a>
+				</li> -->
+
 		<li><a href="https://vimeo.com/user715423" class="icon style2 fa-vimeo"><span class="label">Vimeo</span>
 		</a>
 		</li>
@@ -173,7 +211,7 @@ sitemap:
 
 
 							<ul class="copyright">
-							  <li>&copy; 2017 Ryan Reede</li>
+							  <li>&copy; 2018 Ryan Reede</li>
 						  </ul>
 						</div>
 					</footer>

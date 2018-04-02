@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
 <!--
 
-2017 ryan reede
+2018 ryan reede
 template: pixelarity.com
 
 sitemap:
-|base| 
+|base|
 	-index.html
 	-about.html
 	-|assets|
 	-|images|
 	-|projects|
 		-data.html
-		-vr.html 		
+		-arvr.html
 		-video.html
 		-|data|
 			-images.html
@@ -22,11 +22,13 @@ sitemap:
 		-|video|
 			-modofcards.html
 			-misc.html
-		-|vr|
-			-bcinvr.html		
-			-joycestick.html     **YOU ARE HERE**
+		-|arvr|
+			-armature.html
+			-fmd.html
+			-bcinvr.html
+			-joycestick.html  **YOU ARE HERE**
 			-irishvr.html
-		
+
 -->
 
 <!-- tabs stuff -->
@@ -61,67 +63,78 @@ sitemap:
 						</div>
 					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul>
-							<li><a href="../../index.html"><h2>Home</h2></a></li>
-							
-							<li><a href="../../about.html"><h3>About Me</h3></a></li>
+					<!-- Menu -->
+						<nav id="menu">
+							<ul>
+								<li><a href="../../index.html"><h2>Home</h2></a></li>
 
-							
-							<li><a href="../vr.html"><h3>Virtual Reality</h3></a>
-								<ul>
-									<li>
-									<a href="joycestick.html"><strong>Joycestick</strong></a>
-									</li>
-									
-									<li>
-									<a href="bcinvr.html">Boston College in VR</a></li>
-	
-									<li>
-									<a href="irishvr.html">Making it Irish</a>
-									</li>
-	
-								</ul>
-							</li>
-							
-							<li><a href="../data.html"><h3>Data Analysis</h3></a>
-							
-								<ul>
-									<li>
-									<a href="../data/images.html">K-Nearest Images</a>
-									</li>
-									
-									<li>
-									<a href="../data/simpsons.html">Simpsons Text Generation</a></li>
-	
-									<li>
-									<a href="../data/streaming.html">Streaming Data Analysis</a>
-									</li>
-																		
-									<li>
-									<a href="../data/yelp.html">Yelp Academic Dataset</a>
-									</li>
-								</ul>	
+								<li><a href="../../about.html"><h3>About Me</h3></a></li>
 
-							</li>
-							<li><a href="../video.html"><h3>Video</h3></a>
-							
-							
-								<ul>
-									<li>
-									<a href="../video/modofcards.html">Mod of Cards</a>
-									</li>
-									
-									<li>
-									<a href="../video/misc.html">Miscellaneous</a></li>
-	
-								</ul>						
-							
-							
-							</li>
-						</ul>
-					</nav>
+
+								<li><a href="../arvr.html"><h3>AR/VR</h3></a>
+									<ul>
+
+										<li>
+										<a href="armature.html">Armature</a>
+										</li>
+
+										<li>
+										<a href="fmd.html">Follow Me Dragon</a>
+										</li>
+
+										<li>
+										<a href="joycestick.html"><strong>Joycestick</strong></a>
+										</li>
+
+										<li>
+										<a href="bcinvr.html">Boston College in VR</a></li>
+
+										<li>
+										<a href="irishvr.html">Making it Irish</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li><a href="../data.html"><h3>Data Analysis</h3></a>
+
+									<ul>
+										<li>
+										<a href="../data/images.html">K-Nearest Images</a>
+										</li>
+
+										<li>
+										<a href="../data/simpsons.html">Simpsons Text Generation</a></li>
+
+										<li>
+										<a href="../data/streaming.html">Streaming Data Analysis</a>
+										</li>
+
+										<li>
+										<a href="../data/yelp.html">Yelp Academic Dataset</a>
+										</li>
+									</ul>
+
+								</li>
+								<li><a href="../video.html"><h3>Video</h3></a>
+
+
+									<ul>
+										<li>
+										<a href="../video/modofcards.html">Mod of Cards</a>
+										</li>
+
+										<li>
+										<a href="../video/misc.html">Miscellaneous</a></li>
+
+									</ul>
+
+
+								</li>
+							</ul>
+						</nav>
+
+
 
 				<!-- Main -->
 					<div id="main">
@@ -129,7 +142,7 @@ sitemap:
 
 						  <h1>Joycestick</h1>
 						  <img src="../../images/joycestick/joycestick_class.jpg" alt="classimage" width="100%">
-						  
+
 						  <span class="image main"></span>
 
 							<p>
@@ -138,7 +151,7 @@ sitemap:
 							<p>
 								<a href="https://apnews.com/8ca6137f8393406c9d27d60bd93e4b72/turning-james-joyces-ulysses-virtual-reality-game">In the Associated Press  </a>
 							</p>
-						  						
+
 									<hr />
 
 						  <h2>Overview</h2>
@@ -153,7 +166,7 @@ sitemap:
 						  <h2>Developing Joycestick</h2>
 						  <img src="../../images/joycestick/mit_medialab_joycestick.jpg" alt="mlab" width="100%">
 						  <blockquote>Working on Joycestick at "Reality, Virtually" Hackathon at the Media Lab at MIT.</blockquote>
-							
+
 							<p></p>
 							<p>The dev team for Joycestick comes from a diverse background. We have experience building applications for mobile, web, analytics and even embeded systems. But of course, no one (with the slight exception of myself) had ever touched Unity or built a video game. It was clear we had our work cut out for us and building the early versions of the game relied on our flexibiity as team, and being unafraid to scrap our progress at any time in favor of a more scalable and extensible approach. </p>
 							<p>Early on, this happened a number of times. As we began to explore a more &nbsp;object-oriented game architectures through design patterns, branching off in a new direction became essential. &nbsp;Some early Joycestick C# scripts include the following:</p>
@@ -189,25 +202,25 @@ sitemap:
 
 
           </div>
-            
-            
-            
+
+
+
         <div id="view4">
           <p>SoftFlicker.cs gives the gas lamps in the scene a realistic flicker.</p>
           <script src="https://gist.github.com/reedery/9244d82c6d9ab8da822f2eeec1a3d241.js"></script>
-           
+
           </div>
-                       
- 
-            
-            
-            
+
+
+
+
+
         </div>
-    </div>						  
-							  
-						 						  
-						  
-						  
+    </div>
+
+
+
+
 <hr />
   						  <h2>Lessons Learned</h2>
   						  <p>The proccess of &nbsp;building an independent game (especially for a platform as new as Virtual Reality– we're developing for HTC Vive) is rarely a smooth one. Hiccups along the way are to be expected, and with Joycestick, we certainly hit a fair share of roadblocks. &nbsp;Working with a team of students who are enrolled in multiple other [hard] classes in addition to balancing social lives, clubs and sports is inherently difficult. We managed to make it work by scheduling small deadlines, delegating tasks and staying on top of our Trello boards. That being said, as hard deadlines rolled around, little sleep was had. </p>
@@ -229,23 +242,23 @@ sitemap:
 		<span class="label">Twitter</span>
 		</a>
 		</li>
-		
+
 		<li>
 		<a href="https://github.com/reedery" class="icon style2 fa-github"><span class="label">GitHub</span>
 		</a>
 		</li>
-									
+
 		<li>
 		<a href="https://www.linkedin.com/in/ryreede" class="icon style2 fa-linkedin">
 		<span class="label">LinkedIn</span>
 		</a>
 		</li>
-		 
-		 
-		<!--<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>-->
+
+
+		<!--<li><a href="https://www.instagram.com/--/" class="icon style2 fa-instagram"><span class="label">Instagram</span>-->
 		<!--</a>-->
 		<!--</li>-->
-		
+
 		<li><a href="https://vimeo.com/user715423" class="icon style2 fa-vimeo"><span class="label">Vimeo</span>
 		</a>
 		</li>
@@ -257,7 +270,7 @@ sitemap:
 	</ul>
 </section>
 							<ul class="copyright">
-							  <li>&copy; 2017 Ryan Reede</li>
+							  <li>&copy; 2018 Ryan Reede</li>
 						  </ul>
 						</div>
 					</footer>

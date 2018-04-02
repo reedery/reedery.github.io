@@ -1,30 +1,34 @@
 <!DOCTYPE HTML>
 <!--
-2017 ryan reede
+
+2018 ryan reede
 template: pixelarity.com
+
 sitemap:
-|base| 
+|base|
 	-index.html
 	-about.html
 	-|assets|
 	-|images|
 	-|projects|
 		-data.html
-		-vr.html 		
+		-arvr.html
 		-video.html
 		-|data|
-			-images.html		**YOU ARE HERE**
+			-images.html   **YOU ARE HERE**
 			-simpsons.html
 			-streaming.html
 			-yelp.html
 		-|video|
 			-modofcards.html
 			-misc.html
-		-|vr|
-			-bcinvr.html		
+		-|arvr|
+			-armature.html
+			-fmd.html
+			-bcinvr.html
 			-joycestick.html
-			-irishvr.html		
-		
+			-irishvr.html
+
 -->
 
 <html>
@@ -59,60 +63,70 @@ sitemap:
 					<nav id="menu">
 						<ul>
 							<li><a href="../../index.html"><h2>Home</h2></a></li>
-							
+
 							<li><a href="../../about.html"><h3>About Me</h3></a></li>
 
-							
-							<li><a href="../vr.html"><h3>Virtual Reality</h3></a>
+
+							<li><a href="../arvr.html"><h3>AR/VR</h3></a>
 								<ul>
+
 									<li>
-									<a href="../vr/joycestick.html">Joycestick</a>
+									<a href="../arvr/armature.html">Armature</a>
 									</li>
-									
+
 									<li>
-									<a href="../vr/bcinvr.html">Boston College in VR</a></li>
-	
-									<li>
-									<a href="../vr/irishvr.html">Making it Irish</a>
+									<a href="../arvr/fmd.html">Follow me Dragon</a>
 									</li>
-	
+
+
+									<li>
+									<a href="../arvr/joycestick.html">Joycestick</a>
+									</li>
+
+									<li>
+									<a href="../arvr/bcinvr.html">Boston College in VR</a></li>
+
+									<li>
+									<a href="../arvr/irishvr.html">Making it Irish</a>
+									</li>
+
 								</ul>
 							</li>
-							
+
 							<li><a href="../data.html"><h3>Data Analysis</h3></a>
-							
+
 								<ul>
 									<li>
 									<a href="images.html"><strong>K-Nearest Images</strong></a>
 									</li>
-									
+
 									<li>
 									<a href="simpsons.html">Simpsons Text Generation</a></li>
-	
+
 									<li>
 									<a href="streaming.html">Streaming Data Analysis</a>
 									</li>
-																		
+
 									<li>
 									<a href="yelp.html">Yelp Academic Dataset</a>
 									</li>
-								</ul>	
+								</ul>
 
 							</li>
 							<li><a href="../video.html"><h3>Video</h3></a>
-							
-							
+
+
 								<ul>
 									<li>
 									<a href="../video/modofcards.html">Mod of Cards</a>
 									</li>
-									
+
 									<li>
 									<a href="../video/misc.html">Miscellaneous</a></li>
-	
-								</ul>						
-							
-							
+
+								</ul>
+
+
 							</li>
 						</ul>
 					</nav>
@@ -124,16 +138,16 @@ sitemap:
 						<div class="inner">
 						  <h1>Finding Similar Images with LS-Hash</h1>
 						  <span class="image main"></span>
-						  
-						  
+
+
 						  <h2>Overview</h2>
 						  <p>Given is the task for which this program was developed: </p>
 						  <ul>
 						  <li>You have to develop an algorithm that given a query image finds the “closest” entries to it on a dataset of images</li>
 						  <li>
 						  	The solution will be evaluated based on how its run-time scales with the size of the input dataset, the number of input queries and the value of K. It will also be evaluated on how its memory usage scale with the input.
-						  </li>	
-						
+						  </li>
+
 
 						<li>
 							Finally, your solution will also be evaluated based on its accuracy to solve a classification. Your solution will also be evaluated based on its accuracy to solve a classification task. More specifically, we will run your final code on a folder with a dataset of images and another folder with a several query images. The images will be 2D arrays of 1s and 0s. We will run your code on these input folders for a value of K = 9. These images fall into several category. We know the categories in which each image falls but you do not. We will read the output file produced by your program where you stored the K files closest to each query. We will read it line by line. If the category that most frequently appears on these K files is the same category as the input file, then you get one point. Otherwise you get zero points. This will produce a total score. We will then run your code, just like described above, also for K = 1, 3, 5, 7. Your final accuracy score will the highest score you get among the values of K tested.
@@ -142,7 +156,7 @@ sitemap:
 						  <p>To solve this, we took a hybrid approach incorporating elements of Machine Learning and Computer Vision in which we extracted features from the images, and 'clustered' them using <a>Locality-Sensitive Hashing</a>. On <a>GitHub here</a>.</p>
 						  <hr />
   <h2>Deciding on an Approach</h2>
-							
+
 
 							<p>While getting more familiar with different aspects of this project, we debated many different solutions, before landing on our final implementation. The first of which included comparing every query image to every database image, and maintaining a list of each comparison along with the score associated with that comparison. We planned to do a number of operations to the database image, such as rotations and horizontal and vertical flips, in each comparison to account for potential changes to the image data. </p>
 						  <p>After abandoning this idea because it would require too many passes on the data and would not scale well for multiple query images, we moved more towards a computer vision approach, which relied on extracting important features from the image. After deciding on feature extraction, we debated how to plot each image in the feature space and look for nearby neighbors. We looked at methods from Machine Learning to best understand how to do this, and a naive implementation of the k-Nearest Neighbors algorithm immediately come to mind. <em>k</em>-NN works very well in lower dimensional spaces and when time and scare are not the most immediate concern. Unfortunately for us, time was of the essence and we needed to find an algorithm that could scale and perform quicker than <em>O(n*d)</em>. Even though we were getting good results from just a few simple features when we tried <em>k</em>-NN, we decided to search for a faster alternative that would scale efficiently.</p>
@@ -164,7 +178,7 @@ sitemap:
 							<script src="https://gist.github.com/reedery/ae4f781b6a6386397e7a5bd936379293.js"></script>
 
 <hr />
-							
+
 							<h2>Locality-Sensitive Hashing (LSH)</h2>
 							<p>After feature extraction, we then used a <a>pure python implementation of LSH</a> to hash on the feature vector for each image. Where as a typical hash function will for instance generate very different values to the two function calls <em>naiveHashMap.put([.90, .82, .12])</em> and <em>naiveHashMap.put([.92, .82, .11]), </em>a locality-sensitve hash would place these two vectors into very nearby buckets which makes it a valuable structure for Machine Learning-type problems. We tried many different combination of features, as well as different scoring techniques, but decided that normalizing the features to all be a percentage (less than 1) gave us the most accurate results. After hashing all of the database images, and getting the feature vector for the query image, we used <em>LSH.query([query image feature vector], k)</em> method which returns an array of feature vectors the size <em>k</em> (if there are at least <em>k</em> neighbors).</p>
 							<p>While parsing the database images, we had saved both the images file name, and the images feature vector into two separate lists. After getting all of the feature vectors for the k nearest neighbors, we used this map to find the index of this feature vector, and therefore used this index to find the actual image file name. </p>
@@ -187,7 +201,7 @@ sitemap:
 						  <p>Before finding the NN for each query image, we preprocesses the image then run neighbors. This means that, in effect, the NN search time also includes the time it takes to preprocess each of the query images. Going by the average preprocessing time, this means that query time only took approximately 2.1076s for each of the query images. This means that our LSH will efficiently scale for even larger data sets.</p>
 						  <p>This project was done by Danielle Nash, Ryan Reede and Drew Hoo.</p>
 						  <hr />
-							
+
 <h2>Code Contributions</h2>
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;">FAST Edge Detection: </span><a href="https://www.edwardrosten.com/work/fast.html"><span style="font-weight: 400;">https://www.edwardrosten.com/work/fast.html</span></a></li>
@@ -212,23 +226,24 @@ sitemap:
 		<span class="label">Twitter</span>
 		</a>
 		</li>
-		
+
 		<li>
 		<a href="https://github.com/reedery" class="icon style2 fa-github"><span class="label">GitHub</span>
 		</a>
 		</li>
-									
+
 		<li>
 		<a href="https://www.linkedin.com/in/ryreede" class="icon style2 fa-linkedin">
 		<span class="label">LinkedIn</span>
 		</a>
 		</li>
-		 
-		 
-		<li><a href="https://www.instagram.com/reedles/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
-		</a>
-		</li>
-		
+
+
+		<!--
+				<li><a href="https://www.instagram.com/--/" class="icon style2 fa-instagram"><span class="label">Instagram</span>
+				</a>
+				</li> -->
+
 		<li><a href="https://vimeo.com/user715423" class="icon style2 fa-vimeo"><span class="label">Vimeo</span>
 		</a>
 		</li>
@@ -240,7 +255,7 @@ sitemap:
 	</ul>
 </section>
 							<ul class="copyright">
-							  <li>&copy; 2017 Ryan Reede</li>
+							  <li>&copy; 2018 Ryan Reede</li>
 						  </ul>
 						</div>
 					</footer>
