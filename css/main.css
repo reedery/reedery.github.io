@@ -2,12 +2,45 @@ body {
     background-color: #000000;
   }
   
+  h1 {
+    padding-top:100px;
+    text-align: center;
+    font-family: blenny, sans-serif;
+    font-style: normal;
+    font-size: calc(100px + 0.1vw);
+    color: #cc4030;
+    text-shadow: 1px 1px #304678, 2px 2px #304678, 3px 3px #304678;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(60px + 0.1vw);
+    color: #c15540;
+  }
+
   .text {
-      padding-top:100px;
-      text-align: center;
-      color: #c9c9c9;
-      font-family: "Times New Roman", Times, serif;
-      z-index: 9999;
+      color: #d0c0b8;
+      font-family: museo-sans, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+      font-size: calc(16px + 0.1vw);
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-bottom: 10px;
+
+  }
+
+  #li_title {
+    font-size: calc(18px + 0.1vw);
+    font-family: museo-sans-rounded, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #f2a213;
+    padding-top: 10px;
+    padding-bottom: 2px;
   }
   
   /* PARALLAX */
@@ -26,9 +59,8 @@ body {
   }
   
   #parallax__text{
-      font-size: calc(90px + 0.1vw);
       text-align: center;
-      margin-top: 180px;
+      margin-top: 120px;
       max-width: 100%;
       height: auto;
       padding: 20px;
@@ -44,29 +76,35 @@ body {
   }
   
   .parallax__cover{
-      background: #2e4575;
+      background: #304678;
       position: absolute;
       display: block;
-      height: 2500px;
+      min-height: 200vh;
         top: 100%;
         left: 0;
       right: 0;
   }
   
   
-  .parallax__layer__bg{
+   .parallax__layer__background{
        transform: scale(2.0);
-       z-index: -1;
+       z-index: -2;
    }
   
+   .parallax__layer__b{
+       transform: translateZ(-150px) scale(3.8);
+       z-index: -1;
+
+  } 
+
   .parallax__layer__0{
-       transform: translateZ(-120px) scale(2);
+       transform: translateZ(-100px) scale(2.6);
    }
   
   .parallax__layer__1{
-       transform: translateZ(-60px) scale(1.5);
+       transform: translateZ(-40px) scale(2.1);
    }
   
   .parallax__layer__2{
-       transform: translateZ(0px) scale(1.1);
+       transform: translateZ(0) scale(1.4);
    }
