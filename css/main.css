@@ -1,7 +1,12 @@
 body {
     background-color: #000000;
+    text-align: center;
   }
   
+  a {
+    color: #899bd6
+  }
+
   h1 {
     padding-top:100px;
     text-align: center;
@@ -15,13 +20,20 @@ body {
   h2 {
     text-align: center;
     font-family: ohno-blazeface, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: calc(60px + 0.1vw);
     color: #c15540;
-  }
+    margin-top: 2em;
+    text-shadow: 1px 1px #f2a213, 1px 1px #f2a213, 1px 1px #f2a213;
 
+iframe {
+        display: block;
+        margin: 0 auto;
+     }
+  }
   .text {
+      text-align: left;
       color: #d0c0b8;
       font-family: museo-sans, sans-serif;
     font-weight: 300;
@@ -30,8 +42,38 @@ body {
       padding-left: 15%;
       padding-right: 15%;
       padding-bottom: 10px;
-
   }
+
+  .text iframe{
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 90%;
+     
+  }
+
+
+  .social {
+    height: 3em;
+    width: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2.5em;
+
+}
+    
+
+.social:hover {
+    -webkit-filter : hue-rotate(100deg);
+    filter : hue-rotate(000deg);
+}
+        
+
+
+/* .sqwig {
+    max-width: 200px;
+} */
 
   #li_title {
     font-size: calc(18px + 0.1vw);
@@ -43,7 +85,10 @@ body {
     padding-bottom: 2px;
   }
   
-  /* PARALLAX */
+
+  
+
+
   #parallax_section {
       transform-style: preserve-3d;
       perspective: 100px;
@@ -108,3 +153,6 @@ body {
   .parallax__layer__2{
        transform: translateZ(0) scale(1.4);
    }
+
+
+
