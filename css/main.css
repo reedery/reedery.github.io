@@ -27,11 +27,8 @@ body {
     margin-top: 2em;
     text-shadow: 1px 1px #f2a213, 1px 1px #f2a213, 1px 1px #f2a213;
 
-iframe {
-        display: block;
-        margin: 0 auto;
-     }
   }
+  
   .text {
       text-align: left;
       color: #d0c0b8;
@@ -50,7 +47,6 @@ iframe {
         margin-top: 20px;
         margin-bottom: 20px;
         max-width: 90%;
-     
   }
 
 
