@@ -5,9 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Ryan Portfolio</title>
-  <meta content="3D Twisting Sphere on Webflow by Dhruv Sachdev" name="description" />
+  <!-- TODOOOO  <meta content="3D Twisting Sphere on Webflow by Dhruv Sachdev" name="description" />
   <meta content="3D Twisting Sphere on Webflow" property="og:title" />
-  <meta content="3D Twisting Sphere on Webflow by Dhruv Sachdev" property="og:description" />
+  <meta content="3D Twisting Sphere" property="og:description" />
   <meta
     content="https://assets.website-files.com/627412f597ad38623adcc633/627e3587d2a555debb6e533b_627e3569d27c0422b2f745c9_Screenshot%202022-05-13%20at%2012.39.32.jpg"
     property="og:image" />
@@ -18,7 +18,7 @@
     property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
   <link href="css/style.css"
     rel="stylesheet" type="text/css" />
   <style>
@@ -76,16 +76,16 @@
   <div class="noise"></div>
   <main class="section intro wf-section">
     <div class="w-layout-grid content-grid">
-      <div id="w-node-_4460b2e8-b37d-234f-bbd3-12536ff7bb63-b1dcc634" class="content-wrapper">
-        <h1  class="large-heading">ryan reede </h1>
-        <br><br>
+      <h1  class="large-heading">ryan reede </h1>
+
+      <!-- <div id="w-node-_4460b2e8-b37d-234f-bbd3-12536ff7bb63-b1dcc634" class="content-wrapper">
         <p class="large-paragraph">CGI Artist and Programmer.</p>
         <div class="button-wrapper"><a href="#" id="cta" data-w-id="4460b2e8-b37d-234f-bbd3-12536ff7bb69"
             class="link-rounded-retangle w-inline-block">
             <div class="label-button">Contact me</div>
             <div data-w-id="4460b2e8-b37d-234f-bbd3-12536ff7bb6c" class="button-background"></div>
           </a></div>
-      </div>
+      </div> -->
       <footer id="w-node-_4460b2e8-b37d-234f-bbd3-12536ff7bb6f-b1dcc634" class="wrap-nav-bottom">
         <div class="social-links vertical"><a data-w-id="4460b2e8-b37d-234f-bbd3-12536ff7bb71"
             href="http://www.instagram.com/webflow" target="_blank" class="text-link w-inline-block">
@@ -117,16 +117,25 @@
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
 
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
   <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
     integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.122.0/examples/js/controls/OrbitControls.min.js"></script>
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"
     integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="js/scene.js"></script>
+  <script type="module" src="js/scene.js"></script>
 </body>
 
 </html>

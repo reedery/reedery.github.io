@@ -2366,10 +2366,12 @@ textarea.w-select {
 .large-heading {
 
     position: absolute;
-    color: #00fe19;
+    color: #ffffff;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
+    left: 50%;
+
     font-family: 'Moirai One', sans-serif;
     /* text-shadow: 2px 2px #d3ff11, 4px 4px blue, 6px 6px red; */
 
