@@ -3,8 +3,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: Monospace;
-    font-size: 13px;
-    line-height: 24px;
+    /* line-height: 24px; */
     overscroll-behavior: none;
 }
 
@@ -13,19 +12,37 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-family: 'Cute Font', serif;
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-size: calc(3em + 5vw);
-    text-shadow: -0.03em 0.02em .03em rgb(255, 0, 0), 0.04em -0.02em .03em rgb(6, 185, 255);
-    /* This creates the 3D effect, pretty easy, eh? */
-    letter-spacing: 0.08em;
-    /* make sure the letters don't overlap */
-
-
+p {
+    color: rgb(199, 199, 199);
 }
 
+h1 {
+    font-family: 'Climate Crisis', serif;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: calc(2.5em + 3vw);
+    text-shadow: -0.04em 0.02em .0em rgb(255, 0, 0), 0.04em -0.02em .0em rgb(6, 185, 255);
+    letter-spacing: 0.1em;
+    line-height: .8em;
+    margin: 10px;
+}
+
+.floating {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.floating p {
+    color: #000;
+}
 
 a:hover {
     text-decoration: underline;
@@ -33,14 +50,56 @@ a:hover {
 
 button {
     cursor: pointer;
-    text-transform: uppercase;
+    font-family: Cute Font;
+    margin: 0 auto;
+    max-width: 150px;
 }
+
+.pushable {
+    background: hsl(198, 100%, 50%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    flex-grow: 1;
+    /* Make the button scale horizontally */
+    margin: 0 5%;
+    /* Adjust margins to give space between buttons */
+}
+
+.front {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: calc(1em + 1.5vw);
+    background: hsl(0, 0%, 4%);
+    color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+    text-align: center;
+    /* Center the text within the button */
+}
+
+.pushable:active .front {
+    transform: translateY(0px);
+}
+
+#footer {
+    position: fixed;
+    bottom: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 
 #info {
     position: absolute;
     top: 40px;
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     box-sizing: border-box;
     text-align: center;
     -moz-user-select: none;
@@ -49,62 +108,63 @@ button {
     user-select: none;
     pointer-events: none;
     z-index: 1;
+    margin: 0;
+
     /* TODO Solve this in HTML */
-}
-
-a,
-button,
-input,
-select {
-    pointer-events: auto;
-}
-
-.lil-gui {
-    z-index: 2 !important;
-    /* TODO Solve this in HTML */
-}
-
-@media all and (max-width: 640px) {
-    .lil-gui.root {
-        right: auto;
-        top: auto;
-        max-height: 50%;
-        max-width: 80%;
-        bottom: 0;
-        left: 0;
+    a,
+    button,
+    input,
+    select {
+        pointer-events: auto;
     }
-}
 
-#overlay {
-    position: absolute;
-    font-size: 16px;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.7);
-}
+    .lil-gui {
+        z-index: 2 !important;
+        /* TODO Solve this in HTML */
+    }
 
-#overlay button {
-    background: transparent;
-    border: 0;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    color: #ffffff;
-    padding: 12px 18px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+    @media all and (max-width: 640px) {
+        .lil-gui.root {
+            right: auto;
+            top: auto;
+            max-height: 50%;
+            max-width: 80%;
+            bottom: 0;
+            left: 0;
+        }
+    }
 
-#notSupported {
-    width: 50%;
-    margin: auto;
-    background-color: #f00;
-    margin-top: 20px;
-    padding: 10px;
-}
+    /* 
+    #overlay {
+        position: absolute;
+        font-size: 16px;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    #overlay button {
+        background: transparent;
+        border: 0;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 4px;
+        color: #ffffff;
+        padding: 12px 18px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    #notSupported {
+        width: 50%;
+        margin: auto;
+        background-color: #f00;
+        margin-top: 20px;
+        padding: 10px;
+    } */

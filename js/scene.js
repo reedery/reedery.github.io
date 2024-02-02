@@ -79,7 +79,7 @@ function init() {
     const grid = new THREE.GridHelper( 200, 40, 0xaaaaaa, 0xaaaaaa );
     grid.material.opacity = 0.4;
     grid.material.transparent = true;
-    scene.add( grid );
+    //scene.add( grid );
 
     // model
 
@@ -117,9 +117,7 @@ function init() {
     const prismMaterial = new THREE.MeshPhongMaterial({color: 0xffff00});
     cone = new THREE.Mesh(prismGeometry, prismMaterial);
     cone.position.set(0, 3.5, .75);
-
-
-    scene.add( cone );
+    //scene.add( cone );
 
     renderer = new THREE.WebGLRenderer( { antialias: false } );
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -132,11 +130,11 @@ function init() {
     composer.addPass( renderPass );
 
 
-    const pixelatedPass = new RenderPixelatedPass(3.5, scene, camera );
+    const pixelatedPass = new RenderPixelatedPass(3, scene, camera );
     composer.addPass( pixelatedPass );
 
 
-   effectFilm = new FilmPass(6, false);
+    effectFilm = new FilmPass(10, false);
   
     effectFilm.renderToScreen = true;
     //composer.addPass( effectFilm );
@@ -151,7 +149,7 @@ function init() {
     // effect1.uniforms[ 'scale' ].value = 2;
     // composer.addPass( effect1);
 
-    const effect3 = new OutputPass(0);
+    const effect3 = new OutputPass();
     composer.addPass( effect3 );
 
 
@@ -307,11 +305,11 @@ function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
 
     if ( camera.aspect < 0.5) { // Very narrow aspect ratio
-        camera.fov = 60;
+        camera.fov = 45;
     } else if ( camera.aspect < 1) { // Portrait mode, likely a mobile device
-        camera.fov = 50;
-    } else if ( camera.aspect < 1.5) { // Slightly wide aspect ratio, could be a tablet or small desktop screen
         camera.fov = 40;
+    } else if ( camera.aspect < 1.5) { // Slightly wide aspect ratio, could be a tablet or small desktop screen
+        camera.fov = 35;
     } else { // Landscape mode, likely a desktop device
         camera.fov = 30;
     }
