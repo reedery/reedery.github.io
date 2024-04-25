@@ -1,0 +1,196 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+#container {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#three-js-scene {
+    height: 100vh;
+    opacity: .99;
+}
+
+#project-showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-tile {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    display: none;
+}
+
+.project-tile.active {
+    display: block;
+}
+
+#prev-btn,
+#next-btn {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+.noise {
+    /* background: rgb(255, 255, 255); */
+    background-image: url(/images/nois.jpg);
+    background-repeat: repeat;
+    /* Added to tile the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.1;
+    mix-blend-mode: color-burn;
+    /* Adjust the opacity as desired */
+    pointer-events: none;
+    /* Ignore pointer events on the noise element */
+    z-index: 1;
+
+    /* Ensure the noise element is on top of other elements */
+}
+
+#content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    /* Add some padding for spacing */
+    box-sizing: border-box;
+    z-index: 2;
+    /* Ensure the content is on top of other elements */
+    text-align: center;
+    /* Center the content horizontally */
+}
+
+#content-container h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: xxx-large;
+    margin-top: 6vh;
+    color: lightcyan;
+
+    @media (max-width: 600px) {
+        margin-top: 12vh;
+
+    }
+
+
+    /* Remove the default top margin for the heading */
+}
+
+#content-container button {
+    color: lightcyan;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    line-height: 1.5em;
+    font-size: x-large;
+    margin-left: 24vw;
+    margin-right: 24vw;
+    margin-bottom: 9vh;
+    background: none;
+    border: 2px solid lightcyan;
+    border-radius: 5px;
+    padding: 10px;
+
+    @media (max-width: 600px) {
+        margin-left: 8vw;
+        margin-right: 8vw;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: large;
+    }
+
+    /* Darken colors when pressed */
+    &:active {
+        color: #6e9eab;
+        border-color: #6e9eab;
+    }
+
+    /* Remove the default top margin for the heading */
+}
+
+#content-container p {
+    color: lightcyan;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.5em;
+    font-size: x-large;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 4vh;
+    background: none;
+
+    @media (max-width: 600px) {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: medium;
+    }
+
+    /* Remove the default top margin for the heading */
+}
+
+#content-container img {
+    /* max-width: 100%; */
+    height: 42vh;
+    border: 8px solid lightcyan;
+    border-radius: 50%;
+    /* opacity: 80%; */
+    mix-blend-mode: exclusion;
+    /* Added this line */
+
+    /* Added this line */
+
+    @media (max-width: 600px) {
+        height: 30vh;
+    }
+
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+#gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    /* Ensure the gradient is behind the content but on top of the Three.js scene */
+    pointer-events: none;
+    /* Ignore pointer events on the gradient element */
+}
