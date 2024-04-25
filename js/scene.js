@@ -36,7 +36,7 @@ function init() {
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x111111 );
-    //scene.fog = new THREE.Fog(0x4d32ee, 32, 60);
+    //scene.fog = new THREE.Fog(0x4d32ee, 2, 20);
 
     clock = new THREE.Clock();
 
@@ -84,7 +84,7 @@ function init() {
     // model
 
     const loader = new GLTFLoader();
-    loader.load( 'static/RobotExpressive.glb', function ( gltf ) {
+    loader.load( 'static/brobot.glb', function ( gltf ) {
 
         model = gltf.scene;
         model.traverse( function ( node ) {
@@ -93,6 +93,7 @@ function init() {
             } 
         } );
         scene.add( model );
+        console.log(gltf.animations);
         createGUI( model, gltf.animations );
 
     }, undefined, function ( e ) {
@@ -101,17 +102,23 @@ function init() {
 
     } );
 
-    loader.load( 'static/room.glb', function ( gltf ) {
+    const boxGeometry = new THREE.BoxGeometry(2, 2, 1);
+    const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+    const box = new THREE.Mesh(boxGeometry, boxMaterial);
+    box.position.set(0, 2, 6);
+    scene.add(box);
 
-        const room = gltf.scene;
-        room.scale.set(5, 5, 5);
-        room.rotation.y = THREE.MathUtils.degToRad(-30);
-        scene.add( room );
-    }, undefined, function ( e ) {
+    // loader.load( 'static/room.glb', function ( gltf ) {
 
-        console.error( e );
+    //     const room = gltf.scene;
+    //     room.scale.set(5, 5, 5);
+    //     room.rotation.y = THREE.MathUtils.degToRad(-30);
+    //     scene.add( room );
+    // }, undefined, function ( e ) {
 
-    } );
+    //     console.error( e );
+
+    // } );
 
     const prismGeometry = new THREE.BoxGeometry(0.05, 0.05, 3);
     const prismMaterial = new THREE.MeshPhongMaterial({color: 0xffff00});
@@ -131,23 +138,13 @@ function init() {
 
 
     const pixelatedPass = new RenderPixelatedPass(3, scene, camera );
-    composer.addPass( pixelatedPass );
+   // composer.addPass( pixelatedPass );
 
 
     effectFilm = new FilmPass(10, false);
   
     effectFilm.renderToScreen = true;
     //composer.addPass( effectFilm );
-
-
-    // const effect2 = new ShaderPass( RGBShiftShader );
-    // effect2.uniforms[ 'amount' ].value = 0.005;
-    // composer.addPass( effect2 );
-
-
-    // const effect1 = new ShaderPass( DotScreenShader );
-    // effect1.uniforms[ 'scale' ].value = 2;
-    // composer.addPass( effect1);
 
     const effect3 = new OutputPass();
     composer.addPass( effect3 );
@@ -178,18 +175,16 @@ function createGUI( model, animations ) {
 
     
     gui = new GUI();
-
-
-    // gui.add(controls, "scanlinesIntensity", 0, 1).onChange(controls.updateEffectFilm);
-    // gui.add(controls, "noiseIntensity", 0, 3).onChange(controls.updateEffectFilm);
-    // gui.add(controls, "grayscale").onChange(controls.updateEffectFilm);
-    // gui.add(controls, "scanlinesCount", 0, 2048).step(1).onChange(controls.updateEffectFilm);
-
-
         
     const states = [ 'Idle', 'Walking', 'Running', 'Dance', 'Death', 'Sitting', 'Standing' ];
     const emotes = [ 'Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp' ];
+    for (let i = 0; i < states.length; i++) {
+        states[i] = "Robot_" + states[i];
+    }
 
+    for (let i = 0; i < emotes.length; i++) {
+        emotes[i] = "Robot_" + emotes[i];
+    }
 
     mixer = new THREE.AnimationMixer( model );
 
@@ -260,21 +255,21 @@ function createGUI( model, animations ) {
 
     // expressions
 
-    face = model.getObjectByName( 'Head_4' );
+    // face = model.getObjectByName( 'Head_4' );
 
-    const expressions = Object.keys( face.morphTargetDictionary );
-    const expressionFolder = gui.addFolder( 'Expressions' );
+    // const expressions = Object.keys( face.morphTargetDictionary );
+    // const expressionFolder = gui.addFolder( 'Expressions' );
 
-    for ( let i = 0; i < expressions.length; i ++ ) {
+    // for ( let i = 0; i < expressions.length; i ++ ) {
 
-        expressionFolder.add( face.morphTargetInfluences, i, 0, 1, 0.01 ).name( expressions[ i ] );
+    //     expressionFolder.add( face.morphTargetInfluences, i, 0, 1, 0.01 ).name( expressions[ i ] );
 
-    }
+    // }
 
-    activeAction = actions[ 'Idle' ];
+    activeAction = actions[ 'Robot_Idle' ];
     activeAction.play();
 
-    expressionFolder.open();
+    //expressionFolder.open();
     gui.close();
 
 }
