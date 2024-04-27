@@ -1,0 +1,11 @@
+{
+  "title": "Gravity AR",
+  "photo": "",
+  "year": 2019,
+  "role": [
+    "Technical Artist",
+    "Software Engineer"
+  ],
+  "description": "Multiuser, cross-platform networked Augmented Reality experience built in Unity. Supported ARCore and ARKit devices, with 85 devices networked together in a spatially mapped 3D environment in realtime. Included spatialized DMX lights and fog machines that users would interact with through their AR app clients.",
+  "video": ""
+}

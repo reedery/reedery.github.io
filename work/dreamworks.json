@@ -1,0 +1,11 @@
+{
+  "title": "Pipeline Technical Direction",
+  "company": "DreamWorks Animation",
+  "photo": "",
+  "year": 2019,
+  "role": [
+    "Pipeline Technical Director"
+  ],
+  "description": "Worked as a Pipeline TD on DreamWorks Animation's next-generation CG pipeline infrastructure. It was a service-oriented architecture based on Pixar's OpenUSD. I worked with artists in Rigging, Modeling and Scene Layout to design and build workflow code and UIs (Python QTGui) in tools such as Nuke, Maya, Katana and Houdini. Credited on the animated film Abominable (2019).",
+  "video": ""
+}
