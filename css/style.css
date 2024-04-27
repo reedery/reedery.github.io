@@ -71,8 +71,8 @@ html {
     left: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.1;
-    mix-blend-mode: color-burn;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
     /* Adjust the opacity as desired */
     pointer-events: none;
     /* Ignore pointer events on the noise element */
@@ -147,7 +147,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     line-height: 1.5em;
-    font-size: x-large;
+    font-size: large;
     margin-left: 20vw;
     margin-right: 20vw;
     margin-bottom: 4vh;
@@ -183,14 +183,39 @@ html {
     margin-bottom: 12px;
 }
 
-#gradient-overlay {
+.film-filter {
+    position: relative;
+    overflow: hidden;
+}
+
+.film-filter::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9));
     z-index: 1;
-    /* Ensure the gradient is behind the content but on top of the Three.js scene */
     pointer-events: none;
-    /* Ignore pointer events on the gradient element */
+}
+
+.film-filter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4) 50%, transparent 0);
+    background-size: 2px 2px;
+    background-position: -1px -1px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.film-filter>* {
+    filter: sepia(0.25) saturate(2.3) contrast(1.1) brightness(1.6) hue-rotate(10deg);
+
 }

@@ -1,15 +1,18 @@
 import * as THREE from 'three';
+// import { EffectComposer } from 'three/postprocessing/EffectComposer.js';
+// import { RenderPass } from 'three/postprocessing/RenderPass.js';
+// import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+// import { CopyShader } from 'three/addons/shaders/CopyShader.js';
+// import BadTVShader from './BadTVShader.js';
 
-let camera, scene, renderer;
-let mesh;
-const AMOUNT = 3;
-let isDragging = false;
-let previousMousePosition = { x: 0, y: 0 };
-const cameraOffsets = new Map();
-const cameraDistance = 3; // Adjust this value to control the camera's distance from the mesh
+let camera, scene, renderer, composer;
+const CAM_AMOUNT = 4;
 
 
-let object, stats;
+// let shaderTime = 0;
+// let badTVPass;
+
+let object;
 let planes, planeObjects, planeHelpers;
 let clock;
 const params = {
@@ -17,21 +20,21 @@ const params = {
     animate: true,
     planeX: {
 
-        constant: 0.8,
+        constant: 2.8,
         negated: false,
         displayHelper: false
 
     },
     planeY: {
 
-        constant: 0.202,
+        constant: 2.202,
         negated: false,
         displayHelper: false
 
     },
     planeZ: {
 
-        constant: 1.9,
+        constant: 3.9,
         negated: false,
         displayHelper: false
 
@@ -88,26 +91,27 @@ function init() {
 
     const ASPECT_RATIO = (window.innerWidth )/(window.innerHeight);
 
-    const WIDTH =  window.innerWidth / AMOUNT * window.devicePixelRatio;
-    const HEIGHT = window.innerHeight / AMOUNT * window.devicePixelRatio;
+    const WIDTH =  window.innerWidth / CAM_AMOUNT * window.devicePixelRatio;
+    const HEIGHT = window.innerHeight / CAM_AMOUNT * window.devicePixelRatio;
 
     const cameras = [];
 
-    for ( let y = 0; y < AMOUNT; y ++ ) {
+    for ( let y = 0; y < CAM_AMOUNT; y++ ) {
 
-        for ( let x = 0; x < AMOUNT; x ++ ) {
+        for ( let x = 0; x < CAM_AMOUNT; x++ ) {
 
-            const subcamera = new THREE.PerspectiveCamera( 10 + (y/AMOUNT), ASPECT_RATIO, 0.1, 100 );
+            const subcamera = new THREE.PerspectiveCamera( 13 - (y/CAM_AMOUNT), ASPECT_RATIO, 0.1, 100 );
             subcamera.viewport = new THREE.Vector4( Math.floor( x * WIDTH ), Math.floor( y * HEIGHT ), Math.ceil( WIDTH ), Math.ceil( HEIGHT ) );
-            subcamera.position.x = ( x / AMOUNT ) + 4;
-            subcamera.position.y = 0.5 - (.9 * x) + y*2;
+            subcamera.position.x = 4 - ( x / CAM_AMOUNT );
+            subcamera.position.y = 4 + (.9 * x) + (y/3);
             subcamera.position.z = 1.5 + (.8 * x) + y*3;
-            subcamera.position.multiplyScalar(1);
-            subcamera.lookAt( 0, -.5, 0 );
+            subcamera.position.multiplyScalar(1 + 0.1*x);
+            let yp = -1 + (y / CAM_AMOUNT);
+            subcamera.lookAt( 0, yp, 0 );
             subcamera.updateMatrixWorld();
+
             cameras.push( subcamera );
         }
-
     }
 
     camera = new THREE.ArrayCamera( cameras );
@@ -222,16 +226,34 @@ function init() {
     ground.receiveShadow = true;
     scene.add( ground );
 
-// Renderer
-    renderer = new THREE.WebGLRenderer( { antialias: true, stencil: true } );
+    // Renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true, stencil: true });
     renderer.shadowMap.enabled = true;
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setClearColor( 0x000000 );
-
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x111111);
     renderer.localClippingEnabled = true;
 
+    // Create a ShaderPass instance with BadTVShader
+    // badTVPass = new ShaderPass(BadTVShader);
 
+    // // // Set uniforms for the badTVPass
+    // badTVPass.uniforms['time'].value = 0.0; // Initial time value
+    // badTVPass.uniforms['distortion'].value = 2.0;
+    // badTVPass.uniforms['distortion2'].value = 0.91;
+    // badTVPass.uniforms['speed'].value = 0.04;
+    // badTVPass.uniforms['rollSpeed'].value = 0.002;
+
+    //const renderPass = new RenderPass(scene, camera);
+    // const copyShader = new THREE.ShaderMaterial(CopyShader);
+    // let copyPass = new ShaderPass(copyShader);
+
+    // Create the EffectComposer and add passes
+    // composer = new EffectComposer(renderer);
+    // composer.addPass(renderPass);
+    // composer.addPass(badTVPass);
+    //composer.addPass(copyPass);
+    // /copyPass.renderToScreen = true;
 
 
     const canvas = renderer.domElement;
@@ -261,17 +283,17 @@ function attachEventListeners() {
 function onWindowResize() {
 
     const ASPECT_RATIO = window.innerWidth / window.innerHeight;
-    const WIDTH = ( window.innerWidth / AMOUNT ) * window.devicePixelRatio;
-    const HEIGHT = ( window.innerHeight / AMOUNT ) * window.devicePixelRatio;
+    const WIDTH = ( window.innerWidth / CAM_AMOUNT ) * window.devicePixelRatio;
+    const HEIGHT = ( window.innerHeight / CAM_AMOUNT ) * window.devicePixelRatio;
 
     camera.aspect = ASPECT_RATIO;
     camera.updateProjectionMatrix();
 
-    for ( let y = 0; y < AMOUNT; y ++ ) {
+    for ( let y = 0; y < CAM_AMOUNT; y ++ ) {
 
-        for ( let x = 0; x < AMOUNT; x ++ ) {
+        for ( let x = 0; x < CAM_AMOUNT; x ++ ) {
 
-            const subcamera = camera.cameras[ AMOUNT * y + x ];
+            const subcamera = camera.cameras[ CAM_AMOUNT * y + x ];
 
             subcamera.viewport.set(
                 Math.floor( x * WIDTH ),
@@ -292,86 +314,17 @@ function onWindowResize() {
 
   
 
-function handleStart(event) {
-    console.log('Start event:', event.type);
-    isDragging = true;
-  
-    if (event.type.startsWith('mouse')) {
-      previousMousePosition = {
-        x: event.clientX,
-        y: event.clientY,
-      };
-    } else {
-      previousMousePosition = {
-        x: event.clientX || event.touches[0].clientX,
-        y: event.clientY || event.touches[0].clientY,
-      };
-  
-      // Capture pointer events on the canvas
-      renderer.domElement.setPointerCapture(event.pointerId);
-    }
-  }
-  function handleMove(event) {
-    if (!isDragging) return;
-  
-    let currentMousePosition;
-  
-    if (event.type.startsWith('mouse')) {
-      currentMousePosition = {
-        x: event.clientX,
-        y: event.clientY,
-      };
-    } else {
-      currentMousePosition = {
-        x: event.clientX || event.touches[0].clientX,
-        y: event.clientY || event.touches[0].clientY,
-      };
-    }
-  
-    const deltaX = currentMousePosition.x - previousMousePosition.x;
-    const deltaY = currentMousePosition.y - previousMousePosition.y;
-  
-    camera.cameras.forEach((subcamera, index) => {
-      const angleX = deltaX * 0.01;
-      const angleY = deltaY * 0.01;
-  
-      const offsetX = cameraDistance * Math.sin(angleX);
-      const offsetY = cameraDistance * Math.cos(angleY);
-  
-      subcamera.position.x += mesh.position.x + offsetX;
-      subcamera.position.y += mesh.position.y + offsetY;
-      subcamera.position.z = mesh.position.z + cameraDistance;
-      subcamera.lookAt(mesh.position);
-      subcamera.updateMatrixWorld(true);
-    });
-  
-    previousMousePosition = currentMousePosition;
-  }
-  
-  function handleEnd(event) {
-    console.log('End event:', event.type);
-    isDragging = false;
-  
-    if (event.type.startsWith('pointer')) {
-      renderer.domElement.releasePointerCapture(event.pointerId);
-    }
-  }
   
   function animate() {
-    //mesh.rotation.x +=.01;
-    //requestAnimationFrame(animate);
-    //renderer.render(scene, camera);
-
-
     const delta = clock.getDelta();
 
     requestAnimationFrame( animate );
 
     if ( params.animate ) {
 
-        object.rotation.x -= delta * 0.3;
-        object.rotation.y += delta * 0.2;
-        object.rotation.Z -= delta * 0.3;
+        object.rotation.x -= delta * 0.1;
+        object.rotation.y += delta * 0.06;
+        object.rotation.Z -= delta * 0.2;
 
     }
 
@@ -388,8 +341,10 @@ function handleStart(event) {
 
     }
 
+    // shaderTime += 0.1;
+    // badTVPass.uniforms['time'].value = shaderTime;
+
     renderer.render( scene, camera );
+    //composer.render();
 
-
-    
   }
