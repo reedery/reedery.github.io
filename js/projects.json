@@ -1,10 +1,7 @@
-// Fetch projects data from JSON file
-
-
-let projectdata = [
+[
     {
     "title": "Vortex",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2020,
     "role": [
       "Technical Artist",
@@ -15,7 +12,7 @@ let projectdata = [
   },
   {
     "title": "Teleportal SDK",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2020,
     "role": [
       "Software Engineer",
@@ -26,7 +23,7 @@ let projectdata = [
   },
   {
     "title": "Movieoke",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2022,
     "role": [
       "Software Engineer",
@@ -38,7 +35,7 @@ let projectdata = [
   },
   {
     "title": "MovieBot",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2023,
     "role": [
       "Software Engineer",
@@ -49,7 +46,7 @@ let projectdata = [
   },
   {
     "title": "Joycestick",
-    "photo": "images/rr.jpg",
+    "photo": "images/joycestick/joycestick_class.jpg",
     "year": 2016,
     "role": [
       "Engineering Lead",
@@ -60,7 +57,7 @@ let projectdata = [
   },
   {
     "title": "Jurrasic World VR",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2018,
     "role": [
       "Software Engineer"
@@ -70,7 +67,7 @@ let projectdata = [
   },
   {
     "title": "Gravity AR",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2019,
     "role": [
       "Technical Artist",
@@ -81,7 +78,7 @@ let projectdata = [
   },
   {
     "title": "Follow Me Dragon",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2017,
     "role": [
       "Software Engineer"
@@ -92,7 +89,7 @@ let projectdata = [
   {
     "title": "Pipeline Technical Direction",
     "company": "DreamWorks Animation",
-    "photo": "images/rr.jpg",
+    "photo": "",
     "year": 2019,
     "role": [
       "Pipeline Technical Director"
@@ -102,7 +99,7 @@ let projectdata = [
   },
   {
     "title": "McMullen Virtual Reality",
-    "photo": "images/rr.jpg",
+    "photo": "images/irishvr/oculus.jpg",
     "year": 2015,
     "role": [
       "Software Engineer"
@@ -110,44 +107,4 @@ let projectdata = [
     "description": "For the Spring 2015 exhibit at the McMullen Museum of Art at Boston College, I created a Virtual Reality experience to allow visitors to virtually visit the areas in Ireland where the art pieces originated from. I shot and stitched together panoramas from across the Irish countryside and built an interactive VR experience in Unity for the Oculus DK2. Custom 3D printed button mounts allowed users to change scenes.",
     "video": ""
   }
-];
-
-
-// Get the necessary elements
-const projectTilesContainer = document.getElementById('project-tiles-container');
-const projectModal = document.getElementById('project-modal');
-const modalTitle = document.getElementById('modal-title');
-const modalPhoto = document.getElementById('modal-photo');
-const modalYear = document.getElementById('modal-year');
-const modalRole = document.getElementById('modal-role');
-const modalDescription = document.getElementById('modal-description');
-const modalVideo = document.getElementById('modal-video');
-const closeBtn = document.getElementsByClassName('close')[0];
-
-// Generate project tiles dynamically
-projectdata.forEach(project => {
-  const projectTile = document.createElement('div');
-  projectTile.classList.add('project-tile');
-  projectTile.style.setProperty('--background-image', `url('${project.photo}')`);
-
-  projectTile.innerHTML = `
-    <h3>${project.title}</h3>
-  `;
-  projectTile.addEventListener('click', () => {
-    // Update modal content with project details
-    modalTitle.textContent = project.title;
-    modalPhoto.src = project.photo;
-    modalYear.textContent = project.year;
-    modalRole.innerHTML = project.role.map(role => `<li>${role}</li>`).join('');
-    modalDescription.innerHTML = project.description;
-    modalVideo.innerHTML = `<iframe src="${project.video}" allowfullscreen></iframe>`;
-    projectModal.style.display = 'block';
-    
-  });
-  projectTilesContainer.appendChild(projectTile);
-});
-
-// Close modal when close button is clicked
-closeBtn.addEventListener('click', () => {
-  projectModal.style.display = 'none';
-});
+]
