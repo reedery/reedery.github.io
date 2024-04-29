@@ -104,7 +104,7 @@ html {
 
     @media (max-width: 600px) {
         margin-top: 12vh;
-
+        font-size: xxx-large;
     }
 
 
@@ -147,18 +147,26 @@ html {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     line-height: 1.5em;
-    font-size: large;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    font-size: x-large;
+    margin-left: 25vw;
+    margin-right: 25vw;
     margin-bottom: 4vh;
     background: none;
+
+    @media (max-width: 820px) {
+        margin-left: 15vw;
+        margin-right: 15vw;
+        text-align: center;
+        line-height: 1.4em;
+        font-size: large;
+    }
 
     @media (max-width: 600px) {
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: center;
-        line-height: 1.5em;
-        font-size: medium;
+        line-height: 1.4em;
+        font-size: large;
     }
 
     /* Remove the default top margin for the heading */
@@ -225,10 +233,15 @@ html {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 300px;
-    grid-gap: 20px;
+    grid-gap: 80px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 20px;
+    padding: 70px;
+    grid-template-rows: repeat(2, 300px);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+
 }
 
 #project-tiles-container::-webkit-scrollbar {
@@ -265,13 +278,16 @@ html {
 }
 
 .project-tile img {
-    max-width: 100%;
-    max-height: 200px;
+    height: 60px;
     object-fit: cover;
     margin-bottom: 10px;
+    user-select: none;
+
 }
 
 .project-tile h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
     font-size: 18px;
     margin: 0;
 }
@@ -289,6 +305,10 @@ html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content img {
+    height: 50px;
 }
 
 .modal-content {
