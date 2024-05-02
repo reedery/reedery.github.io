@@ -8,6 +8,52 @@ html {
     background-color: black;
 }
 
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: -100px;
+}
+
+.fa {
+    padding: 12px;
+    font-size: 46px;
+
+
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    /* color: black; */
+    background: white;
+
+}
+
+/* .fa-x {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #24292e;
+    color: white;
+}
+
+.fa-vimeo {
+    background: #1ab7ea;
+    color: white;
+}
+
+.fa-envelope {
+    background: #dd4b39;
+    color: white;
+} */
+
 #container {
     height: 200vh;
     display: flex;
@@ -26,19 +72,10 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.99) 5%, rgba(42, 42, 42, 0.99) 15%, rgba(53, 53, 53, 0.99) 60%, rgba(42, 42, 42, 0.99) 85%, rgba(0, 0, 0, 0.97) 95%);
 }
 
-.project-tile {
-    background-color: #f0f0f0;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    display: none;
-}
 
-.project-tile.active {
-    display: block;
-}
 
 #prev-btn,
 #next-btn {
@@ -203,7 +240,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.97) 98%);
     z-index: 1;
     pointer-events: none;
 }
@@ -224,24 +261,27 @@ html {
 
 
 .film-filter>* {
-    filter: sepia(0.25) saturate(2.3) contrast(1.1) brightness(1.6) hue-rotate(10deg);
+    filter: sepia(0.25) saturate(2.0) contrast(1.1) brightness(1.9) hue-rotate(10deg);
 }
 
 
-
+/* Project Tiles */
 #project-tiles-container {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 300px;
-    grid-gap: 80px;
+    grid-auto-columns: calc(40vh - 20px);
+    grid-template-rows: repeat(2, calc(30vh - 20px));
+    grid-gap: 30px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 70px;
-    grid-template-rows: repeat(2, 300px);
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    touch-action: pan-x;
+    padding: 20px;
+}
 
+@media screen and (max-width: 768px) {
+    #project-tiles-container {
+        grid-auto-columns: calc(50vw - 20px);
+        grid-template-rows: repeat(2, calc(50vw - 20px));
+    }
 }
 
 #project-tiles-container::-webkit-scrollbar {
@@ -249,81 +289,165 @@ html {
 }
 
 .project-tile {
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     position: relative;
     overflow: hidden;
-    width: 300px;
-    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    user-select: none;
+
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-tile::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: var(--background-image);
-
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
-    opacity: 0.7;
+    filter: brightness(0.8);
     z-index: -1;
 }
 
-.project-tile img {
-    height: 60px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    user-select: none;
+.project-tile::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.project-tile h3,
+.project-tile p {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 4px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 
 }
 
 .project-tile h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: medium;
-    font-size: 18px;
-    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
+
+    @media (max-height: 600px) {
+        font-size: 20px;
+    }
 }
 
+.project-tile p {
+    font-size: 20px;
+    padding-bottom: 10px;
 
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+
+
+    @media (max-height: 600px) {
+        font-size: 14px;
+    }
+}
 
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content img {
-    height: 50px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    position: relative;
+    background-color: rgba(28, 28, 28, 0.8);
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    max-width: 800px;
+    overflow: hidden;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 92%;
+        margin: 5% auto;
+    }
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.modal-content li {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 48px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.4s;
+}
+
+.close:hover {
+    color: #888;
 }

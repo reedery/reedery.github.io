@@ -2,7 +2,7 @@
 export const projectData = [
     {
     "title": "Vortex",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2020,
     "role": [
       "Technical Artist",
@@ -13,14 +13,14 @@ export const projectData = [
   },
   {
     "title": "Teleportal SDK",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2020,
     "role": [
       "Software Engineer",
       "Business Development"
     ],
     "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a'>Read more about Teleportal here.</a>",
-    "video": ""
+    "video": "https://youtu.be/jp__SVtPbdQ"
   },
   {
     "title": "Jurassic World VR Expedition",
@@ -35,7 +35,7 @@ export const projectData = [
   },
   {
     "title": "Movieoke",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2022,
     "role": [
       "Software Engineer",
@@ -47,7 +47,7 @@ export const projectData = [
   },
   {
     "title": "MovieBot",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2023,
     "role": [
       "Software Engineer",
@@ -58,7 +58,7 @@ export const projectData = [
   },
   {
     "title": "Joycestick",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2016,
     "role": [
       "Engineering Lead",
@@ -69,7 +69,7 @@ export const projectData = [
   },
   {
     "title": "Gravity AR",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2019,
     "role": [
       "Technical Artist",
@@ -80,7 +80,7 @@ export const projectData = [
   },
   {
     "title": "Follow Me Dragon",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2017,
     "role": [
       "Software Engineer"
@@ -91,7 +91,7 @@ export const projectData = [
   {
     "title": "Pipeline Technical Direction",
     "company": "DreamWorks Animation",
-    "photo": "images/rr.jpg",
+    "photo": "../images/rr.jpg",
     "year": 2019,
     "role": [
       "Pipeline Technical Director"
