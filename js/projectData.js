@@ -1,12 +1,13 @@
 
 export const projectData = [
     {
-    "title": "Vortex",
+    "title": "Vortex CGI app",
     "photo": "../images/rr.jpg",
     "year": 2020,
     "role": [
       "Technical Artist",
-      "Software Engineer"
+      "Software Engineer",
+      "Product Designer"
     ],
     "description": "Vortex is a performance-based 3D animation toolkit for mobile video creators. It allows users to create and share 3D animated videos by composing a set of performances on characters, cameras or props in space and time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074'>Read more about Vortex here.</a>",
     "video": "https://youtu.be/J7eE5F_ns3M"
@@ -23,7 +24,7 @@ export const projectData = [
     "video": "https://youtu.be/jp__SVtPbdQ"
   },
   {
-    "title": "Jurassic World VR Expedition",
+    "title": "Jurassic World VR",
     "photo": "",
     "year": 2018,
     "role": [
@@ -34,7 +35,17 @@ export const projectData = [
     "video": "https://youtu.be/YjsfLltva4s"
   },
   {
-    "title": "Movieoke",
+    "title": "GDC Talk: VR in Digital Humanities",
+    "photo": "",
+    "year": 2019,
+    "role": [
+      "Speaker"
+    ],
+    "description": "At GDC 2019, I present our research from Joycestick to an audience...",
+    "video": "https://youtu.be/f3Z1c9QdFn4"
+  },
+  {
+    "title": "Movieoke CGI app",
     "photo": "../images/rr.jpg",
     "year": 2022,
     "role": [
@@ -46,7 +57,7 @@ export const projectData = [
     "video": "https://youtube.com/shorts/5C9jzgT89f4?feature=shared"
   },
   {
-    "title": "MovieBot",
+    "title": "MovieBot CGI app",
     "photo": "../images/rr.jpg",
     "year": 2023,
     "role": [
@@ -57,7 +68,7 @@ export const projectData = [
     "video": "https://youtu.be/1nOCuDtxdRo" 
   },
   {
-    "title": "Joycestick",
+    "title": "Joycestick VR",
     "photo": "../images/rr.jpg",
     "year": 2016,
     "role": [
@@ -79,7 +90,7 @@ export const projectData = [
     "video": "https://vimeo.com/596350528"
   },
   {
-    "title": "Follow Me Dragon",
+    "title": "Follow Me Dragon AR",
     "photo": "../images/rr.jpg",
     "year": 2017,
     "role": [
@@ -89,7 +100,7 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "Pipeline Technical Direction",
+    "title": "DreamWorks Animation - Pipeline TD",
     "company": "DreamWorks Animation",
     "photo": "../images/rr.jpg",
     "year": 2019,
@@ -100,7 +111,7 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "McMullen Virtual Reality",
+    "title": "McMullen Museum VR",
     "photo": "images/rr.jpg",
     "year": 2015,
     "role": [
@@ -110,7 +121,7 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "ARmature (Hackathon)",
+    "title": "ARmature AR (Hackathon)",
     "photo": "",
     "year": 2018,
     "role": [
@@ -122,7 +133,7 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "MiXR (Hackathon)",
+    "title": "MiXR VR (Hackathon)",
     "photo": "",
     "year": 2020,
     "role": [
@@ -135,7 +146,7 @@ export const projectData = [
     "video": "https://youtu.be/V_XULehu524"
   },
   {
-    "title": "AnimAid (Hackathon)",
+    "title": "AnimAid AR (Hackathon)",
     "photo": "",
     "year": 2019,
     "role": [

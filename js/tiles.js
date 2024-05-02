@@ -31,7 +31,7 @@ function init() {
         projectTile.innerHTML = `
             <h3>${project.title}</h3>
             <p>${project.year}</p>
-            <img src="${project.photo}" alt="${project.title}">
+            <img src="${project.photo}" draggable="false" alt="${project.title}">
         `;
 
         projectTile.addEventListener('click', () => {

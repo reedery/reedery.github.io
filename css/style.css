@@ -8,24 +8,55 @@ html {
     background-color: black;
 }
 
+footer {
+    height: 50vh;
+}
+
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    bottom: -100px;
+    gap: 26px;
+    position: relative;
+    bottom: 50px;
 }
 
 .fa {
     padding: 12px;
-    font-size: 46px;
-
-
+    /* font-size: 46px; */
+    color: black;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    /* color: black; */
-    background: white;
+    background: lightcyan;
+    transition: transform 0.2s;
+
+}
+
+.fa:hover {
+    background: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+.social-title {
+    color: lightcyan;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+    font-size: x-large;
+
+    @media (max-width: 600px) {
+        font-size: large;
+    }
+}
+
+.bottom-image img {
+    justify-content: center;
+    /* position: fixed; */
+    /* height: 400px; */
+    width: 100vw;
 
 }
 
@@ -124,10 +155,8 @@ html {
     left: 0;
     width: 100%;
     padding: 20px;
-    /* Add some padding for spacing */
     box-sizing: border-box;
     z-index: 2;
-    /* Ensure the content is on top of other elements */
     text-align: center;
     /* Center the content horizontally */
 }
@@ -275,6 +304,10 @@ html {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -296,6 +329,7 @@ html {
     transition: transform 0.2s;
     user-select: none;
 
+
 }
 
 .project-tile:hover {
@@ -315,6 +349,7 @@ html {
     background-position: center;
     filter: brightness(0.8);
     z-index: -1;
+    user-select: none;
 }
 
 .project-tile::after {
@@ -337,6 +372,8 @@ html {
     margin: 0;
     font-family: 'Inter', sans-serif;
 
+
+
 }
 
 .project-tile h3 {
@@ -344,12 +381,9 @@ html {
     font-weight: bold;
 
     @media (max-width: 600px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    @media (max-height: 600px) {
-        font-size: 20px;
-    }
 }
 
 .project-tile p {
