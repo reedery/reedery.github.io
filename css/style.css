@@ -2,91 +2,82 @@ body,
 html {
     margin: 0;
     padding: 0;
-    height: 200vh;
+    height: 300vh;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: black;
 }
 
-footer {
-    height: 50vh;
+#connect-section {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/images/ryan-beats.jpg');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
 }
-
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 26px;
-    position: relative;
-    bottom: 50px;
+    gap: 40px;
+    margin-top: 20px;
+    font-size: xxx-large;
+
+    @media (max-width: 600px) {
+        font-size: x-large;
+        gap: 10px;
+    }
 }
 
 .fa {
-    padding: 12px;
-    /* font-size: 46px; */
-    color: black;
-    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: lightcyan;
     text-decoration: none;
     border-radius: 50%;
-    background: lightcyan;
     transition: transform 0.2s;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .fa:hover {
-    background: rgb(255, 255, 255);
     transform: scale(1.2);
 }
 
 .social-title {
     color: lightcyan;
     font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 70px;
-    font-size: x-large;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 500;
+}
 
-    @media (max-width: 600px) {
-        font-size: large;
+@media (max-width: 600px) {
+    .social-title {
+        font-size: x-large;
     }
 }
 
+
 .bottom-image img {
     justify-content: center;
-    /* position: fixed; */
-    /* height: 400px; */
     width: 100vw;
 
 }
 
-/* .fa-x {
-    background: #55ACEE;
-    color: white;
-}
 
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-
-.fa-github {
-    background: #24292e;
-    color: white;
-}
-
-.fa-vimeo {
-    background: #1ab7ea;
-    color: white;
-}
-
-.fa-envelope {
-    background: #dd4b39;
-    color: white;
-} */
 
 #container {
-    height: 200vh;
+    height: 300vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -102,11 +93,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.99) 5%, rgba(42, 42, 42, 0.99) 15%, rgba(53, 53, 53, 0.99) 60%, rgba(42, 42, 42, 0.99) 85%, rgba(0, 0, 0, 0.97) 95%);
+    /* position: relative; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.99) 2%, rgb(150, 150, 150) 50%, rgba(0, 0, 0, 0.99) 99%);
 }
 
-
+#connect-section {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.99) 5%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0.99) 95%), url(/images/rr-beats-gradient.jpg);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
 
 #prev-btn,
 #next-btn {
@@ -119,14 +117,6 @@ footer {
     color: white;
     border: none;
     cursor: pointer;
-}
-
-#prev-btn {
-    left: 10px;
-}
-
-#next-btn {
-    right: 10px;
 }
 
 .noise {
@@ -190,6 +180,7 @@ footer {
     border: 2px solid lightcyan;
     border-radius: 5px;
     padding: 10px;
+    transition: all 0.2s;
 
     @media (max-width: 600px) {
         margin-left: 8vw;
@@ -206,6 +197,11 @@ footer {
     }
 
     /* Remove the default top margin for the heading */
+}
+
+#content-container button:hover {
+    color: #ffffff;
+    scale: 1.1;
 }
 
 #content-container p {
@@ -245,9 +241,6 @@ footer {
     border-radius: 50%;
     /* opacity: 80%; */
     mix-blend-mode: exclusion;
-    /* Added this line */
-
-    /* Added this line */
 
     @media (max-width: 600px) {
         height: 30vh;
@@ -306,14 +299,14 @@ footer {
     padding: 20px;
     padding-left: 40px;
     padding-right: 40px;
-
-
 }
 
 @media screen and (max-width: 768px) {
     #project-tiles-container {
-        grid-auto-columns: calc(50vw - 20px);
-        grid-template-rows: repeat(2, calc(50vw - 20px));
+        grid-auto-columns: calc(60vw - 20px);
+        grid-template-rows: repeat(2, calc(70vw - 10px));
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -322,14 +315,19 @@ footer {
 }
 
 .project-tile {
+    width: auto;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
 
-
+    /* filter: sepia(0.25) saturate(2.0) contrast(1.1) brightness(1.9) hue-rotate(10deg); */
+    @media (max-width: 600px) {
+        /* bottom: -100px; */
+    }
 }
 
 .project-tile:hover {
@@ -344,10 +342,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--background-image);
-    background-size: cover;
+    /* background-image: var(--background-image); */
     background-position: center;
-    filter: brightness(0.8);
+    /* filter: brightness(0.8); */
     z-index: -1;
     user-select: none;
 }
@@ -363,16 +360,41 @@ footer {
     z-index: 1;
 }
 
+.project-tile img {
+    width: 110%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: repeat;
+
+    @media (max-width: 600px) {
+        height: 110%;
+        width: auto;
+    }
+
+    /* filter: saturate(1.2) contrast(1.3) brightness(0.) hue-rotate(20deg); */
+
+}
+
 .project-tile h3,
 .project-tile p {
     position: relative;
     z-index: 2;
     color: #fff;
-    padding: 4px;
-    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: -280px;
+    margin: 10px;
     font-family: 'Inter', sans-serif;
 
+    background-color: black;
 
+    @media (max-width: 600px) {
+        bottom: -190px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
 
 }
 
@@ -381,25 +403,20 @@ footer {
     font-weight: bold;
 
     @media (max-width: 600px) {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 }
 
 .project-tile p {
     font-size: 20px;
-    padding-bottom: 10px;
 
     @media (max-width: 600px) {
-        font-size: 14px;
+        font-size: 12px;
     }
 
 
-    @media (max-height: 600px) {
-        font-size: 14px;
-    }
 }
-
 
 .modal {
     display: none;
@@ -422,15 +439,16 @@ footer {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 75%;
+    width: calc(100% - 200px);
     max-width: 800px;
     overflow: hidden;
     color: #fff;
+    font-family: 'Inter', sans-serif;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .modal-content {
-        width: 92%;
+        width: calc(100% - 40px);
         margin: 5% auto;
     }
 }
@@ -479,7 +497,7 @@ footer {
     font-size: 48px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.4s;
+    transition: color 0.3s;
 }
 
 .close:hover {

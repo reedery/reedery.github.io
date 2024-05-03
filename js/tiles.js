@@ -23,14 +23,16 @@ const pixelMoveThreshold = 5;
 
 function init() {
     // Generate project tiles dynamically
-    projectData.forEach(project => {
+    projectData
+    .sort((a, b) => new Date(b.year) - new Date(a.year))
+    .forEach(project => {
         const projectTile = document.createElement('div');
         projectTile.classList.add('project-tile');
         //projectTile.style.touchAction = 'pan-y';
 
         projectTile.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.year}</p>
+            <h3>${project.title} - ${project.year}</h3>
+            <p>${project.details} </p>
             <img src="${project.photo}" draggable="false" alt="${project.title}">
         `;
 
@@ -38,7 +40,7 @@ function init() {
             //console.log("hasScrollCooledDown: "+ hasScrollCooledDown);
             if (scrollCooledDown) {
                 modalTitle.textContent = project.title;
-                modalPhoto.src = project.photo;
+                // modalPhoto.src = project.photo;
                 modalYear.textContent = project.year;
                 modalRole.innerHTML = project.role.map(role => `<li>${role}</li>`).join('');
                 modalDescription.innerHTML = project.description;

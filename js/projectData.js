@@ -1,32 +1,37 @@
 
 export const projectData = [
     {
-    "title": "Vortex CGI app",
-    "photo": "../images/rr.jpg",
+    "title": "Vortex CGI",
+    "photo": "../images/project/vortex.jpg",
     "year": 2020,
+    "details": "Unity 3D App (iOS + Android)",
     "role": [
       "Technical Artist",
       "Software Engineer",
-      "Product Designer"
+      "Product Designer",
+      "Co-founder",
     ],
     "description": "Vortex is a performance-based 3D animation toolkit for mobile video creators. It allows users to create and share 3D animated videos by composing a set of performances on characters, cameras or props in space and time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074'>Read more about Vortex here.</a>",
     "video": "https://youtu.be/J7eE5F_ns3M"
   },
   {
     "title": "Teleportal SDK",
-    "photo": "../images/rr.jpg",
+    "photo": "../images/project/tp-sdk.jpg",
     "year": 2020,
+    "details": "Typescript 3D Networking (Unity, Three.js)",
     "role": [
       "Software Engineer",
-      "Business Development"
+      "Business Development",
+      "Co-founder"
     ],
     "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a'>Read more about Teleportal here.</a>",
     "video": "https://youtu.be/jp__SVtPbdQ"
   },
   {
-    "title": "Jurassic World VR",
-    "photo": "",
+    "title": "Jurassic World",
+    "photo": "/images/project/jurassic.jpeg",
     "year": 2018,
+    "details": "UE4/Motion Simulator (HTC Vive)",
     "role": [
       "Software Engineer",
       "Pipeline Technical Director"
@@ -35,9 +40,10 @@ export const projectData = [
     "video": "https://youtu.be/YjsfLltva4s"
   },
   {
-    "title": "GDC Talk: VR in Digital Humanities",
-    "photo": "",
+    "title": "VR in Digital Humanities",
+    "photo": "../images/project/gdc.jpg",
     "year": 2019,
+    "details": "GDC Conference Speaker",
     "role": [
       "Speaker"
     ],
@@ -45,32 +51,37 @@ export const projectData = [
     "video": "https://youtu.be/f3Z1c9QdFn4"
   },
   {
-    "title": "Movieoke CGI app",
-    "photo": "../images/rr.jpg",
+    "title": "Movieoke",
+    "photo": "../images/project/movieoke.jpg",
     "year": 2022,
+    "details": "Unity 3D App (iOS + Android)",
     "role": [
       "Software Engineer",
+      "Technical Artist",
       "Product Manager",
-      "3D Generalist"
+      "Co-founder"
     ],
     "description": "Movieoke (Movie Karaoke) is a new way to create 3D animated remakes of iconic moments from movies, TV shows, or memes. To make a video with Movieoke, simply perform the lines on-screen and Movieoke's performance capture system tracks your face and voice to apply it to a 3D character in real-time. Inspired by Animoji, Vine, and Snapchat, Movieoke aims to make 3D animation creation more accessible, improvisational, and fun than ever before. Designed for the next generation of video creators, especially teens familiar with 3D creation in virtual worlds like Roblox and Minecraft, Movieoke believes that most 3D animation content in the future will be created through performance rather than keyframes. The ambition is to help creators channel their creative energy in completely new ways and transform animation from a slow art to a fast art. Some <a href=\"https://www.youtube.com/shorts/eMn8kpP70hU?feature=share\">fun</a> videos created by the Movieoke community",
     "video": "https://youtube.com/shorts/5C9jzgT89f4?feature=shared"
   },
   {
-    "title": "MovieBot CGI app",
-    "photo": "../images/rr.jpg",
+    "title": "MovieBot AI Animation",
+    "photo": "../images/project/moviebot.jpg",
     "year": 2023,
+    "details": "Unity 3D App (iOS + Android)",
     "role": [
       "Software Engineer",
-      "3D Generalist"
+      "3D Generalist",
+      "Co-founder/CEO"
     ],
     "description": "MovieBot is an AI-powered 3D animation platform that transforms text into animated video instantly. Users simply type a story topic and MovieBot generates an interactive 3D movie with talking characters based on the prompt. It offers a simple UI for generating movies, allowing users to choose characters, voices, worlds, and script styles. Every generated movie is a 3D scene that can be remixed in the Story Editor. MovieBot aimed to make 3D animation, traditionally a complex art form requiring desktop computers and technical skills, accessible on smartphones. The development process prioritized user feedback and community input. A key lesson learned was that while earlier versions focused on user performance, pivoting to AI proved more successful in terms of content shared online. MovieBot was also featured on the Dr. Phil show. <a href='https://youtu.be/1nOCuDtxdRo'>Watch the Dr. Phil feature here.</a>",
     "video": "https://youtu.be/1nOCuDtxdRo" 
   },
   {
-    "title": "Joycestick VR",
-    "photo": "../images/rr.jpg",
+    "title": "Joycestick",
+    "photo": "../images/project/joycestick.jpg",
     "year": 2016,
+    "details": "Unity VR App (HTC Vive)",
     "role": [
       "Engineering Lead",
       "Teaching Assistant"
@@ -80,8 +91,9 @@ export const projectData = [
   },
   {
     "title": "Gravity AR",
-    "photo": "../images/rr.jpg",
+    "photo": "../images/project/gravity.jpg",
     "year": 2019,
+    "details": "Multi-user AR App (iOS + Android)",
     "role": [
       "Technical Artist",
       "Software Engineer"
@@ -91,19 +103,20 @@ export const projectData = [
   },
   {
     "title": "Follow Me Dragon AR",
-    "photo": "../images/rr.jpg",
+    "photo": "../images/project/fmd.jpg",
     "year": 2017,
+    "details": "UE4 ARKit App (iOS)",
     "role": [
       "Software Engineer"
     ],
     "description": "One of the first Apple ARKit apps developed and released, featured and installed on iPads in Apple Stores around the world. Apple invited our dev team to Cupertino to work on the app with their support ahead of the official ARKit launch in iOS. Drake the dragon is your AR pet who performs tricks, breathes fire, and follows you around as you collect cookies to feed him.",
-    "video": ""
+    "video": "https://youtu.be/0FyH3YFSs8s"
   },
   {
-    "title": "DreamWorks Animation - Pipeline TD",
-    "company": "DreamWorks Animation",
-    "photo": "../images/rr.jpg",
+    "title": "DreamWorks Pipeline TD",
+    "photo": "../images/project/dwa.jpg",
     "year": 2019,
+    "details": "OpenUSD @ DreamWorks Animation",
     "role": [
       "Pipeline Technical Director"
     ],
@@ -112,8 +125,9 @@ export const projectData = [
   },
   {
     "title": "McMullen Museum VR",
-    "photo": "images/rr.jpg",
+    "photo": "../images/project/mcmullen.jpg",
     "year": 2015,
+    "details": "UE4 VR App (Oculus Rift DK2)",
     "role": [
       "Software Engineer"
     ],
@@ -121,9 +135,10 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "ARmature AR (Hackathon)",
-    "photo": "",
+    "title": "ARmature Stop Motion",
+    "photo": "../images/project/armature.jpg",
     "year": 2018,
+    "details": "Hackathon - Unity 3D animation app (Mira)",
     "role": [
       "Software Engineer",
       "Technical Artist"
@@ -133,9 +148,10 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "MiXR VR (Hackathon)",
-    "photo": "",
+    "title": "MiXR 3D Synthesizer",
+    "photo": "../images/project/mixr.jpg",
     "year": 2020,
+    "details": "Hackathon - UE4 VR App (Valve Index)",
     "role": [
       "Software Engineer",
       "Technical Artist"
@@ -146,9 +162,10 @@ export const projectData = [
     "video": "https://youtu.be/V_XULehu524"
   },
   {
-    "title": "AnimAid AR (Hackathon)",
-    "photo": "",
+    "title": "AnimAid Pre-viz",
+    "photo": "../images/project/animaid.jpg",
     "year": 2019,
+    "details": "Hackathon - Unity 3D App (iOS)",
     "role": [
       "Software Engineer",
       "Technical Artist"
