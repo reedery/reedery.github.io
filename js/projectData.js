@@ -11,7 +11,7 @@ export const projectData = [
       "Product Designer",
       "Co-founder",
     ],
-    "description": "Vortex is a performance-based 3D animation toolkit for mobile video creators. It allows users to create and share 3D animated videos by composing a set of performances on characters, cameras or props in space and time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074'>Read more about Vortex here.</a>",
+    "description": "Vortex is a performance-based 3D animation toolkit Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit  Vortex is a performance-based 3D animation toolkit for mobile video creators. It allows users to create and share 3D animated videos by composing a set of performances on characters, cameras or props in space and time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074'>Read more about Vortex here.</a>",
     "video": "https://youtu.be/J7eE5F_ns3M"
   },
   {
@@ -24,7 +24,7 @@ export const projectData = [
       "Business Development",
       "Co-founder"
     ],
-    "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a'>Read more about Teleportal here.</a>",
+    "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a'>Read more about Teleportal here</a> and view the archived <a href=\"https://web.archive.org/web/20200202004243/https://teleportal.dev/docs/\">Developer Docs</a>",
     "video": "https://youtu.be/jp__SVtPbdQ"
   },
   {
@@ -65,13 +65,14 @@ export const projectData = [
     "video": "https://youtube.com/shorts/5C9jzgT89f4?feature=shared"
   },
   {
-    "title": "MovieBot AI Animation",
+    "title": "MovieBot AI",
     "photo": "../images/project/moviebot.jpg",
     "year": 2023,
     "details": "Unity 3D App (iOS + Android)",
     "role": [
       "Software Engineer",
-      "3D Generalist",
+      "Technical Artist",
+      "Product Manager",
       "Co-founder/CEO"
     ],
     "description": "MovieBot is an AI-powered 3D animation platform that transforms text into animated video instantly. Users simply type a story topic and MovieBot generates an interactive 3D movie with talking characters based on the prompt. It offers a simple UI for generating movies, allowing users to choose characters, voices, worlds, and script styles. Every generated movie is a 3D scene that can be remixed in the Story Editor. MovieBot aimed to make 3D animation, traditionally a complex art form requiring desktop computers and technical skills, accessible on smartphones. The development process prioritized user feedback and community input. A key lesson learned was that while earlier versions focused on user performance, pivoting to AI proved more successful in terms of content shared online. MovieBot was also featured on the Dr. Phil show. <a href='https://youtu.be/1nOCuDtxdRo'>Watch the Dr. Phil feature here.</a>",
@@ -90,7 +91,7 @@ export const projectData = [
     "video": "https://www.youtube.com/embed/oOQ-NyNIj_E"
   },
   {
-    "title": "Gravity AR",
+    "title": "Gravity",
     "photo": "../images/project/gravity.jpg",
     "year": 2019,
     "details": "Multi-user AR App (iOS + Android)",
@@ -102,7 +103,7 @@ export const projectData = [
     "video": "https://vimeo.com/596350528"
   },
   {
-    "title": "Follow Me Dragon AR",
+    "title": "Follow Me Dragon",
     "photo": "../images/project/fmd.jpg",
     "year": 2017,
     "details": "UE4 ARKit App (iOS)",
@@ -135,10 +136,10 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "ARmature Stop Motion",
+    "title": "ARmature Pose",
     "photo": "../images/project/armature.jpg",
     "year": 2018,
-    "details": "Hackathon - Unity 3D animation app (Mira)",
+    "details": "Hackathon - Unity 3D app (Mira Prism)",
     "role": [
       "Software Engineer",
       "Technical Artist"
@@ -162,7 +163,7 @@ export const projectData = [
     "video": "https://youtu.be/V_XULehu524"
   },
   {
-    "title": "AnimAid Pre-viz",
+    "title": "AnimAid PreViz",
     "photo": "../images/project/animaid.jpg",
     "year": 2019,
     "details": "Hackathon - Unity 3D App (iOS)",

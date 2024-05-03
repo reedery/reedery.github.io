@@ -37,7 +37,6 @@ function init() {
         `;
 
         projectTile.addEventListener('click', () => {
-            //console.log("hasScrollCooledDown: "+ hasScrollCooledDown);
             if (scrollCooledDown) {
                 modalTitle.textContent = project.title;
                 // modalPhoto.src = project.photo;

@@ -6,7 +6,7 @@ import * as THREE from 'three';
 // import BadTVShader from './BadTVShader.js';
 
 let camera, scene, renderer, composer;
-const CAM_AMOUNT = 4;
+const CAM_AMOUNT = 3;
 
 
 // let shaderTime = 0;
