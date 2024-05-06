@@ -1,0 +1,12 @@
+{
+  "title": "Movieoke",
+  "photo": "",
+  "year": 2022,
+  "role": [
+    "Software Engineer",
+    "Product Manager",
+    "3D Generalist"
+  ],
+  "description": "Movieoke (Movie Karaoke) is a new way to create 3D animated remakes of iconic moments from movies, TV shows, or memes. To make a video with Movieoke, simply perform the lines on-screen and Movieoke's performance capture system tracks your face and voice to apply it to a 3D character in real-time. Inspired by Animoji, Vine, and Snapchat, Movieoke aims to make 3D animation creation more accessible, improvisational, and fun than ever before. Designed for the next generation of video creators, especially teens familiar with 3D creation in virtual worlds like Roblox and Minecraft, Movieoke believes that most 3D animation content in the future will be created through performance rather than keyframes. The ambition is to help creators channel their creative energy in completely new ways and transform animation from a slow art to a fast art.",
+  "video": "https://youtu.be/7E8niHZXveI"
+}

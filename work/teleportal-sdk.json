@@ -1,0 +1,11 @@
+{
+  "title": "Teleportal SDK",
+  "photo": "",
+  "year": 2020,
+  "role": [
+    "Software Engineer",
+    "Business Development"
+  ],
+  "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a'>Read more about Teleportal here.</a>",
+  "video": ""
+}

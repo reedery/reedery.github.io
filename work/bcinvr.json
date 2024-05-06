@@ -1,0 +1,10 @@
+{
+  "title": "McMullen Virtual Reality",
+  "photo": "images/irishvr/oculus.jpg",
+  "year": 2015,
+  "role": [
+    "Software Engineer"
+  ],
+  "description": "For the Spring 2015 exhibit at the McMullen Museum of Art at Boston College, I created a Virtual Reality experience to allow visitors to virtually visit the areas in Ireland where the art pieces originated from. I shot and stitched together panoramas from across the Irish countryside and built an interactive VR experience in Unity for the Oculus DK2. Custom 3D printed button mounts allowed users to change scenes.",
+  "video": ""
+}

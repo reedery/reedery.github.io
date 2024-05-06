@@ -1,0 +1,11 @@
+{
+  "title": "Vortex",
+  "photo": "",
+  "year": 2020,
+  "role": [
+    "Technical Artist",
+    "Software Engineer"
+  ],
+  "description": "Vortex is a performance-based 3D animation toolkit for mobile video creators. It allows users to create and share 3D animated videos by composing a set of performances on characters, cameras or props in space and time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074'>Read more about Vortex here.</a>",
+  "video": ""
+}
