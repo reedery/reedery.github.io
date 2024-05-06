@@ -10,6 +10,8 @@ const modalYear = document.getElementById('modal-year');
 const modalRole = document.getElementById('modal-role');
 const modalDescription = document.getElementById('modal-description');
 const modalVideo = document.getElementById('modal-video');
+const modalPhotos = document.getElementById('modal-photos');
+const modalSubtitle = document.getElementById('modal-subtitle');
 const closeBtn = document.getElementsByClassName('close')[0];
 
 // drag scroll on desktop
@@ -43,7 +45,27 @@ function init() {
                 modalYear.textContent = project.year;
                 modalRole.innerHTML = project.role.map(role => `<li>${role}</li>`).join('');
                 modalDescription.innerHTML = project.description;
-                modalVideo.innerHTML = `<iframe src="${project.video}" allowfullscreen></iframe>`;
+                modalVideo.innerHTML = `<iframe src="https://streamable.com/e/yh024o"  frameborder="0" style="height:40vh;width:100%;position:relative;" ></iframe></div>`;
+                
+{/* <iframe src="https://streamable.com/e/yh024o" width="100%" height="100%" frameborder="0" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe> */}
+
+                modalSubtitle.innerHTML = project.subtitle;
+
+                // Create the Flickr embed HTML
+                const flickrEmbedHtml = `
+                    <a data-flickr-embed="true" data-footer="false" href="${project.flickrAlbumUrl}" >
+                    <img src="https://live.staticflickr.com/5213/5484169808_303d1b65d1_m.jpg" width="420" height="320" alt="${project.title}"/>
+                    </a>
+                `;
+                modalPhotos.innerHTML = flickrEmbedHtml;
+
+                const flickrScript = document.createElement('script');
+                flickrScript.id = 'flickr-embed-script';
+                flickrScript.src = '//embedr.flickr.com/assets/client-code.js';
+                flickrScript.charset = 'utf-8';
+                flickrScript.async = true;
+                document.body.appendChild(flickrScript);
+
                 projectModal.style.display = 'block';
             }
         });

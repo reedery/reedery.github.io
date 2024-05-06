@@ -5,6 +5,7 @@ export const projectData = [
     "photo": "../images/project/vortex.jpg",
     "year": 2020,
     "details": "Unity 3D App (iOS + Android)",
+    "subtitle": "",
     "role": [
       "Technical Artist",
       "Software Engineer",
@@ -19,6 +20,7 @@ export const projectData = [
     "photo": "../images/project/tp-sdk.jpg",
     "year": 2020,
     "details": "Typescript 3D Networking (Unity, Three.js)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Business Development",
@@ -32,6 +34,7 @@ export const projectData = [
     "photo": "/images/project/jurassic.jpeg",
     "year": 2018,
     "details": "UE4/Motion Simulator (HTC Vive)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Pipeline Technical Director"
@@ -44,6 +47,7 @@ export const projectData = [
     "photo": "../images/project/gdc.jpg",
     "year": 2019,
     "details": "GDC Conference Speaker",
+    "subtitle": "",
     "role": [
       "Speaker"
     ],
@@ -55,6 +59,7 @@ export const projectData = [
     "photo": "../images/project/movieoke.jpg",
     "year": 2022,
     "details": "Unity 3D App (iOS + Android)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Technical Artist",
@@ -69,6 +74,7 @@ export const projectData = [
     "photo": "../images/project/moviebot.jpg",
     "year": 2023,
     "details": "Unity 3D App (iOS + Android)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Technical Artist",
@@ -83,18 +89,22 @@ export const projectData = [
     "photo": "../images/project/joycestick.jpg",
     "year": 2016,
     "details": "Unity VR App (HTC Vive)",
+    "subtitle": "",
     "role": [
-      "Engineering Lead",
-      "Teaching Assistant"
+      "Software Engineer",
+      "Product Manager",
+      "Lead Designer"
     ],
-    "description": "Joycestick reimagines James Joyce's <em>Ulysses</em> in Virtual Reality. I led this project from ideation, to securing the URF grant funding through to development by a team of nearly 30 students from Boston College, MIT, Northeastern and Berklee School of Music. The experience breaks the story up logically by chapter and represents each through objects and images. These are translated into interactive scenes that uncover aspects of the story as the player progresses. Featured in Boston Globe, NYTimes, London Times and demoed at literature and technology conferences around the world including Signapore, Dublin, Seattle and New York.",
-    "video": "https://www.youtube.com/embed/oOQ-NyNIj_E"
+    "brief": "Joycestick reimagined Joyce's <em>Ulysses</em> in VR and was built over 24mo by a team of 30 students that I led.",
+    "description": "I led this project from ideation, to securing the URF grant funding through to development by a team of nearly 30 students from Boston College, MIT, Northeastern and Berklee School of Music. The experience breaks the story up logically by chapter and represents each through objects and images. These are translated into interactive scenes that uncover aspects of the story as the player progresses. Featured in Boston Globe, NYTimes, London Times and demoed at literature and technology conferences around the world including Signapore, Dublin, Seattle and New York.",
+    "video": "https://www.youtube.com/embed/kwI70wGPlTw"
   },
   {
     "title": "Gravity",
     "photo": "../images/project/gravity.jpg",
     "year": 2019,
     "details": "Multi-user AR App (iOS + Android)",
+    "subtitle": "",
     "role": [
       "Technical Artist",
       "Software Engineer"
@@ -107,6 +117,7 @@ export const projectData = [
     "photo": "../images/project/fmd.jpg",
     "year": 2017,
     "details": "UE4 ARKit App (iOS)",
+    "subtitle": "",
     "role": [
       "Software Engineer"
     ],
@@ -118,6 +129,7 @@ export const projectData = [
     "photo": "../images/project/dwa.jpg",
     "year": 2019,
     "details": "OpenUSD @ DreamWorks Animation",
+    "subtitle": "",
     "role": [
       "Pipeline Technical Director"
     ],
@@ -129,6 +141,7 @@ export const projectData = [
     "photo": "../images/project/mcmullen.jpg",
     "year": 2015,
     "details": "UE4 VR App (Oculus Rift DK2)",
+    "subtitle": "",
     "role": [
       "Software Engineer"
     ],
@@ -140,6 +153,7 @@ export const projectData = [
     "photo": "../images/project/armature.jpg",
     "year": 2018,
     "details": "Hackathon - Unity 3D app (Mira Prism)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Technical Artist"
@@ -149,10 +163,11 @@ export const projectData = [
     "video": ""
   },
   {
-    "title": "MiXR 3D Synthesizer",
+    "title": "MiXR 3d Synth",
     "photo": "../images/project/mixr.jpg",
     "year": 2020,
-    "details": "Hackathon - UE4 VR App (Valve Index)",
+    "details": "Hackathon - UE4 VR Music app (Valve Index)",
+    "subtitle": "",
     "role": [
       "Software Engineer",
       "Technical Artist"
@@ -160,19 +175,21 @@ export const projectData = [
     "description": "MiXR is an ultimate audio-visual synthesizer that maps individual movement through space to a generative environment. It allows users to experience music in an abstract way, with movement at the core of sound exploration. The project was built using Unreal Engine, leveraging its audio engine for modular and granular synthesis. Full body tracking maps the user's body to synthesizer parameters and shader effects. The visuals feature a vaporwave 80s gamer theme, blending the 'real' and abstract worlds.",
     "challenges": "Learning Unreal Engine, optimizing neon glowing art, implementing real-time audio interaction, algorithmic chord composition, and generative audio.",
     "accomplishments": "Successfully learning Unreal, creating custom art, and implementing complex audio and visual interactions.",
-    "video": "https://youtu.be/V_XULehu524"
+    "video": "https://www.youtube.com/embed/V_XULehu524?start=15"
   },
   {
     "title": "AnimAid PreViz",
     "photo": "../images/project/animaid.jpg",
     "year": 2019,
     "details": "Hackathon - Unity 3D App (iOS)",
+    "subtitle": "Animaid enables artists to quickly pre-visualize ideas using a minecraft-style interface in AR to build basic elements of a scene that can be drawn on top of. It was built at Creating Reality AR/VR Hackathon '19 at MIT.",
     "role": [
       "Software Engineer",
       "Technical Artist"
     ],
     "description": "AnimAid is a tool for rapid prototyping of story concepts, accessible on ARKit and ARCore devices. It aims to democratize the skills and tools used for creating concept art and storyboards. The system consists of three main components.",
     "link": "https://devpost.com/software/animaid",
-    "video": ""
+    "video": "https://www.youtube.com/embed/2-PuKfeCO_s",
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316728236"
   }
 ];

@@ -16,12 +16,11 @@
 <body>
   <div id="container">
     <div id="content-container">
-      <h1>Ryan Reede</h1>
+     <h1>Ryan Reede</h1>
       <img src="images/rr-circ.png" alt="ryan">
       <p>Engineer & CGI Artist with 10 yrs of experience shipping 3D software at startups and large studios. 
         Loves bringing previously unimaginable ideas to life with new tools.
       </p>
-    
         <div class="button-container">
           <button id="my-work-btn" onclick="window.scrollTo({ top: document.body.scrollHeight/3 || document.documentElement.scrollHeight/3, left: 0, behavior: 'smooth', });">My Work</button>
           <button id="connect-btn" onclick="window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: 'smooth', });">Connect</button>
@@ -56,16 +55,21 @@
 
 
     <div id="project-modal" class="modal">
+      
       <div class="modal-dialog">
         <div class="modal-content">
           <span class="close">&times;</span>
           <div class="modal-body">
             <!-- <img id="modal-photo" src="" alt=""> -->
             <h2 id="modal-title"></h2>
-            <p id="modal-year"></p>
+            <h4 id="modal-year"></h4>
             <ul id="modal-role"></ul>
+            <p id="modal-year"></p>
+            <p id="modal-subtitle"></p>
+            <div id="modal-photos"></div>
             <p id="modal-description"></p>
-            <div id="modal-video"></div>
+            <div id="modal-video">
+            </div>
           </div>
         </div>
       </div>
@@ -92,43 +96,4 @@
     <script type="module" src="js/projectData.js"></script>
     <script type="module" src="js/tiles.js"></script>
 </body>
-
 </html>
-
-<!-- 
-        <p><strong>Hello and welcome!</strong></p>
-        <p>I&#x27;m Ryan, and I&#x27;m from Manhattan Beach, CA. Growing up with access to tools like Photoshop and After Effects taught me things about computers, creativity and problem-solving that play a vital role in my life every day. For this reason, I devote my time and energy to making technology more accessible for everyone.</p>
-        <p>At <a href="http://teleportal.app">Teleportal</a>, it is our belief that spatial computing presents the most ergonomic, creative and powerful human-computer interaction paradigm yet. We are working to ensure a privacy and accessibility-focused future for spatial computing. </p>
-        <p>For fun I like to cook, run and draw. Plastic Beach is my favorite record and <em>The Iron Giant</em> is my favorite film. I do my best to learn from my mistakes and be better each day. Practice makes perfect.</p>
-        <p>‍</p>
-        <h3><strong>Projects + Work</strong></h3>
-        <ul>
-          <li><a href="https://teleportal.app/">Teleportal</a> creates tools to make creating AR/VR software easier.<a href="https://reedery.github.io/tecnolatinx.com">‍</a></li>
-          <li><a href="https://reedery.github.io/tecnolatinx.com">Tecnolatinx XR Labs</a> (TLX) makes emerging technology (AR/VR) more accessible by providing lab space and curriculum to driven students.<strong><em>‍</em></strong></li>
-          <li><em>Abominable</em> (DreamWorks Animation, 2019): Feature-length animated film. Credit: Production Technology (Pipeline) Technical Director.<strong>‍</strong></li>
-          <li>Jurassic World VR (VRC, 2018): LBE Multiplayer VR <a href="https://www.hollywoodreporter.com/behind-screen/jurassic-world-virtual-reality-experience-debuts-1117631">motion simulator ride</a> at Dave and Busters. Credit: Software Engineer.<strong>‍</strong></li>
-          <li>Follow Me Dragon (VRC, 2017): Virtual Pet <a href="https://www.producthunt.com/posts/follow-me-dragon">application</a> and Apple ARKit/iOS 11 launch title. Credit: Software Engineer.<strong>‍</strong></li>
-          <li>Joycestick (Boston College, 2016): VR adaption of James Joyce’s Ulysses built by an interdisciplinary team of 30 students from Boston College, MIT, Berklee School of Music and Northeastern University. Credit: Teaching Assistant, Lead Designer</li>
-        </ul>
-        <figure style="padding-bottom:33.75%" id="w-node-65aef109c52b-31068a1c" class="w-richtext-align-center w-richtext-figure-type-video">
-          <div><iframe src="https://www.youtube.com/embed/27N-_M44swM" frameborder="0" allowfullscreen=""></iframe></div>
-        </figure>
-        <ul>
-          <li>Mod of Cards (Boston College, 2015): 6-episode web series inspired by House of Cards with a cast and crew of 31 students. <a href="https://vimeo.com/modofcards">Full season here</a>. Credit: Producer, Cinematographer.</li>
-        </ul>
-        <p>‍</p>
-        <h3><strong>Speaking</strong></h3>
-        <ul>
-          <li><strong>IASIL 2017, Singapore: </strong>In August of 2017, I spoke at the International Association for the Study of Irish Literatures conference at Nanyang Technological University (NTU) about our digital humanities project, Joycestick. To an audience of educators from around the world, I presented information on how interactive narratives can be produced for Virtual Reality and how to replicate the production effort of Joycestick at other undergraduate institutions. <a href="https://www.straitstimes.com/lifestyle/arts/get-into-a-novel-via-virtual-reality">More information</a>.</li>
-        </ul>
-        <ul>
-          <li><strong>GDC 2019, San Francisco, CA: </strong>In March of 2019, Joycestick was given the opportunity to present at the 2019 Game Developers Conference. My portion of our 3-person talk entitled &quot;Virtual Reality Learning: The Interdisciplinary Future of Literature&quot; was a post-mortem on the project from my perspective as the producer and teaching assistant, and (b) thoughts on how more diverse talent pipelines for indiscipline projects can be built. <a href="https://drive.google.com/file/d/1gFGzpFUCZyCN8_G7q61TAXvIN_JC2dYh/view?usp=sharing">Slides here</a>.</li>
-        </ul>
-        <ul>
-          <li><strong>LXiA/TLX Career Day, Los Angeles, CA: </strong>In June of 2019, I presented a 30-minute trip through the feature animation production pipeline to inspire young students to learn more about 3D graphics and consider careers in the industry.</li>
-        </ul>
-        <figure style="padding-bottom:33.75%" id="w-node-3e67689b6a3b-31068a1c" class="w-richtext-align-center w-richtext-figure-type-video">
-          <div><iframe src="https://www.youtube.com/embed/sR4VdwOE6Sg" frameborder="0" allowfullscreen=""></iframe></div>
-        </figure>
-        <p><br></p>
- -->
