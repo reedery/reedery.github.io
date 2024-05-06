@@ -6,7 +6,7 @@ const projectTilesContainer = document.getElementById('project-tiles-container')
 const projectModal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalPhoto = document.getElementById('modal-photo');
-const modalYear = document.getElementById('modal-year');
+// const modalYear = document.getElementById('modal-year');
 const modalRole = document.getElementById('modal-role');
 const modalDescription = document.getElementById('modal-description');
 const modalVideo = document.getElementById('modal-video');
@@ -42,30 +42,39 @@ function init() {
             if (scrollCooledDown) {
                 modalTitle.textContent = project.title;
                 // modalPhoto.src = project.photo;
-                modalYear.textContent = project.year;
+                // modalYear.textContent = project.year;
                 modalRole.innerHTML = project.role.map(role => `<li>${role}</li>`).join('');
                 modalDescription.innerHTML = project.description;
-                modalVideo.innerHTML = `<iframe src="https://streamable.com/e/yh024o"  frameborder="0" style="height:40vh;width:100%;position:relative;" ></iframe></div>`;
                 
-{/* <iframe src="https://streamable.com/e/yh024o" width="100%" height="100%" frameborder="0" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe> */}
+                var videoSection = "";
+                project.video.forEach(element => {
+                    const desc = element[0];
+                    const link = element[1];
+                    videoSection += `<h4>${desc}</h4><iframe src="${link}" frameborder="0" style="height:40vh;width:100%;position:relative;" ></iframe></div><p></p>`;
+                });
+                modalVideo.innerHTML = videoSection;
 
                 modalSubtitle.innerHTML = project.subtitle;
 
                 // Create the Flickr embed HTML
-                const flickrEmbedHtml = `
-                    <a data-flickr-embed="true" data-footer="false" href="${project.flickrAlbumUrl}" >
-                    <img src="https://live.staticflickr.com/5213/5484169808_303d1b65d1_m.jpg" width="420" height="320" alt="${project.title}"/>
-                    </a>
-                `;
-                modalPhotos.innerHTML = flickrEmbedHtml;
+                if (project.flickrAlbumUrl) {
+                    console.log(project.title);
+                    const flickrEmbedHtml = `
+                        <a data-flickr-embed="true" data-footer="false" href="${project.flickrAlbumUrl}" >
+                        <img src="https://live.staticflickr.com/5213/5484169808_303d1b65d1_m.jpg" width="420" height="320" alt="${project.title}"/>
+                        </a>
+                    `;
+                    modalPhotos.innerHTML = flickrEmbedHtml;
 
-                const flickrScript = document.createElement('script');
-                flickrScript.id = 'flickr-embed-script';
-                flickrScript.src = '//embedr.flickr.com/assets/client-code.js';
-                flickrScript.charset = 'utf-8';
-                flickrScript.async = true;
-                document.body.appendChild(flickrScript);
-
+                    const flickrScript = document.createElement('script');
+                    flickrScript.id = 'flickr-embed-script';
+                    flickrScript.src = '//embedr.flickr.com/assets/client-code.js';
+                    flickrScript.charset = 'utf-8';
+                    flickrScript.async = true;
+                    document.body.appendChild(flickrScript);
+                } else {
+                    modalPhotos.innerHTML = "";
+                }
                 projectModal.style.display = 'block';
             }
         });

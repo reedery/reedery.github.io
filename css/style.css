@@ -8,6 +8,10 @@ html {
     background-color: black;
 }
 
+a {
+    color: #6db8e0;
+}
+
 #connect-section {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/images/ryan-beats.jpg');
@@ -485,7 +489,7 @@ html {
 .modal-dialog {
     position: relative;
     width: calc(100% - 200px);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 10% auto;
     overflow-y: initial !important;
 }
@@ -528,6 +532,15 @@ html {
     margin-bottom: 5px;
 }
 
+.modal-content h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
 .modal-content p {
     font-size: 18px;
     line-height: 1.6;
@@ -536,8 +549,20 @@ html {
 .modal-content ul {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
 }
+
+@media (max-width: 600px) {
+    .modal-content ul {
+        font-size: 16px;
+    }
+
+    .modal-content p {
+        font-size: 16px;
+    }
+}
+
 
 .modal-content li {
     display: inline-block;
