@@ -12,25 +12,26 @@ export const projectData = [
       "Product Designer",
       "Co-founder",
     ],
-    "description": " In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aims to make CGI accessible to any creator to explore creative ideas. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074' target=\"_blank\">Read more about Vortex here.</a>",
+    "description": "Vortex was the first B2C product we built at Teleportal (the startup I co-founded/built from 2019-2024). It was based on the networking stack from the Teleportal SDK but focused on the problems video creators face when looking to use the medium of 3D Animation for the first time. In addition to performing object motion via touch-screen input, Vortex allows you to use your mobile device's AR tracking to animate. Inspired by Mandalorian-style virtual production, Figma, multitrack recorders and music/video editors, Vortex aimed to make CGI accessible to any mobile creator. In many ways we were succeeded, but ultimately we would pivot to Movieoke for a better UX. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074' target=\"_blank\">Read more about Vortex here.</a>",
     "video": [
         ["Tutorial of basic concepts in Vortex", "https://streamable.com/e/89glmc"],
+        ["Recording and exporting in Vortex", "https://www.youtube.com/embed/DOWbraISi-o?start=20"],
         ["Supercut of videos made with early concepts for Vortex", "https://www.youtube.com/embed/HMv78mgDhn0"]
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316788844"
   },
   {
     "title": "Teleportal SDK",
     "photo": "../images/project/tp-sdk.jpg",
     "year": 2020,
     "details": "Typescript 3D Networking (Unity, Three.js)",
-    "subtitle": "",
+    "subtitle": "Teleportal SDK was a developer platform that facilitated the creation of shared, persistent AR/VR experiences that are networked in real-time.",
     "role": [
       "Software Engineer",
       "Business Development",
       "Co-founder"
     ],
-    "description": "Teleportal is a platform that allows XR developers and content creators to create shared, persistent experiences that are networked in real-time. It works across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. Teleportal seamlessly synchronizes user locations and coordinate systems between devices, allowing developers to focus on creating their experience. It also automatically saves and retrieves persistent items in the shared geo space. Teleportal SDK integrates with existing Unity projects, converting them into crossplatform XR apps. The long-term vision is that XR, the combination of virtual and mixed reality technologies, is key to the future of collaboration, digital media, and the Internet itself. <a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a' target=\"_blank\">Read more about Teleportal here</a> and view the archived <a href=\"https://web.archive.org/web/20200202004243/https://teleportal.dev/docs/\">Developer Docs</a>",
+    "description": "This was the first product Teleportal (the startup I co-founded/built from 2019-2024) built and released. The Teleportal SDK worked across platforms (iOS / Android / VR / PC / Mac) and interfaces with the Unity game engine. The Teleportal SDK would seamlessly synchronize user locations and coordinate systems between devices and automatically save and retrieve persistent objects in the shared space. The Teleportal SDK integrated with existing Unity projects and three.js.<br><br><a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a' target=\"_blank\">Read more about Teleportal here</a> and view the archived <a href=\"https://web.archive.org/web/20200202004243/https://teleportal.dev/docs/\" target=\"_blank\">Developer Docs</a>.",
     "video": [
         ["Getting started with the Teleportal SDK", "https://www.youtube.com/embed/jp__SVtPbdQ?start=217"]
     ],
@@ -41,16 +42,16 @@ export const projectData = [
     "photo": "/images/project/jurassic.jpeg",
     "year": 2018,
     "details": "UE4/Motion Simulator (HTC Vive)",
-    "subtitle": "",
+    "subtitle": "Jurassic World: VR Expedition was a location-based VR motion-simulator ride powered by UE4 at Dave & Buster's. It was built by our team at VRC in collaboration with Universal with dinosaur assets built by ILM.",
     "role": [
       "Software Engineer",
       "Pipeline Technical Director"
     ],
-    "description": "Jurassic World: VR Expedition is a location-based VR experience at Dave & Buster's arcades. It's a quick, fun ride that immerses players in the Jurassic World universe, set between the first movie and its sequel. Players sit in a bouncing row of seats, wearing HTC Vive headsets, and go on a virtual off-road jeep tour through the park's wreckage. The ride includes a game element where players tag dinosaurs using a handheld Vive controller, similar to the N64 game Pokemon Snap. The experience features close encounters with velociraptors, a T. rex, and a giant mosasaur, all synced with the motion of the seats and realistic wind effects. The ride, created by Universal and The Virtual Reality Company, is designed for fast turnaround, easy use, and accessibility, costing only $5 per play. It showcases how VR can be effectively used in short, exciting experiences in arcade settings.",
+    "description": "Jurassic VR immersed players in an off-roading adventure through the Jurassic World park where they must tag dinosaurs with a laser gun. Each of the four players wear HTC Vive headsets, and is strapped into a four-person motion simulator platform that moves on 3 axis. The experience was 4 min and costed $5 per person, quickly making it one of the most successful VR location-based experiences available.<br><br>The ride was built with a modified version of UE4 that prioritized data moving between the game engine server that was hosting the session for all four players and the motion simulator hardware platform. In addition to gameplay programming in Blueprints, I was responsible for building in-engine tools for rendering nightlys (360 stereo videos) that our director could review each morning and see the latest build. I also scripted our pipeline from Maya to Unreal with axis/unit scale conversions so  animators could push their changes directly to Perforce from Maya.",
     "video": [
-        ["Video review of the Jurassic World VR Experience", "https://youtu.be/YjsfLltva4s"]
+        ["Video review of the Jurassic World VR Experience", "https://www.youtube.com/embed/YjsfLltva4s?start=120"]
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316789279"
   },
   {
     "title": "VR in Digital Humanities",
@@ -61,28 +62,29 @@ export const projectData = [
     "role": [
       "Speaker"
     ],
-    "description": "At GDC 2019, I gave a speech entitled \"VR and Digital Humanities\" where I presented our Joycestick VR project (view the Joycestick project for more info) to an audience of developers and educators.<br><br>I spoke about how we adapted a book (<em>Ulysses</em>) for VR, how our product management process worked to deliver the project with a team of 30 students and takeaways for how to improve outcomes for project based learning experiences that use spatial computing technology.",
+    "description": "At GDC 2019, I gave a speech entitled \"VR and Digital Humanities\" where I presented our Joycestick VR project (view the Joycestick project for more info) to an audience of developers and educators.<br><br>I spoke about how we adapted a book (<em>Ulysses</em>) for VR, how our product management process worked to deliver the project with a team of 30 students and takeaways on how to improve outcomes for students doing similar experiences with VR.",
     "video": [
         ["GDC Speech on Joycestick", "https://www.youtube.com/embed/f3Z1c9QdFn4?start=661"]
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316768787"
   },
   {
     "title": "Movieoke",
     "photo": "../images/project/movieoke.jpg",
     "year": 2022,
     "details": "Unity 3D App (iOS + Android)",
-    "subtitle": "Movieoke (Movie Karaoke) was a fun way to create 3D animated remakes of iconic moments from movies, shows, or memes. It was built by our team at Teleportal from 2021-22 and scaled to nearly 300k users worldwide.",
+    "subtitle": "Movieoke (Movie Karaoke) was a product for creating 3D animated remakes of iconic moments from movies and memes. It was built at Teleportal from 2021-23 and scaled to 320k users worldwide.",
     "role": [
       "Software Engineer",
       "Technical Artist",
       "Product Manager",
       "Co-founder"
     ],
-    "description": "In DATE, we decided to pivot from Vortex (see infromation in the Vortex project) to a product that presented an even easier and more fun way to make 3D animated content. <a href=\"https://medium.com/teleportal/now-playing-movieoke-2285d02cfa42\" target=\"_blank\">Info from launch</a>. <br><br>To make a video with Movieoke, simply perform the lines on-screen and Movieoke's performance capture system tracks your face and voice to apply it to a 3D character in real-time. Inspired by Animoji, Vine, and Snapchat, Movieoke aims to make 3D animation creation more accessible, improvisational, and fun than ever before. Designed for the next generation of video creators, especially teens familiar with 3D creation in virtual worlds like Roblox and Minecraft, Movieoke believes that most 3D animation content in the future will be created through performance rather than keyframes. The ambition is to help creators channel their creative energy in completely new ways and transform animation from a slow art to a fast art. Some <a href=\"https://www.youtube.com/shorts/eMn8kpP70hU?feature=share\" target=\"_blank\">fun</a> videos created by the Movieoke community",
+    "description": "At Teleportal (the startup I co-founded/built from 2019-2023), democratizing 3D content creation was core to our vision. After iterating on Vortex (project info on this site) for 11 releases, it was clear from the analytics that the product was too difficult to use and the product did little to help creators overcome the blank canvas problem.<br><br>Our team came up with Movie Karaoke as a fun way to reimagine storytelling with 3D Animated characters on a mobile device by putting facial capture and voice recording at the center of the UX. The UI was designed like Snapchat’s camera and having scene templates with a teleprompter made for creators to get started. A team of 5 artists/engineers built and released 20 Movieoke versions from April ’22 to March ’23 (at which point Movieoke became MovieBot). The 2.0 release was notable: it introduced customizable scenes and significantly improved the user funnel (51% more recordings, 17% more exports).<br><br>My role during this time was multifaceted. Externally I was responsible for investor updates and internally, I was the product manager working with our lead engineer and designer on scoping eng/tech art sprints and planning upcoming releases. I would pick up art and engineering tasks as needed to ensure that release schedules were met. Once a release was tested and passed QA, I also managed release engineering and publishing updates to Google Play/App Store each two weeks. In 7 months, we scaled from just an idea to 25k WAU/4k DAU on 322k total installs with an average rating of 4.6 starts on iOS/Android.<br><br><a href=\"https://medium.com/teleportal/now-playing-movieoke-2285d02cfa42\" target=\"_blank\">More information here</a>.",
     "video": [
         ["An YouTube Shorts ad for Movieoke (Made with Movieoke)", "https://www.youtube.com/embed/5C9jzgT89f4"],
-        ["Ste Spongebob Characters never made into the final app", "https://www.youtube.com/embed/rZ9uuzl-ucw"]
+        ["YouTube Creator Pankh Khan's Movieoke tutorial", "https://www.youtube.com/embed/zUv1lB26BJw?start=69"],
+        ["YouTube creator's AmongUs machinima made with Movieoke", "https://www.youtube.com/embed/IRf6SjtSA3o"],
         ["Our application to partner w/ OpenAI for API usage in app", "https://www.youtube.com/embed/1_3wdWb_SB4"]
     ],
     "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316749461"
@@ -92,36 +94,40 @@ export const projectData = [
     "photo": "../images/project/moviebot.jpg",
     "year": 2023,
     "details": "Unity 3D App (iOS + Android)",
-    "subtitle": "",
+    "subtitle": "MovieBot (2023) is an AI-powered 3D animation platform that transforms text into animated videos. It was built atop technology from Movieoke (see project info on this site) and scaled from 25k to 122k MAU in 6 months.",
     "role": [
       "Software Engineer",
       "Technical Artist",
       "Product Manager",
-      "Co-founder/CEO"
+      "Co-founder"
     ],
-    "description": "MovieBot is an AI-powered 3D animation platform that transforms text into animated video instantly. Users simply type a story topic and MovieBot generates an interactive 3D movie with talking characters based on the prompt. It offers a simple UI for generating movies, allowing users to choose characters, voices, worlds, and script styles. Every generated movie is a 3D scene that can be remixed in the Story Editor. MovieBot aimed to make 3D animation, traditionally a complex art form requiring desktop computers and technical skills, accessible on smartphones. The development process prioritized user feedback and community input. A key lesson learned was that while earlier versions focused on user performance, pivoting to AI proved more successful in terms of content shared online. MovieBot was also featured on the Dr. Phil show.",
-    "video": [
-        ["MovieBot featured on Dr. Phil", "https://www.youtube.com/embed/1nOCuDtxdRo" ]
+    "description": "Built at Teleportal (the startup I co-founded/built from 2019-2023), MovieBot made AI-assisted content creation accessible for 3D Animated videos. Our team of 4 built upon Movieoke (see project info on this site) to re-launch as MovieBot in just 8 weeks. The core difference between Movieoke and MovieBot is that in the former, creators must record each line of dialogue to make a video. But with MovieBot, creators can enter a topic and make a video instantly, then choose to tweak what is created however they want. The emphasis on speed-to-create led to a 20% month over month growth rate for MovieBot compared to Movieoke.<br><br>During this transition, I became CEO of our startup, but remained focus on building the product as an engineer, technical artist and product manager. In addition to OpenAI gpt-3.5, we integrated other AI tools including Avaturn Avatars and Blockade Labs Skyboxes and ElevenLabs voices into our Unity App. We reached ~1 million installs worldwide and had over 120k MAU and began generating  revenue. Despite our team’s best efforts to build a great product and begin generating revenue, we could not sustain development and the company was shut down at the end of 2023. Fans of MovieBot continue to share old videos using the product today!",
+    "video": [  
+      ["MovieBot featured on Dr. Phil", "https://www.youtube.com/embed/1nOCuDtxdRo" ],
+      ["MovieBot YouTube Shorts ad", "https://www.youtube.com/embed/kVMfdhZznIQ"],
+      ["How to install MovieBot Android", "https://www.youtube.com/embed/hyDR0ZIRIak"],
+      ["AI creator on YouTube showcasing our app", "https://www.youtube.com/embed/3ARvCJe0LfU"],
+      ["Made in MovieBot: Es súper mario bros!", "https://www.youtube.com/embed/77FvgxZ32cM"],
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316768092"
   },
   {
     "title": "Joycestick",
     "photo": "../images/project/joycestick.jpg",
     "year": 2017,
     "details": "Unity VR App (HTC Vive)",
-    "subtitle": "",
+    "subtitle": "Joycestick reimagined Joyce's <em>Ulysses</em> in VR. I led this project from idea through prototyping to a full release. I worked alongside and managed a team of 30 studnets from 2015-17 to build Joycestick.",
     "role": [
       "Software Engineer",
       "Product Manager",
       "Lead Designer"
     ],
-    "brief": "Joycestick reimagined Joyce's <em>Ulysses</em> in VR and was built over 24mo by a team of 30 students that I led.",
-    "description": "I led this project from ideation, to securing the URF grant funding through to development by a team of nearly 30 students from Boston College, MIT, Northeastern and Berklee School of Music. The experience breaks the story up logically by chapter and represents each through objects and images. These are translated into interactive scenes that uncover aspects of the story as the player progresses. Featured in Boston Globe, NYTimes, London Times and demoed at literature and technology conferences around the world including Signapore, Dublin, Seattle and New York.",
+    "description": "After working with Professor Nugent on previous Digital Humantities projects in VR at Boston College, we decided to take on a more ambitious concept: reimagining Ulysses in VR. We secured URF grant funding to development this project, and recruited 30 students from Boston College, MIT, Northeastern and Berklee School of Music to help us bring it to life. <br><br>The experience breaks the story up logically by chapter and represents each through objects and images. These are translated into interactive scenes that uncover aspects of the story as the player progresses. Featured in Boston Globe, NYTimes, London Times and demoed at literature and technology conferences around the world including Signapore, Dublin, Seattle and New York.<br><br><a href=\"https://www.bc.edu/bc-web/schools/morrissey/departments/computer-science/about/news-and-notes/joycestick/_jcr_content.html\" target=\"_blank\" More information on my work on Joycestick here</a>",
     "video": [
-        ["Joycestick promotional video", "https://www.youtube.com/embed/kwI70wGPlTw"]
+        ["Gameplay video of Joycestick", "https://www.youtube.com/embed/27N-_M44swM"],
+        ["Joycestick promotional video", "https://www.youtube.com/embed/kwI70wGPlTw"],
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316771765"
   },
   {
     "title": "Gravity",
@@ -133,9 +139,9 @@ export const projectData = [
       "Technical Artist",
       "Software Engineer"
     ],
-    "description": "Multiuser, cross-platform networked Augmented Reality experience built in Unity. Supported ARCore and ARKit devices, with 85 devices networked together in a spatially mapped 3D environment in realtime. Included spatialized DMX lights and fog machines that users would interact with through their AR app clients.",
+    "description": "With events partner SeecretMap, we built a multiuser, cross-platform networked Augmented Reality experience. Using what would become a production ready version of the Teleportal SDK, our app supported ARCore and ARKit devices. On the night of the event, we had 85 devices networked together in a spatially mapped 3D environment. <br><br>The Gravity experience included spatialized DMX lights and fog machines that users would interact with through their AR apps. I was responsible for all network communications using OSC and MIDI to control the lights and fog machines and release engineering.",
     "video": [
-        ["Grav", "https://player.vimeo.com/video/596350528?h=87fa5a9b14"]
+        ["Gravity event recap video", "https://player.vimeo.com/video/596350528?h=87fa5a9b14"]
     ],
     "flickrAlbumUrl": ""
   },
@@ -144,72 +150,70 @@ export const projectData = [
     "photo": "../images/project/fmd.jpg",
     "year": 2017,
     "details": "UE4 ARKit App (iOS)",
-    "subtitle": "",
+    "subtitle": "Follow Me Dragon was an ARKit app that used the first release of ARKit Beta in Unreal Engine. It was made by a team of 5 at VRC in 2017, and became an official Apple ARKit launch title ahead of WWDC '18.",
     "role": [
       "Software Engineer"
     ],
-    "description": "One of the first Apple ARKit apps developed and released, featured and installed on iPads in Apple Stores around the world. Apple invited our dev team to Cupertino to work on the app with their support ahead of the official ARKit launch in iOS. Drake the dragon is your AR pet who performs tricks, breathes fire, and follows you around as you collect cookies to feed him.",
+    "description": "Follow me Dragon was a virtual pet app in AR that used plane detection to have a dragon follow you around your space. It was featured by Apple and installed on iPads in Apple Stores around the world. Our dev team was invited to Cupertino to work on the app with Apple's support ahead of the official ARKit launch. <br><br>In the app, Drake the dragon performs tricks, breathes fire, and follows you around as you collect cookies to feed him. <br><br>I was responsible for building user interactions with the dragon such as fetch and tap and drag. These functions utilized Unreal's animation state machine, ARKit plane detection and AR lifecycle events and touch interface API.",
     "video": [
-        ["FMD...", "https://www.youtube.com/embed/0FyH3YFSs8s"]
+        ["Follow me Dragon demo", "https://www.youtube.com/embed/0FyH3YFSs8s"]
     ],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316783633"
   },
   {
     "title": "DreamWorks Pipeline TD",
     "photo": "../images/project/dwa.jpg",
     "year": 2019,
     "details": "OpenUSD @ DreamWorks Animation",
-    "subtitle": "From 2018-19, I worked as a Pipeline Technical Director at DreamWorks Animation integrating OpenUSD into the studio's pipeline.",
+    "subtitle": "From 2018-19, I worked as a Pipeline Technical Director at DreamWorks Animation integrating non-destructive OpenUSD workflows into the studio's pipeline infra.",
     "role": [
       "Pipeline Technical Director"
     ],
-    "description": "DreamWorks' <a href=\"https://research.dreamworks.com/wp-content/uploads/2018/07/01-25-golembeski-EDITED.pdf\" target=\"_blank\"> \"Pipeline x\"</a> is a service-oriented architecture based-pipeline built around Pixar's OpenUSD. I worked with artists in Rigging, Modeling and Scene Layout to design and build workflow code and UIs (Python QTGui) in tools such as Nuke, Maya, Katana and Houdini. Credited on the animated film Abominable (2019).",
+    "description": "DreamWorks' <a href=\"https://research.dreamworks.com/wp-content/uploads/2018/07/01-25-golembeski-EDITED.pdf\" target=\"_blank\"> \"Pipeline x\"</a> is a service-oriented architecture CGI pipeline built with Pixar's OpenUSD. I worked on PipelineX with artists from Rigging, Modeling and Scene Layout to design and build workflow code and UIs (Python QTGui) in tools including Nuke, Maya, Katana and Houdini. I became deepluy familiar with the OpenUSD composition/override logic, Python libraries, USDView and Hydra. I was credited for my work on the animated film <em>Abominable</em> (2019) and worked with early modeling artists doing pre-production art models for <em>Bad Guys</em>.",
     "video": [],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316775956"
   },
   {
     "title": "McMullen Museum VR",
     "photo": "../images/project/mcmullen.jpg",
     "year": 2015,
     "details": "UE4 VR App (Oculus Rift DK2)",
-    "subtitle": "",
+    "subtitle": "A VR application at the McMullen Museum (Boston College's on-campus museum) showcasing various monuments from Irish history reporjected in stero 3D.",
     "role": [
       "Software Engineer"
     ],
-    "description": "For the Spring 2015 exhibit at the McMullen Museum of Art at Boston College, I created a Virtual Reality experience to allow visitors to virtually visit the areas in Ireland where the art pieces originated from. I shot and stitched together panoramas from across the Irish countryside and built an interactive VR experience in Unity for the Oculus DK2. Custom 3D printed button mounts allowed users to change scenes.",
+    "description": "For the Spring 2015 exhibit at the McMullen Museum of Art at Boston College, I created a Virtual Reality experiencein UE4 to allow visitors to virtually visit the areas in Ireland where the art pieces in the exhbit came from. I shot and stitched together panoramas from across the Irish countryside and built an interactive VR experience in Unity for the Oculus DK2. Custom 3D printed button mounts allowed users to change scenes.",
     "video": [],
-    "flickrAlbumUrl": ""
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316768952"
   },
   {
     "title": "ARmature Pose",
     "photo": "../images/project/armature.jpg",
     "year": 2018,
     "details": "Hackathon - Unity 3D app (Mira Prism)",
-    "subtitle": "",
+    "subtitle": "ARmature (2018) is an AR that makes it easier for stop-motion animators to bring their visions to life. Built for Mira Prism, ARMature lets an animator move frame-by-frame through an FBX that is scaled 1:1 to match thier physical model",
     "role": [
       "Software Engineer",
       "Technical Artist"
     ],
-    "description": "ARmature is a tool that uses an augmented reality headset to help stop motion animators accurately match their clay models to digitally animated characters, frame by frame. This allows for quick and precise transfer from digital animation to stop motion, enabling both amateurs and professionals to create smooth stop motion animation.",
-    "link": "https://devpost.com/software/armature",
-    "video": [],
-    "flickrAlbumUrl": ""
+    "description": "With a 3D onion skin overlay, stop motion animators could get the motion they already created in a FBX and apply it to thier physical model with accuracy. We think this oculd be huge for making stop-motion animation more accesible, and enabling professional stop-motion animators to bring more impressive sequences to life. <br><br><a href=\"https://devpost.com/software/armature\" target=\"_blank\">More information here</a>.", 
+    "video": [["ARmature demo vide", "https://streamable.com/e/7drp1y"]],
+    "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316789284"
   },
   {
     "title": "MiXR Spatial Synth",
     "photo": "../images/project/mixr.jpg",
     "year": 2020,
-    "details": "Hackathon - UE4 VR Music app (Valve Index)",
-    "subtitle": "MiXR is an  audio-visual synthesizer that maps individual movement through space to a sound generation. Built at Creating Reality AR/VR Hackathon '20 at MIT",
+    "subtitle": "MiXR is an audio-visual synthesizer that maps individual movement through space to sound generation. Built at Reality Hack '20 at MIT",
     "role": [
       "Software Engineer",
       "Technical Artist"
     ],
-    "description": "MiXR allows users to experience music in an abstract way, with movement at the core of sound exploration. The project was built using Unreal Engine, leveraging its audio engine for modular and granular synthesis. Full body tracking maps the user's body to synthesizer parameters and shader effects. The visuals feature a vaporwave 80s gamer theme, blending the 'real' and abstract worlds. The challenges included implementing real-time audio interaction, algorithmic chord composition, and generative audio.",
+    "description": "The MiXR team came together around wanting to use the spatial nature of VR to create new type of musical instrument. With MiXR, users get to experience music creation abstractly through their movement. We built this project with Unreal Engine 4, leveraging its audio engine to build a modular and granular synthesis with a real-time 3D interface. A full body IK rig maps the user's motion to synthesizer parameters and shader effects on the objects being interacted with.<br><br> I was responsible for building the set in 3D with baked + realtime lights, integrating a humanoid IK rig from hand/head positions and programming user <> object interaction with Blueprints. <br><br><a href=\"https://devpost.com/software/mixr-e946oj\" target=\"_blank\">More information here</a>.",
     "video": [
       ["MiXR presentation video ", "https://www.youtube.com/embed/V_XULehu524?start=15"]
     ],
-    "flickrAlbumUrl": "https://www.flickr.com/photos/skywatcher150/albums/72157623679724747/"
+    "flickrAlbumUrl": ""
   },
   {
     "title": "AnimAid PreViz",
@@ -221,13 +225,11 @@ export const projectData = [
       "Software Engineer",
       "Technical Artist"
     ],
-    "description": ", accessible on ARKit and ARCore devices. It aims to democratize the skills and tools used for creating concept art and storyboards. The system consists of three main components.",
+    "description": "Animaid's aim was to democratize the skills and tools used for creating concept art and storyboards. The system consists of three main components. 1. is an AR block builder similar to minecraft that allows users to quick mock a set (ie a city block), 2. a tool for caturing a view of the set for drawing graphics over (such as characters and stage directions), and 3. a deep-learning based 3D mesh generator so users can bring any object imaginable into their sets.<br><br>I was responsible for the interface of the Unity app and all of the tech art in the experience. <a href=\"https://devpost.com/software/animaid\" target=\"_blank\">More information</a>.",
     "link": "https://devpost.com/software/animaid",
     "video": [
-        ["one one one one", "https://streamable.com/e/yh024o"], 
-        ["two two two two", "https://streamable.com/e/ot0m"], 
-        ["three three three", "https://www.youtube.com/embed/V_XULehu524?start=15"]
+        ["Animaid demo video", "https://www.youtube.com/embed/2-PuKfeCO_s"]
     ],
-    "flickrAlbumUrl": ""//https://www.flickr.com/photos/200636511@N06/albums/72177720316728236"
+    "flickrAlbumUrl": ""
   }
 ];
