@@ -250,7 +250,7 @@ export const projectData = [
     ],
     "description": "DreamWorks' <a href=\"https://research.dreamworks.com/wp-content/uploads/2018/07/01-25-golembeski-EDITED.pdf\" target=\"_blank\">\
     \"Pipeline x\"</a> is a service-oriented architecture CGI pipeline built with Pixar's OpenUSD. I worked on PipelineX with artists from Rigging, Modeling\
-    and Scene Layout to design and build workflow code and UIs (Python QTGui) in tools including Nuke, Maya, Katana and Houdini. I became deepluy familiar with\
+    and Scene Layout to design and build workflow code and UIs (Python QTGui) in tools including Nuke, Maya, Katana and Houdini. I became deeply familiar with\
      the OpenUSD composition/override logic, Python libraries, USDView and Hydra. I was credited for my work on the animated film <em>Abominable</em> (2019) and\
       worked with early modeling artists doing pre-production art models for <em>Bad Guys</em>.",
     "video": [],
