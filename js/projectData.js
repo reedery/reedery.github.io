@@ -20,7 +20,6 @@ export const projectData = [
       accessible to any mobile creator. In many ways we were succeeded, but ultimately we would pivot to Movieoke for a better UX. <a href='https://medium.com/teleportal/made-in-vortex-166daa63c074' target=\"_blank\">Read\
       more about Vortex here.</a>",
     "video": [
-        ["Tutorial of basic concepts in Vortex", "https://streamable.com/e/89glmc"],
         ["Recording and exporting in Vortex", "https://www.youtube.com/embed/DOWbraISi-o?start=20"],
         ["Supercut of videos made with early concepts for Vortex", "https://www.youtube.com/embed/HMv78mgDhn0"]
     ],
@@ -148,11 +147,10 @@ export const projectData = [
             generating revenue with our MovieBot+ subscription. <br><br>Despite our team’s best efforts to build a great product and grow our revenue\
             stream, we could not sustain development and the company shut down around January 2024. Fans of MovieBot continue to share old videos using the product today!",
     "video": [  
-      ["MovieBot featured on Dr. Phil", "https://www.youtube.com/embed/1nOCuDtxdRo" ],
       ["MovieBot YouTube Shorts ad", "https://www.youtube.com/embed/kVMfdhZznIQ"],
+      ["MovieBot featured on Dr. Phil", "https://www.youtube.com/embed/1nOCuDtxdRo" ],
       ["How to install MovieBot Android", "https://www.youtube.com/embed/hyDR0ZIRIak"],
-      ["AI creator on YouTube showcasing our app", "https://www.youtube.com/embed/3ARvCJe0LfU"],
-      ["Made in MovieBot: Es súper mario bros!", "https://www.youtube.com/embed/77FvgxZ32cM"],
+      ["AI Influencer showcasing MovieBot", "https://www.youtube.com/embed/4xsdChV390Q"],
     ],
     "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316768092"
   },
@@ -263,7 +261,8 @@ export const projectData = [
     "details": "UE4 VR App (Oculus Rift DK2)",
     "subtitle": "A VR application at the McMullen Museum (Boston College's on-campus museum) showcasing various monuments from Irish history reporjected in stero 3D.",
     "role": [
-      "Software Engineer"
+      "Software Engineer",
+      "3D Print Engineer"
     ],
     "description": "For the Spring 2015 exhibit at the McMullen Museum of Art at Boston College, I created a Virtual Reality experiencein UE4 to allow visitors to\
      virtually visit the areas in Ireland where the art pieces in the exhbit came from. I shot and stitched together panoramas from across the Irish countryside and\
@@ -328,6 +327,22 @@ export const projectData = [
     "link": "https://devpost.com/software/animaid",
     "video": [
         ["Animaid demo video", "https://www.youtube.com/embed/2-PuKfeCO_s"]
+    ],
+    "flickrAlbumUrl": ""
+  },
+  {
+    "title": "10k: Immersive Science",
+    "photo": "../images/project/10k.jpg",
+    "year": 2024,
+    "details": "Engineering on EdTech Platform (Web + VR)",
+    "subtitle": "I was a contributor on 10K Science, an immersive & interactive science EdTech platform.",
+    "role": [
+      "Software Engineer"
+    ],
+    "description": "I successfully shipped a WebGL version of the existing Unity VR project, integrating React front-end elements that communicate seamlessly with Unity Events. The project involved optimizing the frame rate and upgrading the Unity Engine. Additionally, I refactored the camera control systems for both Web and VR versions, enhancing the camera-space visual effects. A custom VR keyboard system was also developed, featuring event-driven and data-bound keys.<br><br>For more information, you can try <a href='https://viewer.10k.science' target=\"_blank\">10k Science Web (Chrome)</a> or explore <a href='https://www.meta.com/en-gb/experiences/10k-science/5616986801647861' target=\"_blank\">10k Science VR</a> on the Oculus Store.",
+    "link": "https://viewer.10k.science",
+    "video": [
+      ["10k Science VR demo", "https://player.vimeo.com/video/1073383527?h=2f31389884"]
     ],
     "flickrAlbumUrl": ""
   }

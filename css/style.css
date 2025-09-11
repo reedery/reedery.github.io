@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 body,
 html {
     margin: 0;
@@ -158,8 +159,8 @@ a {
 }
 
 #content-container h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-weight: 800;
     font-size: xxx-large;
     margin-top: 6vh;
     color: lightcyan;
@@ -219,6 +220,11 @@ a {
     margin-right: 25vw;
     margin-bottom: 4vh;
     background: none;
+}
+
+#content-container p.tagline {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
 }
 
 @media (max-width: 820px) {
@@ -589,10 +595,10 @@ a {
 
 .close {
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 20px;
     color: #ffffff9e;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: medium;
     cursor: pointer;
     transition: color 0.3s;

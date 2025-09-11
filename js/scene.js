@@ -6,7 +6,7 @@ import * as THREE from 'three';
 // import BadTVShader from './BadTVShader.js';
 
 let camera, scene, renderer, composer;
-const CAM_AMOUNT = 4.4;
+const CAM_AMOUNT = 4.2;
 
 
 // let shaderTime = 0;
@@ -27,14 +27,14 @@ const params = {
     },
     planeY: {
 
-        constant: 2.202,
+        constant: 8.202,
         negated: false,
         displayHelper: false
 
     },
     planeZ: {
 
-        constant: 3.9,
+        constant: 1.9,
         negated: false,
         displayHelper: false
 
@@ -100,11 +100,11 @@ function init() {
 
         for ( let x = 0; x < CAM_AMOUNT; x++ ) {
 
-            const subcamera = new THREE.PerspectiveCamera( 13 - (y/CAM_AMOUNT), ASPECT_RATIO, 0.1, 100 );
+            const subcamera = new THREE.PerspectiveCamera( 11 - (y/CAM_AMOUNT), ASPECT_RATIO, 0.1, 100 );
             subcamera.viewport = new THREE.Vector4( Math.floor( x * WIDTH ), Math.floor( y * HEIGHT ), Math.ceil( WIDTH ), Math.ceil( HEIGHT ) );
             subcamera.position.x = 4 - ( x / CAM_AMOUNT );
-            subcamera.position.y = 4 + (.9 * x) + (y/3);
-            subcamera.position.z = 1.5 + (.8 * x) + y*3;
+            subcamera.position.y = 7 + (.9 * x) + (y/3);
+            subcamera.position.z = 1.8 + (.8 * x) + y*3;
             subcamera.position.multiplyScalar(1 + 0.1*x);
             let yp = -1 + (y / CAM_AMOUNT);
             subcamera.lookAt( 0, yp, 0 );
@@ -316,7 +316,7 @@ function onWindowResize() {
 
   
   function animate() {
-    const delta = clock.getDelta();
+    const delta = clock.getDelta() + 0.02;
 
     requestAnimationFrame( animate );
 
