@@ -284,7 +284,7 @@ export const projectData = [
     "description": "With a 3D onion skin overlay, stop motion animators could get the motion they already created in a FBX and apply it to thier physical model\
      with accuracy. We think this oculd be huge for making stop-motion animation more accesible, and enabling professional stop-motion animators to bring more\
     impressive sequences to life. <br><br><a href=\"https://devpost.com/software/armature\" target=\"_blank\">More information here</a>.", 
-    "video": [["ARmature demo vide", "https://streamable.com/e/7drp1y"]],
+    "video": [["ARmature demo vide", "https://www.youtube.com/embed/Cnkaf6-z6Os"]],
     "flickrAlbumUrl": "https://www.flickr.com/photos/200636511@N06/albums/72177720316789284"
   },
   {
