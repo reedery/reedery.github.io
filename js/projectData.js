@@ -42,10 +42,8 @@ export const projectData = [
       a modular and extensible service-oriented architecture in Typescript. My main responsibility was the SDK interface code and improving the developer\
       experience in Unity with each release. Our partners built multiplayer games for Magic Leap, real-time multiuser art exhibits and virtual production\
       software.<br><br><a href='https://medium.com/teleportal/announcing-teleportal-the-xr-telepresence-platform-350a710c4c0a' target=\"_blank\">Read\
-      more about Teleportal here</a> and view the archived <a href=\"https://web.archive.org/web/20200202004243/https://teleportal.dev/docs/\" target=\"_blank\">Developer Docs</a>.",
-    "video": [
-        ["Getting started with the Teleportal SDK", "https://www.youtube.com/embed/jp__SVtPbdQ?start=217"]
-    ],
+      more about Teleportal here</a> and view the archived <a href=\"https://tinyurl.com/tp-sdk-docs-2020\" target=\"_blank\">Developer Docs</a>.",
+    "video": [],
     "flickrAlbumUrl": ""
   },
   {
