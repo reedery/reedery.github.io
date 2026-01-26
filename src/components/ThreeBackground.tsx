@@ -250,6 +250,7 @@ const ThreeBackground = () => {
 
     function animate() {
       const delta = clock.getDelta() + 0.02;
+      animationIdRef.current = requestAnimationFrame(animate);
 
       if (params.animate && object) {
         object.rotation.x -= delta * 0.1;
@@ -277,16 +278,7 @@ const ThreeBackground = () => {
 
     // Initialize everything
     init();
-    const tick = () => {
-      animate();
-      animationIdRef.current = requestAnimationFrame(tick);
-    };
-
-    if (rendererRef.current) {
-      rendererRef.current.setAnimationLoop(animate);
-    } else {
-      tick();
-    }
+    animate();
 
     // Add resize listener
     window.addEventListener('resize', onWindowResize, false);
@@ -297,9 +289,6 @@ const ThreeBackground = () => {
       
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
-      }
-      if (rendererRef.current) {
-        rendererRef.current.setAnimationLoop(null);
       }
       
       if (rendererRef.current && mountRef.current) {
