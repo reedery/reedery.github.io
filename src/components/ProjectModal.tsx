@@ -93,7 +93,10 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <div className="modal-content">
           <span className="close" onClick={onClose}>&times;</span>
           <div className="modal-body">
-            <h2>{project.title}</h2>
+            <h2>
+              {project.title}
+              {project.year ? <span className="project-year"> • {project.year}</span> : null}
+            </h2>
             
             {project.role && project.role.length > 0 && (
               <ul className="role-list">
@@ -101,10 +104,6 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <li key={index}>{role}</li>
                 ))}
               </ul>
-            )}
-            
-            {project.year && (
-              <p className="project-year">{project.year}</p>
             )}
             
             {project.subtitle && (

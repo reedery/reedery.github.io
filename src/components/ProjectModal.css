@@ -67,8 +67,9 @@
 }
 
 .project-year {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #b8d7e6;
 }
 
 .project-subtitle {
