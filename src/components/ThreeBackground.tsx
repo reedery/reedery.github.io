@@ -1,48 +1,90 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { SplatMesh } from '@sparkjsdev/spark';
+
+const USE_PLY_SPLAT = false;
 
 const ThreeBackground = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
-  const sceneRef = useRef<THREE.Scene | null>(null);
-  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const animationIdRef = useRef<number | null>(null);
-  const clockRef = useRef<THREE.Clock>(new THREE.Clock());
+  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
 
   useEffect(() => {
-    const CAM_AMOUNT = 4.2;
-    let camera: THREE.ArrayCamera;
-    let scene: THREE.Scene;
-    let renderer: THREE.WebGLRenderer;
-    let object: THREE.Group;
-    let planes: THREE.Plane[];
-    let planeObjects: THREE.Mesh[];
-    let planeHelpers: THREE.PlaneHelper[];
-    const clock = clockRef.current;
+    const mount = mountRef.current;
+    if (!mount) return;
 
-    const params = {
-      animate: true,
-      planeX: {
-        constant: 2.8,
-        negated: false,
-        displayHelper: false
-      },
-      planeY: {
-        constant: 8.202,
-        negated: false,
-        displayHelper: false
-      },
-      planeZ: {
-        constant: 1.9,
-        negated: false,
-        displayHelper: false
+    let renderer: THREE.WebGLRenderer | null = null;
+    let scene: THREE.Scene | null = null;
+    let camera: THREE.Camera | null = null;
+    let splat: SplatMesh | null = null;
+    let object: THREE.Group | null = null;
+    let planes: THREE.Plane[] = [];
+    let planeObjects: THREE.Mesh[] = [];
+
+    const setFallback = (message: string) => {
+      mount.classList.add('three-fallback');
+      mount.innerHTML =
+        `<div style="color:#b8d7e6;font-family:Inter, sans-serif;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;position:absolute;bottom:16px;left:20px;opacity:0.7;">${message}</div>`;
+    };
+
+    const createRenderer = () => {
+      const contextAttributes: WebGLContextAttributes = {
+        antialias: true,
+        alpha: true,
+        stencil: true,
+        depth: true,
+        failIfMajorPerformanceCaveat: false,
+        preserveDrawingBuffer: false,
+      };
+
+      try {
+        const canvas = document.createElement('canvas');
+        const context =
+          (canvas.getContext('webgl2', contextAttributes) as WebGL2RenderingContext | null) ||
+          (canvas.getContext('webgl', contextAttributes) as WebGLRenderingContext | null) ||
+          (canvas.getContext('experimental-webgl', contextAttributes) as WebGLRenderingContext | null);
+
+        if (!context) {
+          return null;
+        }
+
+        return new THREE.WebGLRenderer({
+          canvas,
+          context,
+          antialias: true,
+          alpha: true,
+          powerPreference: 'high-performance',
+          stencil: true,
+        });
+      } catch (error) {
+        return null;
       }
     };
 
-    function createPlaneStencilGroup(
+    renderer = createRenderer();
+
+    if (!renderer) {
+      setFallback('WebGL unavailable in this browser');
+      return;
+    }
+
+    const hasStencil = Boolean(renderer.getContext().getContextAttributes()?.stencil);
+    rendererRef.current = renderer;
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x111111, 1);
+    renderer.localClippingEnabled = hasStencil;
+    mount.classList.remove('three-fallback');
+    mount.innerHTML = '';
+    mount.appendChild(renderer.domElement);
+
+    scene = new THREE.Scene();
+
+    const createPlaneStencilGroup = (
       geometry: THREE.BufferGeometry,
       plane: THREE.Plane,
       renderOrder: number
-    ) {
+    ) => {
       const group = new THREE.Group();
       const baseMat = new THREE.MeshBasicMaterial();
       baseMat.depthWrite = false;
@@ -51,7 +93,6 @@ const ThreeBackground = () => {
       baseMat.stencilWrite = true;
       baseMat.stencilFunc = THREE.AlwaysStencilFunc;
 
-      // back faces
       const mat0 = baseMat.clone();
       mat0.side = THREE.BackSide;
       mat0.clippingPlanes = [plane];
@@ -63,7 +104,6 @@ const ThreeBackground = () => {
       mesh0.renderOrder = renderOrder;
       group.add(mesh0);
 
-      // front faces
       const mat1 = baseMat.clone();
       mat1.side = THREE.FrontSide;
       mat1.clippingPlanes = [plane];
@@ -73,194 +113,173 @@ const ThreeBackground = () => {
 
       const mesh1 = new THREE.Mesh(geometry, mat1);
       mesh1.renderOrder = renderOrder;
-
       group.add(mesh1);
 
       return group;
-    }
+    };
 
-    function init() {
-      const ASPECT_RATIO = window.innerWidth / window.innerHeight;
-      const WIDTH = (window.innerWidth / CAM_AMOUNT) * window.devicePixelRatio;
-      const HEIGHT = (window.innerHeight / CAM_AMOUNT) * window.devicePixelRatio;
+    const initTorusScene = (useStencil: boolean) => {
+      const CAM_AMOUNT = 4.0;
+      const aspect = window.innerWidth / window.innerHeight;
+      const width = (window.innerWidth / CAM_AMOUNT) * window.devicePixelRatio;
+      const height = (window.innerHeight / CAM_AMOUNT) * window.devicePixelRatio;
 
       const cameras: THREE.PerspectiveCamera[] = [];
-
       for (let y = 0; y < CAM_AMOUNT; y++) {
         for (let x = 0; x < CAM_AMOUNT; x++) {
-          const subcamera = new THREE.PerspectiveCamera(11 - (y / CAM_AMOUNT), ASPECT_RATIO, 0.1, 100);
+          const subcamera = new THREE.PerspectiveCamera(11 - (y / CAM_AMOUNT), aspect, 0.1, 100);
           subcamera.viewport = new THREE.Vector4(
-            Math.floor(x * WIDTH),
-            Math.floor(y * HEIGHT),
-            Math.ceil(WIDTH),
-            Math.ceil(HEIGHT)
+            Math.floor(x * width),
+            Math.floor(y * height),
+            Math.ceil(width),
+            Math.ceil(height)
           );
-          subcamera.position.x = 4 - (x / CAM_AMOUNT);
-          subcamera.position.y = 7 + (0.9 * x) + (y / 3);
-          subcamera.position.z = 1.8 + (0.8 * x) + y * 3;
+          subcamera.position.x = 3 - x / CAM_AMOUNT;
+          subcamera.position.y = 7 + 1.2 * x + y / 3;
+          subcamera.position.z = 1.9 + 0.8 * x + y * 3;
           subcamera.position.multiplyScalar(1 + 0.1 * x);
-          let yp = -1 + (y / CAM_AMOUNT);
+          const yp = -1 + y / CAM_AMOUNT;
           subcamera.lookAt(0, yp, 0);
           subcamera.updateMatrixWorld();
-
           cameras.push(subcamera);
         }
       }
 
-      camera = new THREE.ArrayCamera(cameras);
-      camera.position.z = 2;
+      const arrayCamera = new THREE.ArrayCamera(cameras);
+      arrayCamera.position.z = 2;
+      camera = arrayCamera;
 
-      scene = new THREE.Scene();
-
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
-      scene.add(ambientLight);
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+      scene?.add(ambientLight);
 
       const dirLight = new THREE.DirectionalLight(0xffffff, 7);
       dirLight.position.set(1, 10, 9.5);
       dirLight.castShadow = false;
-      dirLight.shadow.camera.right = 2;
-      dirLight.shadow.camera.left = -2;
-      dirLight.shadow.camera.top = 2;
-      dirLight.shadow.camera.bottom = -2;
-      dirLight.shadow.mapSize.width = 256;
-      dirLight.shadow.mapSize.height = 256;
-      scene.add(dirLight);
+      scene?.add(dirLight);
 
-      planes = [
-        new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0),
-        new THREE.Plane(new THREE.Vector3(0, -1, 0), 0),
-        new THREE.Plane(new THREE.Vector3(0, 0, -1), 0)
-      ];
-
-      planeHelpers = planes.map((plane) => new THREE.PlaneHelper(plane, 2, 0xffffff));
-      planeHelpers.forEach(ph => {
-        ph.visible = false;
-        scene.add(ph);
-      });
-
-      const geometry = new THREE.TorusKnotGeometry(1.5, 0.50, 100, 100);
+      const geometry = new THREE.TorusKnotGeometry(1.5, 0.5, 100, 100);
       object = new THREE.Group();
-      scene.add(object);
+      scene?.add(object);
 
-      // Set up clip plane rendering
-      planeObjects = [];
-      const planeGeom = new THREE.PlaneGeometry(4, 4);
+      if (useStencil) {
+        planes = [
+          new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0),
+          new THREE.Plane(new THREE.Vector3(0, -1, 0), 0),
+          new THREE.Plane(new THREE.Vector3(0, 0, -1), 0),
+        ];
 
-      for (let i = 0; i < 3; i++) {
-        const poGroup = new THREE.Group();
-        const plane = planes[i];
-        const stencilGroup = createPlaneStencilGroup(geometry, plane, i + 1);
-
-        // plane is clipped by the other clipping planes
-        const planeMat = new THREE.MeshStandardMaterial({
-          color: 0x48BFE3,
-          metalness: 0.9,
-          roughness: 0,
-          clippingPlanes: planes.filter(p => p !== plane),
-          stencilWrite: true,
-          stencilRef: 0,
-          stencilFunc: THREE.NotEqualStencilFunc,
-          stencilFail: THREE.ReplaceStencilOp,
-          stencilZFail: THREE.ReplaceStencilOp,
-          stencilZPass: THREE.ReplaceStencilOp,
+        const planeHelpers = planes.map((plane) => new THREE.PlaneHelper(plane, 2, 0xffffff));
+        planeHelpers.forEach((helper) => {
+          helper.visible = false;
+          scene?.add(helper);
         });
-        const po = new THREE.Mesh(planeGeom, planeMat);
-        po.onAfterRender = function (renderer: THREE.WebGLRenderer) {
-          renderer.clearStencil();
-        };
 
-        po.renderOrder = i + 1.2;
+        const planeGeom = new THREE.PlaneGeometry(4, 4);
+        planeObjects = [];
 
-        object.add(stencilGroup);
-        poGroup.add(po);
-        planeObjects.push(po);
-        scene.add(poGroup);
-      }
+        for (let i = 0; i < 3; i++) {
+          const poGroup = new THREE.Group();
+          const plane = planes[i];
+          const stencilGroup = createPlaneStencilGroup(geometry, plane, i + 1);
 
-      const material = new THREE.MeshStandardMaterial({
-        color: 0xd00000,
-        metalness: 0.49,
-        roughness: 0.34,
-        clippingPlanes: planes,
-        clipShadows: true,
-        shadowSide: THREE.DoubleSide,
-      });
+          const planeMat = new THREE.MeshStandardMaterial({
+            color: 0x48bfe3,
+            metalness: 0.9,
+            roughness: 0,
+            clippingPlanes: planes.filter((p) => p !== plane),
+            stencilWrite: true,
+            stencilRef: 0,
+            stencilFunc: THREE.NotEqualStencilFunc,
+            stencilFail: THREE.ReplaceStencilOp,
+            stencilZFail: THREE.ReplaceStencilOp,
+            stencilZPass: THREE.ReplaceStencilOp,
+          });
+          const po = new THREE.Mesh(planeGeom, planeMat);
+          po.onAfterRender = function (rendererInstance: THREE.WebGLRenderer) {
+            rendererInstance.clearStencil();
+          };
+          po.renderOrder = i + 1.25;
 
-      // add the color
-      const clippedColorFront = new THREE.Mesh(geometry, material);
-      clippedColorFront.castShadow = true;
-      clippedColorFront.renderOrder = 6;
-      object.add(clippedColorFront);
-
-      const ground = new THREE.Mesh(
-        new THREE.PlaneGeometry(9, 9, 1, 1),
-        new THREE.ShadowMaterial({ color: 0x000000, opacity: 0.25, side: THREE.DoubleSide })
-      );
-
-      ground.rotation.x = -Math.PI / 3;
-      ground.position.y = -1;
-      ground.receiveShadow = true;
-      scene.add(ground);
-
-      // Renderer
-      renderer = new THREE.WebGLRenderer({ antialias: true, stencil: true });
-      renderer.shadowMap.enabled = true;
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x0b1020);
-      renderer.localClippingEnabled = true;
-
-      if (mountRef.current) {
-        mountRef.current.appendChild(renderer.domElement);
-      }
-
-      // Store references
-      sceneRef.current = scene;
-      rendererRef.current = renderer;
-    }
-
-    function onWindowResize() {
-      if (!rendererRef.current) return;
-
-      const ASPECT_RATIO = window.innerWidth / window.innerHeight;
-      const WIDTH = (window.innerWidth / CAM_AMOUNT) * window.devicePixelRatio;
-      const HEIGHT = (window.innerHeight / CAM_AMOUNT) * window.devicePixelRatio;
-
-      camera.aspect = ASPECT_RATIO;
-      camera.updateProjectionMatrix();
-
-      for (let y = 0; y < CAM_AMOUNT; y++) {
-        for (let x = 0; x < CAM_AMOUNT; x++) {
-          const subcamera = camera.cameras[CAM_AMOUNT * y + x] as THREE.PerspectiveCamera | undefined;
-          if (!subcamera) {
-            continue;
-          }
-
-          subcamera.viewport.set(
-            Math.floor(x * WIDTH),
-            Math.floor(y * HEIGHT),
-            Math.ceil(WIDTH),
-            Math.ceil(HEIGHT)
-          );
-
-          subcamera.aspect = ASPECT_RATIO;
-          subcamera.updateProjectionMatrix();
+          object.add(stencilGroup);
+          poGroup.add(po);
+          planeObjects.push(po);
+          scene?.add(poGroup);
         }
-      }
 
-      rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+        const material = new THREE.MeshStandardMaterial({
+          color: 0xfa00cc0,
+          metalness: 0.68,
+          roughness: 0.54,
+          clippingPlanes: planes,
+          clipShadows: true,
+          shadowSide: THREE.DoubleSide,
+        });
+
+        const clippedColorFront = new THREE.Mesh(geometry, material);
+        clippedColorFront.castShadow = true;
+        clippedColorFront.renderOrder = 6;
+        object.add(clippedColorFront);
+
+        const ground = new THREE.Mesh(
+          new THREE.PlaneGeometry(9, 9, 1, 1),
+          new THREE.ShadowMaterial({ color: 0x000000, opacity: 0.25, side: THREE.DoubleSide })
+        );
+        ground.rotation.x = -Math.PI / 3;
+        ground.position.y = -1;
+        ground.receiveShadow = true;
+        scene?.add(ground);
+      } else {
+        planeObjects = [];
+        const material = new THREE.MeshStandardMaterial({
+          color: 0x48a003,
+          metalness: 0.65,
+          roughness: 0.3,
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.castShadow = false;
+        object.add(mesh);
+      }
+    };
+
+    const initSplatScene = () => {
+      const perspectiveCamera = new THREE.PerspectiveCamera(
+        50,
+        window.innerWidth / window.innerHeight,
+        0.01,
+        100
+      );
+      perspectiveCamera.position.set(0, 0.2, 3.2);
+      camera = perspectiveCamera;
+
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+      scene?.add(ambientLight);
+
+      const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+      dirLight.position.set(2, 3, 4);
+      scene?.add(dirLight);
+
+      splat = new SplatMesh({ url: '/images/7th.ply' });
+      splat.position.set(0, -0.2, 0);
+      splat.scale.set(1, 1, 1);
+      scene?.add(splat);
+    };
+
+    if (USE_PLY_SPLAT) {
+      initSplatScene();
+    } else {
+      initTorusScene(hasStencil);
     }
 
-    function animate() {
-      const delta = clock.getDelta() + 0.02;
-
-      if (params.animate && object) {
-        object.rotation.x -= delta * 0.1;
-        object.rotation.y += delta * 0.06;
-        object.rotation.z -= delta * 0.2;
-      }
-
-      if (planeObjects) {
+    const animate = () => {
+      animationIdRef.current = requestAnimationFrame(animate);
+      if (USE_PLY_SPLAT) {
+        if (splat) {
+          splat.rotation.y += 0.004;
+        }
+      } else if (object) {
+        object.rotation.x -= 0.0024;
+        object.rotation.y += 0.0016;
+        object.rotation.z -= 0.004;
         for (let i = 0; i < planeObjects.length; i++) {
           const plane = planes[i];
           const po = planeObjects[i];
@@ -268,63 +287,80 @@ const ThreeBackground = () => {
           po.lookAt(
             po.position.x - plane.normal.x,
             po.position.y - plane.normal.y,
-            po.position.z - plane.normal.z,
+            po.position.z - plane.normal.z
           );
         }
       }
 
-      if (rendererRef.current && sceneRef.current) {
-        rendererRef.current.render(sceneRef.current, camera);
+      if (renderer && scene && camera) {
+        renderer.render(scene, camera);
       }
-    }
+    };
 
-    // Initialize everything
-    init();
-    clock.start();
-    if (rendererRef.current) {
-      rendererRef.current.setAnimationLoop(animate);
-    } else {
-      animationIdRef.current = requestAnimationFrame(animate);
-    }
+    const onWindowResize = () => {
+      if (!renderer || !camera) return;
+      if (camera instanceof THREE.PerspectiveCamera) {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      } else if (camera instanceof THREE.ArrayCamera) {
+        const CAM_AMOUNT = 4.2;
+        const aspect = window.innerWidth / window.innerHeight;
+        const width = (window.innerWidth / CAM_AMOUNT) * window.devicePixelRatio;
+        const height = (window.innerHeight / CAM_AMOUNT) * window.devicePixelRatio;
+        camera.aspect = aspect;
+        camera.updateProjectionMatrix();
+        for (let y = 0; y < CAM_AMOUNT; y++) {
+          for (let x = 0; x < CAM_AMOUNT; x++) {
+            const subcamera = camera.cameras[CAM_AMOUNT * y + x] as THREE.PerspectiveCamera | undefined;
+            if (!subcamera) continue;
+            if (!subcamera.viewport) {
+              continue;
+            }
+            subcamera.viewport.set(
+              Math.floor(x * width),
+              Math.floor(y * height),
+              Math.ceil(width),
+              Math.ceil(height)
+            );
+            subcamera.aspect = aspect;
+            subcamera.updateProjectionMatrix();
+          }
+        }
+      }
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
 
-    // Add resize listener
-    window.addEventListener('resize', onWindowResize, false);
+    animate();
+    window.addEventListener('resize', onWindowResize);
 
-    // Cleanup function
     return () => {
-      window.removeEventListener('resize', onWindowResize, false);
-      
+      window.removeEventListener('resize', onWindowResize);
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
       }
-      if (rendererRef.current) {
-        rendererRef.current.setAnimationLoop(null);
-      }
-      
-      if (rendererRef.current && mountRef.current) {
-        mountRef.current.removeChild(rendererRef.current.domElement);
+      if (rendererRef.current && mount.contains(rendererRef.current.domElement)) {
+        mount.removeChild(rendererRef.current.domElement);
         rendererRef.current.dispose();
       }
-      
-      if (sceneRef.current) {
-        sceneRef.current.clear();
-      }
+      if (scene) scene.clear();
     };
   }, []);
 
   return (
-    <div 
-      ref={mountRef} 
-      style={{ 
+    <div
+      id="three-js-scene"
+      ref={mountRef}
+      className="three-js-scene"
+      style={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
         height: '100vh',
-        zIndex: 0
-      }} 
+        zIndex: 0,
+      }}
     />
   );
 };
 
-export default ThreeBackground; 
+export default ThreeBackground;
