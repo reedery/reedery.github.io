@@ -1,0 +1,66 @@
+.connect-section {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.99) 5%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0.99) 95%), url(/images/rr-beats-gradient.jpg);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.social-title {
+  color: lightcyan;
+  font-family: 'Inter', sans-serif;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .social-title {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-title {
+    font-size: large;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  font-size: xxx-large;
+}
+
+@media (max-width: 600px) {
+  .social-icons {
+    font-size: x-large;
+    gap: 10px;
+  }
+}
+
+.fa {
+  width: 50px;
+  height: 50px;
+  color: lightcyan;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.fa:hover {
+  transform: scale(1.2);
+} 

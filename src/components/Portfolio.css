@@ -1,0 +1,47 @@
+.portfolio {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.99) 2%, rgb(33, 88, 128) 35%, rgb(33, 88, 128) 65%, rgba(0, 0, 0, 0.99) 99%);
+}
+
+.project-tiles-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33vh - 20px);
+  grid-template-rows: repeat(2, calc(33vh - 20px));
+  grid-gap: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.project-tiles-container::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+
+@media screen and (min-width: 768px) {
+  .project-tiles-container {
+    grid-auto-columns: calc(38vh - 30px);
+    grid-template-rows: repeat(2, calc(38vh - 30px));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-tiles-container {
+    grid-auto-columns: calc(45vh - 20px);
+    grid-template-rows: repeat(2, calc(45vh - 30px));
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .project-tiles-container {
+    grid-auto-columns: calc(25vh - 20px);
+    grid-template-rows: repeat(2, calc(25vh - 20px));
+  }
+} 
