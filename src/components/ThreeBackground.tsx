@@ -112,6 +112,9 @@ const ThreeBackground = () => {
 
       scene = new THREE.Scene();
 
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
+      scene.add(ambientLight);
+
       const dirLight = new THREE.DirectionalLight(0xffffff, 7);
       dirLight.position.set(1, 10, 9.5);
       dirLight.castShadow = false;
@@ -204,7 +207,7 @@ const ThreeBackground = () => {
       renderer.shadowMap.enabled = true;
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x111111);
+      renderer.setClearColor(0x0b1020);
       renderer.localClippingEnabled = true;
 
       if (mountRef.current) {
@@ -250,7 +253,6 @@ const ThreeBackground = () => {
 
     function animate() {
       const delta = clock.getDelta() + 0.02;
-      animationIdRef.current = requestAnimationFrame(animate);
 
       if (params.animate && object) {
         object.rotation.x -= delta * 0.1;
@@ -278,7 +280,12 @@ const ThreeBackground = () => {
 
     // Initialize everything
     init();
-    animate();
+    clock.start();
+    if (rendererRef.current) {
+      rendererRef.current.setAnimationLoop(animate);
+    } else {
+      animationIdRef.current = requestAnimationFrame(animate);
+    }
 
     // Add resize listener
     window.addEventListener('resize', onWindowResize, false);
@@ -289,6 +296,9 @@ const ThreeBackground = () => {
       
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
+      }
+      if (rendererRef.current) {
+        rendererRef.current.setAnimationLoop(null);
       }
       
       if (rendererRef.current && mountRef.current) {

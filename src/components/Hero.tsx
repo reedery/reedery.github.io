@@ -10,7 +10,7 @@ const Hero = ({ onMyWorkClick, onConnectClick }: HeroProps) => {
     <div className="hero">
       <div className="hero-content">
         <h1>Ryan Reede</h1>
-        <img src="/images/rr-circle.png" alt="Ryan" className="hero-image" />
+        <img src="/images/ryan-prof.jpg" alt="Ryan" className="hero-image" />
         <p className="tagline">
           Engineer/founder with 10 years of experience building + scaling 3D software 
           products. I love working with new tools to bring previously unimaginable ideas to life.
