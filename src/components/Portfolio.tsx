@@ -12,9 +12,17 @@ const Portfolio = () => {
   const [scrollCooldown, setScrollCooldown] = useState(true);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
+  const toYearNumber = (value: Project['year']) => {
+    if (typeof value === 'number') {
+      return value;
+    }
+    const parsed = Number.parseInt(value, 10);
+    return Number.isNaN(parsed) ? 0 : parsed;
+  };
+
   // Sort projects by year (newest first) and swap first two items like original
   const sortedProjects = [...projectData]
-    .sort((a, b) => new Date(b.year) - new Date(a.year));
+    .sort((a, b) => toYearNumber(b.year) - toYearNumber(a.year));
   
   // Swap first two items to match original behavior
   if (sortedProjects.length >= 2) {
