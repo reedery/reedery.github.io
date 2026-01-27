@@ -8,6 +8,24 @@
   overflow: hidden;
 }
 
+.three-js-scene.three-fallback {
+  background: radial-gradient(circle at 30% 30%, #1e3955 0%, #0b1020 55%, #05070c 100%);
+  background-size: 160% 160%;
+  animation: heroGradient 16s ease-in-out infinite;
+}
+
+@keyframes heroGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -33,7 +51,7 @@
 
 .hero-image {
   height: 42vh;
-  border: 8px solid lightcyan;
+  border: 4px solid rgb(0, 0, 0);
   border-radius: 50%;
   mix-blend-mode: exclusion;
   margin-top: 10px;
